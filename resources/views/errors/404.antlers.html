@@ -8,9 +8,11 @@
                 {{title}}</h1>
             <p class="text-center lg:text-25 sm:text-20 text-lg leading-lineHeight text-white font-Satoshi">
                 {{description}}</p>
-            <form class="max-w-[700px] w-full mx-auto my-10">
+
+            <!-- ✅ Updated Search Form -->
+            <form action="/search-result" method="GET" class="max-w-[700px] w-full mx-auto my-10">
                 <div class="relative overflow-hidden">
-                    <input type="search"
+                    <input type="search" name="q"
                         class="block w-full md:py-4 md:px-6 py-3 px-4 font-Satoshi 2xl:text-lg lg:text-md text-sm leading-lineHeight font-normal text-white placeholder:text-white bg-transparent border-0 focus:outline-0 focus:ring-0 relative z-1"
                         placeholder="Search here..." required />
                     <div class="absolute top-0 left-0 w-full h-full bg-white bg-opacity-40 backdrop-blur-[8px]"></div>
@@ -24,6 +26,7 @@
                     </button>
                 </div>
             </form>
+
             {{button}}
             <a class="all-btn btn-outline bg-white hover:bg-vividblue-400 hover:border-vividblue-400 text-black hover:text-white shrink-0"
                 href="{{link}}">
@@ -33,10 +36,9 @@
                 {{else}}
                 <img src="{{icon}}" class="ml-2 inline-block" width="14" height="13" alt="">
                 {{/if}}
-                {{/button}}
             </a>
+            {{/button}}
         </div>
     </div>
 </section>
 {{/error_page}}
-<!-- ====== Error Section ====== -->

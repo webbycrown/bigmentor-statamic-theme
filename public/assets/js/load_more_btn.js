@@ -5,6 +5,13 @@ document.addEventListener('click', function(e) {
         const nextPageUrl = button.getAttribute('data-next-page');
         const caseStudiesList = document.querySelector('#case-studies-list');
 
+        const appEnv = document.querySelector('meta[name="app-env"]')?.getAttribute('content');
+        if (appEnv === 'production') {
+            if (nextPageUrl && nextPageUrl.startsWith("http:")) {
+                nextPageUrl = nextPageUrl.replace(/^http:/, "https:");
+            }
+        }
+
         // Store original button content
         const originalContent = button.innerHTML;
 
