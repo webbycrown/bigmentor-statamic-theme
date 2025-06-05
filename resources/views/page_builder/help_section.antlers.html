@@ -1,0 +1,19 @@
+<div class="relative mt-7 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 2xl:mt-16">
+    <div class="grid sm:grid-cols-2 grid-cols-1">
+        {{help}}
+        <div class="bg-cover bg-no-repeat text-center px-5 py-12 md:py-16 lg:py-20 xl:py-28 2xl:py-32"
+            style="background-image: url('{{ bg_image }}');">
+
+            <h3
+                class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-4 md:mb-6 lg:mb-8 xl:mb-10 leading-lineHeight text-white font-Larken font-medium">
+                {{title}}</h3>
+                {{button}}
+            <a class="all-btn btn-outline" href="{{link}}">
+                {{text}}
+                {{svg src="{{icon}}" width="14" height="13" viewBox="0 0 14 13" fill="none"}}
+                {{/button}}
+            </a>
+        </div>
+        {{/help}}
+    </div>
+</div>

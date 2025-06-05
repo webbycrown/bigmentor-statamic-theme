@@ -1,0 +1,86 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: bard_field
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+              smart_typography: true
+              save_html: true
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: true
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text_field
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Text Field'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+                    gggiu:
+                      display: gggiu
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: text_field
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: 'Text Field'
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            replicator_preview: true
+                            hide_display: false
+              always_show_set_button: true
+              collapse: false
+              previews: true
+              type: bard
+              display: 'Bard Field'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

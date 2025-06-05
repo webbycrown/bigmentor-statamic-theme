@@ -1,0 +1,82 @@
+{{if blogs or insights}}
+{{ if blogs}}
+<section class="site-search__suggestions-section">
+    <h6 class="site-search__suggestion-title font-Satoshi text-sm uppercase font-medium text-gray-800 mb-4">
+        Recent Searched Services or Blogs:
+    </h6>
+    <ul class="site-search__suggestion-list grid md:grid-cols-2 grid-cols-1 list-disc marker:text-gray-900">
+        {{ blogs }}
+        <li class="site-search__suggestion-item md:pr-5">
+            <a class="font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md 2xl:my-3 my-1 block"
+               href="{{ url }}">
+                {{ title }}
+            </a>
+        </li>
+        {{ /blogs }}
+    </ul>
+</section>
+{{ else }}
+<p class="text-gray-600">No Recent Searched Services or Blogs.</p>
+{{ /if }}
+
+{{ if insights }}
+<hr class="border-t-gray-700 2xl:my-8 xl:my-7 lg:my-6 my-5">
+
+<section class="site-search__history-block lg:mb-5 mt-8">
+    <h6 class="site-search__suggestion-title font-Satoshi text-sm uppercase font-medium text-gray-800 mb-4 lg:mb-6">
+        Recently Viewed Insights or Case-Studies:
+    </h6>
+    <div class="site-search__history-items flex items-center flex-wrap gap-5 justify-between">
+   
+        {{ insights }}
+        {{ page_builder }}
+            {{ if type == "insights_blog_page" }}
+            <div class="site-search__history-item inline-flex items-center gap-5">
+                <div class="site-search__history-image-container">
+                    <div class="2xl:w-24 xl:w-20 w-16 2xl:h-24 xl:h-20 h-16 site-search__image-wrap">
+                        {{thumb_image}}
+                        <img class="w-full h-full object-cover" src="{{ url }}">
+                        {{/thumb_image}}
+                    </div>
+                </div>
+                <div class="site-search__history-text-container">
+                    <a href="{{ url }}">
+                        <h6 class="site-search__page-title font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md block">
+                            {{ title }}
+                        </h6>
+                    </a>
+                </div>
+            </div>
+            {{ /if }}
+            {{if type == 'banner_section' }}
+            {{if layout=="hero"}}
+            <div class="site-search__history-item inline-flex items-center gap-5">
+                <div class="site-search__history-image-container">
+                    <div class="2xl:w-24 xl:w-20 w-16 2xl:h-24 xl:h-20 h-16 site-search__image-wrap">
+                        {{thumb_image}}
+                        <img class="w-full h-full object-cover" src="{{ url }}">
+                        {{/thumb_image}}
+                    </div>
+                </div>
+                <div class="site-search__history-text-container">
+                    <a href="{{ url }}">
+                        <h6 class="site-search__page-title font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md block">
+                            {{ title }}
+                        </h6>
+                    </a>
+                </div>
+            </div>
+            {{/if}}
+            {{/if}}
+        {{ /page_builder }}
+    {{ /insights }}
+    </div>
+</section>
+{{ else }}
+<p class="text-gray-600">No recently viewed pages.</p>
+{{ /if }}
+{{else}}
+<p class="text-gray-600">No Data Found.</p>
+{{/if}}
+
+

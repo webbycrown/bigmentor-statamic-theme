@@ -1,0 +1,10 @@
+title: 'Error Page'
+data:
+  title: '404'
+  description: 'Sorry, we were unable to find that page'
+  button:
+    -
+      id: makzeu0e
+      text: 'Back to home'
+      link: /
+      icon: image/redirect.svg

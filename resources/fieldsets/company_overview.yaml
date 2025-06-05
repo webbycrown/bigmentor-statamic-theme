@@ -1,0 +1,246 @@
+title: 'Company Overview Section'
+fields:
+  -
+    handle: layout
+    field:
+      options:
+        facts_figures: 'Facts & Figures'
+        impact_stats: 'Impact Stats'
+        key_metrics: 'Key Metrics'
+        achievements: 'Achievements section'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: layout
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: if_have_a_section_title
+    field:
+      default: false
+      type: toggle
+      display: 'if have a section title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: section_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'section title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      always_save: true
+      if:
+        if_have_a_section_title: 'equals true'
+  -
+    handle: section_description
+    field:
+      character_limit: '200'
+      antlers: false
+      type: textarea
+      display: 'Section Description'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals achievements'
+  -
+    handle: facts_figures
+    field:
+      fields:
+        -
+          handle: numbers
+          field:
+            input_type: text
+            character_limit: 5
+            antlers: false
+            type: text
+            display: numbers
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: description
+          field:
+            input_type: text
+            character_limit: 100
+            antlers: false
+            type: text
+            display: Description
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 5
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Facts & Figures'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals facts_figures'
+  -
+    handle: impact_stats
+    field:
+      fields:
+        -
+          handle: numbers
+          field:
+            input_type: text
+            character_limit: 5
+            antlers: false
+            type: text
+            display: numbers
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 5
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Impact Stats'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals impact_stats'
+  -
+    handle: key_metrics
+    field:
+      fields:
+        -
+          handle: numbers
+          field:
+            input_type: text
+            character_limit: 5
+            antlers: false
+            type: text
+            display: numbers
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 5
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Key Metrics'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals key_metrics'
+  -
+    handle: achievements_section
+    field:
+      fields:
+        -
+          handle: numbers
+          field:
+            input_type: text
+            character_limit: 5
+            antlers: false
+            type: text
+            display: numbers
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 5
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Achievements section'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals achievements'

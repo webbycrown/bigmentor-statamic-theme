@@ -1,0 +1,54 @@
+{{if layout == "highlight_statistics"}}
+<section class="relative overflow-hidden py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <div class="flex items-center flex-col gap-5 xl:gap-18 2xl:gap-20 md:flex-row">
+
+            <div class="w-full">
+                <div class="relative before:content-[''] before:pt-[100%] before:block">
+                    <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{image}}" alt="about">
+                </div>
+            </div>
+            <div class="w-full max-w-[680px] bg-white flex items-center justify-center">
+                <div class="text-left text-black">
+                    <span
+                        class="border uppercase py-1 px-5 border-vividblue-400 rounded-2xl text-sm font-bold mb-4 md:mb-6 uppercase inline-block">{{tag_title}}</span>
+                    <h2
+                        class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-3 md:mb-5 leading-lineHeight text-black font-Larken font-medium">
+                        {{title}}</h2>
+                    <p class="2xl:text-lg text-md leading-lineHeight mb-3 md:mb-5 font-normal text-gray-800">
+                        {{description}}</p>
+                    <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">{{short_desc}}</p>
+                    <div
+                        class="border-t border-gray-700 mt-6 pt-6 lg:mt-8 lg:pt-8 xl:mt-9 xl:pt-9 2xl:mt-11 2xl:pt-11 grid sm:grid-cols-3 min-[425px]:grid-cols-2 grid-cols-1 gap-4">
+                        {{counts}}
+                        <div class="w-full h-full sm:border-0 border border-gray-700 p-6 sm:p-0">
+                            <h4
+                                class="2xl:text-4xl xl:text-3xl lg:text-1xl text-28 mb-2 leading-lineHeight text-black font-Satoshi font-medium">
+                                {{numbers}}</h4>
+                            <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">{{title}}</p>
+                        </div>
+                        {{/counts}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}
+{{if layout == "text_image_split"}}
+<div class="relative 2xl:pt-[100px] 2xl:pb-[110px] xl:py-20 lg:py-16 md:py-12 py-10">
+    <div class="container">
+        <h2 class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-0 leading-lineHeight text-black font-Larken font-medium md:text-center">{{title}}</h2>
+        <div class="mt-6 lg:mt-10 xl:mt-12 2xl:mt-[60px] flex justify-between flex-col md:flex-row gap-7 md:gap-12 lg:gap-14 xl:gap-16 2xl:gap-[70px]">
+            <div class="w-full max-w-[500px]">
+                <img src="{{image}}" class="w-full h-full object-cover object-center" alt="">
+            </div>
+            <div class="w-full">
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-5">{{description}}</p>
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{short_desc}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

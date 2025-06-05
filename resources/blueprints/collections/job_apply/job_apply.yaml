@@ -1,0 +1,166 @@
+title: 'Job Apply'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              instructions_position: above
+              listable: hidden
+              visibility: read_only
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
+          -
+            handle: first_name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'First Name'
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: last_name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Last Name'
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: 'Email Address'
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: phone
+            field:
+              input_type: tel
+              antlers: false
+              type: text
+              display: 'Phone Number'
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: applied_position
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Applied Position'
+              listable: hidden
+              instructions_position: above
+              visibility: hidden
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: application_date
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: 'Application Date'
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: applied_job
+            field:
+              max_items: 1
+              mode: select
+              create: true
+              collections:
+                - job_careers
+              type: entries
+              display: 'Applied Job'
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: resume
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Resume
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: message
+            field:
+              antlers: false
+              type: textarea
+              display: About
+              listable: hidden
+              instructions_position: above
+              visibility: read_only
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

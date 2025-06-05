@@ -1,0 +1,52 @@
+<div
+    class="relative video-container 2xl:pb-20 2xl:pt-24 xl:pb-20 xl:pt-20 lg:pb-16 lg:pt-16 md:pb-14 md:pt-14 sm:pb-12 sm:pt-12 pb-10 pt-10 my-7 sm:my-8 md:my-10 lg:my-12 xl:my-14 2xl:my-16">
+    <video poster="{{background_image}}" class="background-video z-[0] absolute top-0 left-0 w-full h-full object-cover"
+        muted loop playsinline>
+        <source src="{{background_video}}" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 z-1 bg-custom-gradient-300"></div>
+    <div class="container relative z-2">
+        <div class="max-w-[780px]">
+            <h4
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl lg:mb-5 mb-3 leading-lineHeight text-white font-Larken font-medium">
+                {{title}}</h4>
+            <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight mb-3 font-normal text-white">{{description}}</p>
+        </div>
+        <div class="w-full max-w-[1130px] 2xl:pb-48 xl:pb-40 lg:pb-32 md:pb-16 sm:pb-14 pb-10">
+            <div
+                class="play-btn cursor-pointer md:ml-auto 2xl:w-[100px] 2xl:h-[100px] xl:w-20 xl:h-20 w-16 h-16 2xl:text-45 xl:text-3xl lg:text-1xl md:text-xl text-25 text-white bg-white bg-opacity-35 border-opacity-35 rounded-full border border-white flex items-center justify-center">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+        {{ reviews }}
+        <div class="flex items-center gap-3 mb-6">
+            <div class="avatar-group">
+                {{ avatars }}
+                <div
+                    class="avatar-group-item material-shadow rounded-full border-2 border-white -ml-3 -lg:ml-5 w-8 h-8 lg:w-12 lg:h-12 overflow-hidden">
+                    <a class="block" href="{{ url }}">
+                        <img src="{{ image }}" alt="{{ alt }}" class="object-cover w-full h-full">
+                    </a>
+                </div>
+                {{ /avatars }}
+            </div>
+            <div>
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-medium text-white">
+                    {{ review_title }}
+                </p>
+                <div class="text-[#FCD53F]">
+                    {{ loop times="{stars}" }}
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                {{ /loop }}
+                {{if stars != "5"}}
+                {{ loop from="{stars+1}" to="5" }}
+                    <i class="fa-regular fa-star text-gray-300"></i>
+                {{ /loop }}
+                {{/if}}
+                </div>
+            </div>
+        </div>
+        {{ /reviews }}
+
+    </div>
+</div>

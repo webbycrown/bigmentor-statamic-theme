@@ -1,0 +1,17 @@
+title: 'Our Insights'
+route: /insights/{slug}
+template: our_insights/show
+layout: layout
+taxonomies:
+  - categories
+revisions: false
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

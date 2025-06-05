@@ -1,0 +1,215 @@
+title: 'Banner Section'
+fields:
+  -
+    handle: layout
+    field:
+      options:
+        'hero ': 'Hero Section'
+        work_showcase: 'Work Showcase Section'
+        info: 'Information Section'
+        content_over_image: 'Content-Over-Image Layout'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: hero
+      type: select
+      display: layout
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: hero_layout
+    field:
+      options:
+        ' with_transparent_header': 'Hero with transparent header'
+        with_back_button: 'Hero with back button'
+        with_card_content: 'Hero with card content'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Hero Layout'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - sometimes
+        - required
+      if:
+        layout: 'equals hero'
+  -
+    handle: image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Bg-Image
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: title
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      unless:
+        layout: 'equals info'
+  -
+    handle: overlay_image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'overlay image'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals info'
+  -
+    handle: thumb_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'thumb image'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals hero'
+  -
+    handle: thumb_description
+    field:
+      antlers: false
+      type: textarea
+      display: 'thumb description'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals hero'
+  -
+    handle: short_description
+    field:
+      antlers: false
+      type: textarea
+      display: 'short description'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: collections
+    field:
+      options:
+        our_insights: 'Our Insights'
+        'industries ': Industries
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: Collections
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - sometimes
+      if:
+        layout: 'equals work_showcase'
+  -
+    handle: industries
+    field:
+      mode: select
+      create: true
+      collections:
+        - industries
+      type: entries
+      display: Industries
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - sometimes
+      always_save: true
+      if:
+        collections: 'equals industries'
+  -
+    handle: our_insights
+    field:
+      mode: select
+      create: true
+      collections:
+        - our_insights
+      type: entries
+      display: 'Our Insights'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        collections: 'equals our_insights'
+      validate:
+        - sometimes
+      always_save: true
+  -
+    handle: button
+    field: common_settings.button
+    config:
+      validate:
+        - sometimes
+        - required
+      if:
+        hero_layout: 'equals with_back_button'

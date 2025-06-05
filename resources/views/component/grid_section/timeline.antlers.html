@@ -1,0 +1,59 @@
+<div class="relative py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container relative">
+        <div class="text-center 2xl:mb-16 xl:mb-14 lg:mb-12 md:mb-10 mb-8">
+            <h2
+                class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 md:mb-5 mb-3 leading-lineHeight text-black font-Larken font-medium">
+                {{section_title}}</h2>
+            <p class="lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>
+        </div>
+        <div class="grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 sm:gap-0">
+            {{timeline_grid}}
+            {{if count % 2 == 0}}
+            <div class="grid grid-cols-1">
+                <div class="bg-gray-500 px-5 md:px-[30px] md:pt-10 md:pb-14 py-8 sm:order-1 order-2">
+                    <h3
+                        class="2xl:text-7xl xl:text-5xl text-3xl mb-4 md:mb-[22px] leading-lineHeight text-gray-500 custom-text-shadow font-Satoshi font-medium">
+                        0{{count}}</h3>
+                    {{if link != ""}}
+                    <h4
+                        class="lg:text-25 sm:text-20 text-lg mb-[10px] leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                        <a href="{{link}}" class="text-currentColor">{{title}}</a></h4>
+                    {{else}}
+                    <h4
+                        class="lg:text-25 sm:text-20 text-lg mb-[10px] leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                        <a href="contact-us.html" class="text-currentColor">{{title}}</a></h4>
+                    {{/if}}
+                    <p class="text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>
+                </div>
+                <div
+                    class="relative w-full before:content-[''] before:block before:pt-[100%] overview-hidden sm:order-2 order-1">
+                    <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{image}}" alt="">
+                </div>
+            </div>
+
+            {{else}}
+            <div class="grid grid-cols-1">
+                <div class="relative w-full before:content-[''] before:block before:pt-[100%] overview-hidden">
+                    <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{image}}" alt="">
+                </div>
+                <div class="bg-gray-500 px-5 md:px-[30px] md:pt-10 md:pb-14 py-8">
+                    <h3
+                        class="2xl:text-7xl xl:text-5xl text-3xl mb-4 md:mb-[22px] leading-lineHeight text-gray-500 custom-text-shadow font-Satoshi font-medium">
+                        0{{count}}</h3>
+                    {{if link != ""}}
+                    <h4
+                        class="lg:text-25 sm:text-20 text-lg mb-[10px] leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                        <a href="{{link}}" class="text-currentColor">{{title}}</a></h4>
+                    {{else}}
+                    <h4
+                        class="lg:text-25 sm:text-20 text-lg mb-[10px] leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                        <a href="contact-us.html" class="text-currentColor">{{title}}</a></h4>
+                    {{/if}}
+                    <p class="text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>
+                </div>
+            </div>
+            {{/if}}
+            {{/timeline_grid}}
+        </div>
+    </div>
+</div>

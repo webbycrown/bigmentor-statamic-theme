@@ -1,0 +1,94 @@
+title: 'Left Image Right Text Section'
+fields:
+  -
+    handle: layout
+    field:
+      options:
+        two_column: Two-Column
+        split_content: 'Split Content'
+        corp_section: 'Corp Card Section'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: layout
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      default: split_content
+  -
+    handle: tag_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'tag title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals split_content'
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: title
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: description
+    field:
+      antlers: false
+      type: textarea
+      display: description
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: image
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: about
+    field:
+      character_limit: '200'
+      antlers: false
+      type: textarea
+      display: about
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals split_content'
+  -
+    handle: button
+    field: common_settings.button

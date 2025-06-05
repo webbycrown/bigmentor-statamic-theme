@@ -1,0 +1,58 @@
+{{ if layouts_grid == "row" }}
+<div class="relative bg-gray-200">
+    <div class="container 2xl:py-20 xl:py-16 lg:py-14 md:py-12 py-10">
+        <div class="flex justify-between flex-col md:flex-row gap-7">
+            <div class="w-full max-w-fit">
+                <h1 class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-black font-Larken font-medium">{{title}}</h1>
+            </div>
+            <div class="w-full max-w-[885px]">
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+{{ if layouts_grid == "column" }}
+<div class="w-full">
+
+    {{ page_builder }}
+        {{ if type == "intro_section" }}           
+        <h1 class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-black font-Larken font-medium mb-4">{{title}}</h1>
+        <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>
+        {{ /if }}
+        {{ /page_builder }}
+        <ul class="flex flex-wrap gap-3 w-full xl:py-[70px] lg:py-16 md:py-14 sm:py-12 py-8">
+            {{page_builder}}
+                {{ social_media }}
+                <li>
+                    {{ if icon}}
+                    {{if icon ends_with ".svg"}}
+                    <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                        href="{{link}}"> {{ svg src="{{icon}}" class="ml-1" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none"
+                        }}</a>
+                </li>
+
+                {{ else }}
+                <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                    href="{{link}}"><img src="{{ icon }}" class="ml-1" width="16" height="16" alt=""></a></li>
+
+                {{ /if }}
+                {{ else }}
+                <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                    href="{{link}}"><i class="{{icon_class}}"></i></a></li>
+                {{ /if }}
+                {{ /social_media }}
+            {{ /page_builder }}
+        </ul>
+        <div class="flex flex-wrap gap-3 align-middle justify-between border-b border-gray-700 2xl:mb-16 xl:mb-14 lg:mb-12 md:mb-10 mb-8 xl:pb-[18px] pb-3">
+            {{page_builder}}
+            {{ if type == "intro_section" }}
+            {{left_right_text}}
+            <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight text-black font-medium block mb-0">{{text}}</p>
+            {{/left_right_text}}
+            {{ /if }}
+            {{/page_builder}}
+        </div>
+</div>
+{{/if}}

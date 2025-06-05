@@ -1,0 +1,43 @@
+<section class="relative bg-gray-500 2xl:py-20 xl:py-16 lg:py-14 md:py-12 py-10">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="2xl:text-4xl lg:text-3xl sm:text-1xl text-xl lg:mb-5 mb-4 leading-lineHeight text-black font-Larken font-medium">
+                {{ page_title }}
+            </h1>
+            <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">
+            {{effective_date}}
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="relative overflow-hidden 2xl:pt-20 xl:pt-16 lg:pt-14 md:pt-12 sm:pt-8 pt-7 pb-7 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-14 2xl:pb-16">
+    <div class="container relative z-1">
+        <div class="max-w-[900px] w-full mx-auto">
+            {{ section}}
+                <div class="md:mb-10 mb-8">
+                    <h4 class="lg:text-25 sm:text-20 text-lg lg:mb-5 mb-3 leading-lineHeight text-black font-Larken font-medium">
+                        {{ heading }}
+                    </h4>
+
+                    {{ if body }}
+                        <p class="lg:text-20 md:text-18 text-md lg:mb-5 mb-3 leading-lineHeight text-gray-800 font-Satoshi">
+                            {{ body }}
+                        </p>
+                    {{ /if }}
+
+                    {{ if list_items }}
+                        <ul>
+                            {{ list_items }}
+                                <li class="flex items-center lg:gap-4 gap-2 lg:text-20 md:text-18 text-md lg:mb-4 mb-3 leading-lineHeight text-gray-800 font-Satoshi">
+                                    <img class="lg:w-5 lg:h-5 w-4 h-4 object-contain" src="{{icon   }}" alt="check-arrow">
+                                    <span>{{ text }}</span>
+                                </li>
+                            {{ /list_items }}
+                        </ul>
+                    {{ /if }}
+                </div>
+            {{ /section }}
+        </div>
+    </div>
+</section>

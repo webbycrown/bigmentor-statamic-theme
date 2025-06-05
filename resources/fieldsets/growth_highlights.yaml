@@ -1,0 +1,139 @@
+title: 'Growth Highlights Graph'
+fields:
+  -
+    handle: chart_type
+    field:
+      options:
+        bar: 'Bar Chart'
+        pie: 'PI Chart'
+        line: 'Line Chart'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Chart Type'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: section_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Section Title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: chart_data
+    field:
+      fields:
+        -
+          handle: year
+          field:
+            mode: single
+            inline: false
+            full_width: false
+            columns: 1
+            rows: 1
+            time_enabled: false
+            time_seconds_enabled: false
+            format: 'Y'
+            type: date
+            display: year
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: sunny
+          field:
+            input_type: text
+            character_limit: 5
+            antlers: false
+            type: text
+            display: Sunny
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: rainy
+          field:
+            input_type: text
+            character_limit: 5
+            antlers: false
+            type: text
+            display: Rainy
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Chart Data'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: about_highlights
+    field:
+      fields:
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: description
+          field:
+            antlers: false
+            type: textarea
+            display: Description
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 6
+      min_rows: 3
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'About Highlights'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required

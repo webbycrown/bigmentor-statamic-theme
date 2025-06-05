@@ -1,0 +1,59 @@
+{{ if if_have_a_description == true }}
+<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-75"
+    {{ if image }}style="background-image: url('{{ image:url }}')" {{ else }}class="bg-technology_report_bg" {{ /if }}>
+    <div class="container 2xl:py-[70px] xl:py-16 lg:py-14 md:py-12 py-10">
+        <div class="flex justify-between flex-col md:flex-row gap-7 relative z-1">
+            <div class="w-full max-w-fit">
+                <h2
+                    class="2xl:text-4xl lg:text-3xl sm:text-1xl text-xl leading-lineHeight text-white font-Larken font-medium">
+                    {{ title }}
+                </h2>
+                {{ if button }}
+                {{button}}
+                <a class="all-btn btn-outline bg-vividblue-400 border-vividblue-400" href="{{ link }}">
+                    {{ text }}
+                    {{ if icon ends_with ".svg" }}
+                    {{ svg src='{icon}' class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13" }}
+                    {{ else }}
+                    <img src="{{ icon }}" alt="" class="ml-2 inline-block" width="14" height="13">
+                    {{ /if }}
+                </a>
+                {{/button}}
+                {{ /if }}
+
+            </div>
+            <div class="w-full max-w-[750px]">
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-white">
+                    {{ description }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{{ else }}
+<div class="relative my-7 sm:my-8 md:my-10 lg:my-12 xl:my-14 2xl:my-16 lg:w-[calc(100%-100px)] md:w-[calc(100%-50px)] w-[calc(100%-16px)] mx-auto bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-60"
+    {{ if image }}style="background-image: url('{{ image:url }}')" {{ else }}class="bg-business-better-bg" {{ /if }}>
+    <div class="container 2xl:py-[70px] xl:py-16 lg:py-14 md:py-12 sm:py-10 py-8">
+        <div class="flex items-center justify-between flex-col md:flex-row gap-10 relative z-1">
+            <h2
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-white font-Larken font-medium w-full max-w-[870px]">
+                {{ title }}
+            </h2>
+
+            {{ if button }}
+            {{button}}
+            <a class="all-btn btn-outline bg-vividblue-400 border-vividblue-400" href="{{ link }}">
+                {{ text }}
+                {{ if icon ends_with ".svg" }}
+                {{ svg src='{icon}' class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13" }}
+                {{ else }}
+                <img src="{{ icon }}" alt="" class="ml-2 inline-block" width="14" height="13">
+                {{ /if }}
+            </a>
+            {{/button}}
+            {{ /if }}
+
+        </div>
+    </div>
+</div>
+{{ /if }}

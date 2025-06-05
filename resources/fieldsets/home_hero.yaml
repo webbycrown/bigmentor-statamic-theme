@@ -1,0 +1,188 @@
+title: 'Home Hero Section'
+fields:
+  -
+    handle: hero_slider
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            slider:
+              display: Slider
+              instructions: null
+              icon: align-right
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Title
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: description
+                  field:
+                    antlers: false
+                    type: textarea
+                    display: Description
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: background_image
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Background Image'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: button_1
+                  field:
+                    fields:
+                      -
+                        handle: text
+                        field:
+                          input_type: text
+                          antlers: false
+                          type: text
+                          display: Text
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          replicator_preview: true
+                          hide_display: false
+                      -
+                        handle: link
+                        field:
+                          input_type: text
+                          antlers: false
+                          type: text
+                          display: Link
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          replicator_preview: true
+                          hide_display: false
+                      -
+                        handle: icon
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          show_set_alt: true
+                          type: assets
+                          display: Icon
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          replicator_preview: true
+                          hide_display: false
+                    mode: table
+                    max_rows: 1
+                    reorderable: true
+                    fullscreen: true
+                    type: grid
+                    display: 'Button 1'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: button_2
+                  field:
+                    fields:
+                      -
+                        handle: text
+                        field:
+                          input_type: text
+                          antlers: false
+                          type: text
+                          display: Text
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          replicator_preview: true
+                          hide_display: false
+                      -
+                        handle: link
+                        field:
+                          input_type: text
+                          antlers: false
+                          type: text
+                          display: Link
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          replicator_preview: true
+                          hide_display: false
+                      -
+                        handle: icon
+                        field:
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          show_set_alt: true
+                          type: assets
+                          display: Icon
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                          replicator_preview: true
+                          hide_display: false
+                    mode: table
+                    max_rows: 1
+                    reorderable: true
+                    fullscreen: true
+                    type: grid
+                    display: 'Button 2'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: navigation_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Navigation Text'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: 'Hero Slider'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

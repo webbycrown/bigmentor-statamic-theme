@@ -1,0 +1,107 @@
+title: 'Terms and Conditions'
+fields:
+  -
+    handle: page_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Page Title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: effective_date
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Effective Date'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: section
+    field:
+      fields:
+        -
+          handle: heading
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Heading
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: body
+          field:
+            antlers: false
+            type: textarea
+            display: Body
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: list_items
+          field:
+            fields:
+              -
+                handle: icon
+                field:
+                  max_files: 1
+                  mode: list
+                  container: assets
+                  restrict: false
+                  allow_uploads: true
+                  show_filename: true
+                  show_set_alt: true
+                  type: assets
+                  display: Icon
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  replicator_preview: true
+                  hide_display: false
+              -
+                handle: text
+                field:
+                  input_type: text
+                  antlers: false
+                  type: text
+                  display: Text
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  replicator_preview: true
+                  hide_display: false
+            mode: table
+            reorderable: true
+            fullscreen: true
+            type: grid
+            display: 'List Items'
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 15
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: section
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

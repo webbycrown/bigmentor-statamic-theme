@@ -1,0 +1,88 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Name
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: Email
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: phone_number
+            field:
+              input_type: tel
+              antlers: false
+              type: text
+              display: 'Phone Number'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: help_topic
+            field:
+              options:
+                'Leadership Coaching': 'Leadership Coaching'
+                'Sales and Business Development': 'Sales and Business Development'
+                'Operational Improvement': 'Operational Improvement'
+                'Marketing and Brand Strategy': 'Marketing and Brand Strategy'
+                'Financial Management': 'Financial Management'
+                'Business Strategy Development': 'Business Strategy Development'
+                Other: Other
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Help Topic'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              default: How_we_can_help_you
+              validate:
+                - required
+          -
+            handle: message
+            field:
+              antlers: false
+              type: textarea
+              display: Message
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required

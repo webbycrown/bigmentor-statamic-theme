@@ -1,0 +1,25 @@
+<div
+    class="wb-partner-section bg-gray-200 relative md:py-9 2xl:py-14 py-7 mb-7 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16">
+    <div class="container">
+        <div class="w-full static">
+            <div class="swiper wb-partner-slider-view">
+                <div class="swiper-wrapper items-center">
+                    {{partners}}
+                    <div class="swiper-slide">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <img class="mx-auto" src="{{url}}" alt="partner">
+                        </div>
+                    </div>
+                    {{/partners}}
+                    {{partners}}
+                    <div class="swiper-slide">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <img class="mx-auto" src="{{url}}" alt="partner">
+                        </div>
+                    </div>
+                    {{/partners}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

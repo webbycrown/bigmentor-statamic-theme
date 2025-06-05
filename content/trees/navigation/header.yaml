@@ -1,0 +1,538 @@
+tree:
+  -
+    id: c200565b-f3bc-457a-812a-d26ac4cdf977
+    title: 'About us'
+    url: /about-us
+    data:
+      layouts: simple
+  -
+    id: 270dc07c-7308-4812-962a-3faadc5c8bad
+    title: Industries
+    url: /industries
+    data:
+      layouts: category-based-grouping
+    children:
+      -
+        id: f69199f3-4981-4a54-87b4-4ce63a77c824
+        title: Technology
+        url: /
+        children:
+          -
+            id: a27cdac5-eebb-4ae7-a3c8-1c6a4209692b
+            title: 'Startups & Innovation'
+            url: /industries/technology
+          -
+            id: f9187720-f976-495a-857f-469bff3c808b
+            title: 'Software Development'
+            url: /industries/software-development
+          -
+            id: 81e7f923-a46c-479b-8ac9-cb4a044adfdc
+            title: 'IT Consulting'
+            url: /industries/it-consulting
+          -
+            id: 63e904ec-2f5a-4b49-a96e-a59df4ff9d53
+            title: Cybersecurity
+            url: /industries/cybersecurity
+          -
+            id: 892339d8-a9d7-4691-9aec-ff8cdb9587ac
+            title: 'Cloud Computing'
+            url: /industries/cloud-computing
+      -
+        id: aed9fb4a-13ff-413c-a757-881ef33b82ca
+        title: Healthcare
+        url: /
+        children:
+          -
+            id: 93786536-0169-4518-a51a-ae27065c23d8
+            title: 'Medical Practices'
+            url: /industry/expertise/medical-practices
+          -
+            id: 6bb0145f-59cb-48f0-b912-c2d17fe5845d
+            title: 'Health Services'
+            url: /industry/expertise/health-services
+          -
+            id: c3a03132-8895-42d7-b67b-d6d673748b11
+            title: 'Biotech Firms'
+            url: /industry/expertise/biotech-firms
+          -
+            id: 9aa7e61a-cd1c-42d0-9257-c84286923dd3
+            title: Pharmaceuticals
+            url: /industry/expertise/pharmaceuticals
+          -
+            id: b0ad1124-cc58-43b7-9cac-eb20ba88ffe6
+            title: 'Medical Devices'
+            url: /industry/expertise/medical-devices
+      -
+        id: 14505a68-ec46-4c87-bdf6-11f144c4afbd
+        title: Finance
+        url: /
+        children:
+          -
+            id: bfffaa77-944c-4d0f-bacf-5412feccb116
+            title: Banking
+            url: /industries/finance
+          -
+            id: 7f80c2e3-a5fc-41cc-86eb-22a05264239c
+            title: Investment
+            url: /industries/Investment
+          -
+            id: 1ce5e7e9-0bb1-4ba5-8fee-4ec6db202194
+            title: 'Financial Planning'
+            url: /industries/financial-planning
+          -
+            id: f16607bf-5d31-4a8f-9caf-be891592b4f3
+            title: Insurance
+            url: /industries/Insurance
+          -
+            id: 596f9e2a-8dca-4ed4-b311-855524ce512d
+            title: 'Wealth Management'
+            url: /industries/wealth-management
+      -
+        id: 76b34775-a37b-4316-b6ba-2105d4684c69
+        title: Retail
+        url: /
+        children:
+          -
+            id: 99b25a6a-b950-49a8-abff-19df5330eb8a
+            title: E-commerce
+            url: /industries/retail
+          -
+            id: b314bb1e-5a75-42b6-969c-9c878a3b3da1
+            title: 'Brick-and-Mortar Stores'
+            url: /industries/brick-and-mortar
+          -
+            id: ebb31fab-c985-486c-bfed-87be3330726a
+            title: 'Product Management'
+            url: /industries/product-management
+          -
+            id: f514b2ee-c708-4288-8261-f67b0a455c4a
+            title: 'Luxury Goods'
+            url: /industries/luxury-goods
+          -
+            id: 319bccb0-8295-4687-8406-12985d822750
+            title: 'Consume Electronics'
+            url: /industries/consumer-electronics
+      -
+        id: 957ec852-f433-42ec-b741-4afb9eaf4e0c
+        title: Manufacturing
+        url: /
+        children:
+          -
+            id: cbf662c1-f4cf-4a93-98f8-eb3548f65c2e
+            title: Production
+            url: /industries/manufacturing
+          -
+            id: e5dd034b-db2a-4522-b99b-09451e1072aa
+            title: 'Leadership Transformation'
+            url: /industries/leadership
+          -
+            id: b62f5060-8d6a-400f-957f-3fbfdbe07c0c
+            title: 'Process Improvement'
+            url: /industries/Improvement
+          -
+            id: 573e2cd9-91fe-48d4-b423-b40a85effa24
+            title: 'Automotive Manufacturing'
+            url: /industries/automotive-manufacturing
+          -
+            id: df4bd5a9-5d4e-40c5-bc92-9c2ab8b6a0b6
+            title: 'Electronics Manufacturing'
+            url: /industries/electronics-manufacturing
+      -
+        id: 48c5b993-4989-4b5a-8f67-caef198c0ec4
+        title: 'Real Estate'
+        url: /
+        children:
+          -
+            id: 380199c2-86b8-4b4d-a79c-36d979b77a8b
+            title: 'Real Estate Development'
+            url: /industries/real-estate
+          -
+            id: 5cd6b18d-3857-454c-b39d-7177825162d0
+            title: 'Property Management'
+            url: /industries/property-management
+          -
+            id: 10c65bd2-1ab6-4060-961f-e7676fbfe2d1
+            title: Brokerage
+            url: /industries/brokerage
+          -
+            id: 086e7053-6554-4877-8bb3-8ac90dcdb01e
+            title: 'Commercial Real Estate'
+            url: /industries/commercial
+      -
+        id: 22304a53-2a88-45ef-b561-8e310b8d1048
+        title: Hospitality
+        children:
+          -
+            id: 4a31f543-00e6-4310-b35d-2b92b25b7395
+            title: Hotels
+            url: /industries/hospitality
+          -
+            id: c6e69fbf-3f90-4d14-9102-4fa7a772aa62
+            title: Restaurants
+            url: /industries/restaurants
+          -
+            id: 1291c1cb-acbc-45ba-8e67-06706dba6135
+            title: 'Travel Services'
+            url: /industries/travel-services
+          -
+            id: e3a73d53-06f7-40c4-8a3e-f3185e0bccba
+            title: 'Event Planning'
+            url: /industries/event-planning
+          -
+            id: 3f375e97-cb15-401f-b988-259213679134
+            title: Tourism
+            url: /industriess/tourism
+      -
+        id: a8b09919-70e0-48ae-9578-7ba818a0a453
+        title: Education
+        children:
+          -
+            id: 350589f4-0e3a-4b70-a925-48b4c86d8289
+            title: Schools
+            url: /industries/education
+          -
+            id: 6a8ececc-751c-4225-aefa-cf32f8d1ec0d
+            title: 'Training Institutions'
+            url: /industries/training-institutions
+          -
+            id: 8827863a-aab6-4add-b400-ec100d1e0a7a
+            title: 'Educational Technology'
+            url: /industries/educational
+          -
+            id: edfce601-57f7-464a-b258-7e1625495e93
+            title: 'Higher Education'
+          -
+            id: 397fd1ac-ff51-4ca6-a123-9d6cd92bbf9c
+            title: 'Vocational Training'
+            url: /industries/vocational-training
+      -
+        id: 4c35da18-0c6a-478d-90c7-664d369b48de
+        title: Agriculture
+        children:
+          -
+            id: 1e0a6a34-d649-4622-9d91-996bcda9a432
+            title: Farming
+            url: /industries/agriculture
+          -
+            id: b62cf38f-db3a-401c-b6ff-ffde735ad5bd
+            title: Agribusiness
+            url: /industries/agribusiness
+          -
+            id: c8d93b68-3e82-4fa5-b5ad-020a505ea2c6
+            title: 'Food Production'
+            url: /industries/food-production
+          -
+            id: c37c39a6-1fe1-4ee2-b169-22bf142aecc4
+            title: 'Sustainable Agriculture'
+            url: /industries/sustainable-agriculture
+          -
+            id: 27cd2f55-4d1f-476c-8268-5cd970830021
+            title: 'Crop Management'
+            url: /industries/crop-management
+      -
+        id: 130cf216-e399-4723-82f0-74b63de56518
+        title: Telecommunications
+        children:
+          -
+            id: 32705edd-4f61-4b28-82c7-bc40d60db066
+            title: 'Network Services'
+            url: /industries/telecommunications
+          -
+            id: 1257ca61-d149-453c-874a-9a0cd53e8bad
+            title: 'Mobile Technology'
+            url: /industries/mobile-technology
+          -
+            id: 33fdfa24-bd78-4752-a73d-394af850ad0c
+            title: Infrastructure
+            url: /industries/Infrastructure
+          -
+            id: 8cd9402e-c502-4ced-bd1b-e2a57f0c7099
+            title: 'Broadband Services'
+            url: /industries/broadband
+          -
+            id: 864a95aa-b1e6-48c5-b97f-e62d9bd4e0fc
+            title: 'Telecom Equipment'
+            url: /industries/telecom
+  -
+    id: f4fcad18-dae4-45a1-8f0f-ed847b33c4ef
+    title: 'Our Services'
+    url: /services
+    data:
+      layouts: grid
+    children:
+      -
+        id: af4cc3cc-190a-4f36-9f15-8bc403561473
+        title: 'Business Strategy Development'
+        url: /services/business-strategy
+        data:
+          icon: image/BusinessStrategyDevelopmentIcon.svg
+      -
+        id: 14bb074f-9065-4f95-8662-8b2e73171c67
+        title: 'Leadership Coaching'
+        url: /services/leadership-coaching
+        data:
+          icon: image/LeadershipCoachingIcon.svg
+      -
+        id: 96608272-0b4a-4029-88eb-bb88d0eb6437
+        title: 'Operational Improvement'
+        url: /services/operational
+        data:
+          icon: image/OperationalImprovementIcon.svg
+      -
+        id: c560ef6a-f5ac-4b70-b848-48ffca8e2450
+        title: 'Marketing and Brand Strategy'
+        url: /services/marketing-strategy
+        data:
+          icon: image/MarketingandBrandStrategyIcon.svg
+      -
+        id: 7ab7e805-5a4d-41c3-b7ea-28240b6d33bb
+        title: 'Financial Management'
+        url: /services/financial-management
+        data:
+          icon: image/FinancialPlanning.png
+      -
+        id: 8a036d0e-baf7-4755-8167-0306dbd38cfe
+        title: 'Sales and Business Development'
+        url: /services/sales-development
+        data:
+          icon: image/Sales-and-Business-Development.svg
+      -
+        id: 4a56128d-e1fd-49e6-8aa2-52d5283a96ad
+        title: 'Talent Management'
+        url: /services/talent-management
+        data:
+          icon: image/TalentManagementIcon.svg
+      -
+        id: ac1e569d-e767-436c-b852-85feb6cca53f
+        title: 'Innovation Management'
+        url: /services/innovation-management
+        data:
+          icon: image/InnovationManagementIcon.svg
+      -
+        id: 9282bc73-e48b-4d4e-bd05-42552d35f461
+        title: 'Legal and Compliance'
+        url: /services/legal-compliance
+        data:
+          icon: image/LegalandComplianceIcon.svg
+      -
+        id: 78ac6593-e98c-49a0-a273-ebd64f50b134
+        title: 'Customer Service Excellence'
+        url: /services/customer-service-excellence
+        data:
+          icon: image/CustomerServiceExcellenceIcon.svg
+  -
+    id: ef25f373-6369-4231-b8ae-93e256705166
+    title: 'Our Insights'
+    url: /insights
+    data:
+      layouts: category-based-grouping
+    children:
+      -
+        id: faca1217-ca20-4995-9392-ed2cf994f9f3
+        title: 'Tools & Calculators'
+        children:
+          -
+            id: 56a33e1d-db6c-46a0-bcdf-fe31b90018b0
+            title: 'Business Valuation Tools'
+            url: /insights/mentee-to-mentor
+          -
+            id: 3ffedb31-9c4e-4612-b19f-0cfef6e09f0a
+            title: 'Financial Calculator'
+            url: /insights/financial-calculator
+          -
+            id: 035fb667-4c19-4104-b77a-89f61f80848f
+            title: 'Market Analysis Tools'
+            url: /insights/market-analysis-tools
+          -
+            id: 1333f95d-937c-4731-b3e1-8af50965ca71
+            title: 'Productivity Tools'
+            url: /insights/productivity-tools
+      -
+        id: 740e7513-5908-42b0-a963-ceccce42d0d3
+        title: 'Case Studies'
+        children:
+          -
+            id: 9df16b18-9ac5-40e5-a103-0116eb582be0
+            title: 'Business Growth'
+            url: /case-studies/enhancing
+          -
+            id: 64f70a17-0527-4d93-a932-948833ec9665
+            title: 'Operational Excellence'
+            url: /case-studies/journeys-of-growth
+          -
+            id: 6d5ecddd-21b9-42d8-beff-37cbf574616a
+            title: 'Strategic Planning'
+            url: /case-studies/transformative-success
+          -
+            id: 028546c4-0c64-4c76-95d1-72b3e7e10f5a
+            title: 'Crisis Management'
+            url: /case-studies/startup-success
+      -
+        id: f4bc089a-e004-47c3-9fa0-e0c7b12c9b25
+        title: 'Webinars & Events'
+        url: /events
+        children:
+          -
+            id: a47310b3-49df-487c-a054-3cdcd30de534
+            title: 'Upcoming Webinars'
+            url: /insights/expert-advice
+          -
+            id: 3e0f45d7-0429-4d3d-a194-c70a89d11b23
+            title: 'Past Webinar Recordings'
+            url: /insights/past-webinar-recordings
+          -
+            id: 8b787c28-8efe-4076-b6ae-6ad680c62bc6
+            title: 'Workshops and Seminars'
+            url: /insights/seminars
+          -
+            id: a901abbf-95cd-422d-ae90-05e9429c7cd2
+            title: 'Industry Conferences'
+            url: /insights/Industry-conferences
+      -
+        id: bad2a191-8c8f-4924-bdfc-85a9e6a658b7
+        title: 'Industry Trends'
+        children:
+          -
+            id: 4c908186-6f14-4536-8b8b-199c3654ab5b
+            title: 'Emerging Markets'
+            url: /insights/market-trends
+          -
+            id: 60420669-806e-4089-9836-5bdc24bad31a
+            title: 'Technology Innovations'
+            url: /insights/technology-innovations
+          -
+            id: 685fde02-679c-45db-8535-459f074748ac
+            title: 'IT Consumer Behavior Shifts'
+            url: /insights/IT-Consumer
+          -
+            id: 54795dbe-026b-456c-b201-6e589bbe42bf
+            title: 'Regulatory Changes'
+            url: /insights/regulatory-changes
+      -
+        id: bc33f5a4-3e71-4df0-82df-90e36d4af5e6
+        title: 'Success Stories'
+        children:
+          -
+            id: 0dd7762e-034d-403f-bf7c-44e48ace0c46
+            title: 'Startup Journeys'
+            url: /insights/leadership-management
+          -
+            id: d51615da-26e2-455a-aea1-da071d451ae1
+            title: 'Leadership Transformation'
+            url: /insights/leadership-transformation
+          -
+            id: 99a51e16-8162-493e-a06c-1fdfbcdff366
+            title: 'Financial Turnarounds'
+            url: /insights/financial-turnarounds
+          -
+            id: a168d6e5-1f6f-4604-9be2-22e501c11096
+            title: 'Innovative Solutions'
+            url: /insights/Innovative-solutions
+      -
+        id: 74c5031d-3c09-43c5-8054-cf2daae11718
+        title: 'Guides & Resources'
+        children:
+          -
+            id: 9ba7cb6d-c4a1-47ce-ac41-30f788b22a10
+            title: 'Business Planning'
+            url: /insights/innovation-technology
+          -
+            id: 9000ea78-fe8d-4a17-a341-69e9e0c766d1
+            title: 'Marketing Strategies'
+            url: /insights/marketing-strategies
+          -
+            id: 8976bd24-282b-4665-b7e2-62b1709cf65f
+            title: 'Financial Manage Guides'
+            url: /insights/financial-manage-guides
+          -
+            id: 65471794-f2c4-49ee-96c2-d509894f4575
+            title: 'Leadership Development'
+            url: /insights/leadership-bevelopment
+      -
+        id: 3f0a75b2-d44d-4824-b162-891d7ba46ff4
+        title: 'Research & Reports'
+        children:
+          -
+            id: 8bc1f90f-e37c-49e2-a1c6-50127a3ac2b0
+            title: 'Innovation Trends'
+            url: /insights/financial-insights
+          -
+            id: 0d183be9-e3a4-4a10-b2a1-aafefe96d25e
+            title: 'Performance Metrics'
+            url: /insights/performance-metrics
+          -
+            id: 68e1bca2-7e91-442f-ad32-a98fe3f22201
+            title: 'Market Analysis'
+            url: /insights/market-analysis
+          -
+            id: ac49a461-7cb4-4d2b-9249-8206ba2d028d
+            title: 'Consumer Insights'
+            url: /insights/consumer-insights
+      -
+        id: c27cbf70-f90c-4558-8637-fd9357ae8bb3
+        title: 'Mentorship FAQs'
+        children:
+          -
+            id: ba4a2e09-b25c-423b-9f66-bbdbf53b65dc
+            title: 'Mentoring Process'
+            url: /insights/mentorship-experiences
+          -
+            id: bb331082-90b8-4198-b6b0-b6d28bfe269d
+            title: 'How to Choose a Mentor'
+            url: /insights/how-choose-mentor
+          -
+            id: 00536cfd-4b97-4981-acd1-b2ee7b0a447b
+            title: 'Mentoring Questions'
+            url: /insights/mentoring-questions
+          -
+            id: 0e4dacef-0e95-4b9b-b665-7fa0f0b5c13b
+            title: 'Mentorship Success Tips'
+            url: /insights/success-tips
+      -
+        id: f3f41048-4150-4ce0-bb1d-364dea98d83f
+        title: 'News & Updates'
+        children:
+          -
+            id: 30715ae3-041b-4805-a9a5-7d70d554ded5
+            title: 'Company Announcements'
+            url: /insights/event-highlights
+          -
+            id: f7188f82-8239-4289-b5ce-5bb4daa8bc0a
+            title: 'Industry News'
+            url: /insights/Industry-news
+          -
+            id: 520cee67-a6c3-4966-b0a8-a07e860328f3
+            title: 'Mentoring Program News'
+            url: /insights/mentoring-program
+          -
+            id: c644233d-b7cb-4569-9a98-4f20fb56ce75
+            title: 'New Service Launches'
+            url: /insights/new-service-launches
+      -
+        id: 1a88c2ae-3370-437d-ae99-65e77aaa00d8
+        title: 'Expert Opinions'
+        children:
+          -
+            id: 57bdc06c-0665-48d2-9fe3-9dbd0742424c
+            title: 'Mentor Interviews'
+            url: /insights/brand-identity
+          -
+            id: d651cb1e-59fc-448d-ae5d-06bdd163414a
+            title: 'Thought Leader Articles'
+            url: /insights/leader-articles
+          -
+            id: 3d81ee6c-5ffc-47fc-8819-bc98c762ff63
+            title: 'Opinion Pieces'
+            url: /insights/opinion-pieces
+          -
+            id: 1230f72c-e916-46d3-b43b-f0edbac089ff
+            title: 'Industry Perspectives'
+            url: /insights/industry-perspectives
+  -
+    id: a096d4af-e114-469d-b95a-396296cced7a
+    title: 'Case Studies'
+    url: /case-studies
+  -
+    id: 0974612d-5d5f-4508-98bf-ec9f8e0ab6a5
+    title: 'Contact us'
+    url: /contact-us

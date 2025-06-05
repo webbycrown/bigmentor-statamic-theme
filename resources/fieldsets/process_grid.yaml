@@ -1,0 +1,133 @@
+title: 'Process Grid'
+fields:
+  -
+    handle: process_grid
+    field:
+      fields:
+        -
+          handle: image
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Image
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: short_description
+          field:
+            character_limit: '200'
+            antlers: false
+            type: textarea
+            display: 'Short Description'
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: button
+          field:
+            fields:
+              -
+                handle: text
+                field:
+                  input_type: text
+                  antlers: false
+                  type: text
+                  display: Text
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  replicator_preview: true
+                  hide_display: false
+                  validate:
+                    - required
+              -
+                handle: link
+                field:
+                  input_type: text
+                  antlers: false
+                  type: text
+                  display: Link
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  replicator_preview: true
+                  hide_display: false
+                  validate:
+                    - required
+              -
+                handle: icon
+                field:
+                  max_files: 1
+                  mode: list
+                  container: assets
+                  restrict: false
+                  allow_uploads: true
+                  show_filename: true
+                  show_set_alt: true
+                  type: assets
+                  display: icon
+                  listable: hidden
+                  instructions_position: above
+                  visibility: visible
+                  replicator_preview: true
+                  hide_display: false
+                  validate:
+                    - required
+            mode: table
+            reorderable: true
+            fullscreen: true
+            type: grid
+            display: Button
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: element_id
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: 'Element Id'
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 5
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Process Grid'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required

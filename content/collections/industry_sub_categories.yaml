@@ -1,0 +1,7 @@
+title: 'Industry Sub Categories'
+route: /industry/expertise/{slug}
+template: industry_sub_categories/show
+revisions: false
+date_behavior:
+  past: public
+  future: private

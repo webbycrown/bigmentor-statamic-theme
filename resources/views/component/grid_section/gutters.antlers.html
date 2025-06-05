@@ -1,0 +1,29 @@
+<div class="wb-insights-from-section relative py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <h2
+            class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 pb-6 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-14 2xl:pb-16 leading-lineHeight text-black font-Larken font-medium">
+            {{section_title}}</h2>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-8 lg:gap-10 xl:gap-14 2xl:gap-16">
+            {{gutters}}
+            <div class="border-t border-t-gray-700 pt-6 md:pt-8 lg:pt-12 xl:pt-14">
+                <div
+                    class="text-black w-20 h-20 lg:w-[100px] lg:h-[100px] border-4 lg:border-[7px] border-gray-200 p-3 rounded-full flex items-center justify-center xl:mb-[25px] lg:mb-4 mb-3">
+                    <img src="{{icon}}" alt="img" class="lg:w-12 lg:h-12 w-10 h-10 object-contain object-center">
+                </div>
+                <h4
+                    class="lg:text-25 sm:text-20 text-lg lg:mb-4 mb-3 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium ">
+                    <a href="{{link}}" class="text-currentColor flex items-center justify-between">
+                        <span>{{title}}</span>
+                        <svg width="24" height="24" class="text-vividblue-400" viewBox="0 0 24 24" fill="none">
+                            <path d="M8 19.0005V5.00049L19 12.0005L8 19.0005Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                    </a>
+                </h4>
+                <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>
+            </div>
+            {{/gutters}}
+        </div>
+    </div>
+</div>

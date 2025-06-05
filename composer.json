@@ -1,0 +1,31 @@
+{
+    "name": "webbycrown/bigmentor-statamic-theme",
+    "description": "BigMentor - A modern, flexible Statamic starter kit to showcase business services and portfolios.",
+    "type": "statamic-starter-kit",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WebbyCrown",
+            "email": "support@webbycrown.com",
+            "homepage": "https://webbycrown.com",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "statamic",
+        "statamic-starter-kit",
+        "statamic-theme",
+        "bigmentor",
+        "business",
+        "portfolio",
+        "services"
+    ],
+    "extra": {
+        "statamic": {
+            "name": "BigMentor - Statamic Theme",
+            "description": "A Statamic starter kit for businesses to showcase services, case studies, and portfolios."
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

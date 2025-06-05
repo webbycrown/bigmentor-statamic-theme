@@ -1,0 +1,126 @@
+<!-- ====== Insights from Section ====== -->
+<div class="wb-insights-from-section relative py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <h2
+            class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-0 leading-lineHeight text-black font-Larken font-medium">
+            {{section_title}}</h2>
+
+        <div class="xl:mt-16 xl:mb-20 my-8">
+            <div class="chart-container w-full">
+                <canvas id="chart" class="w-full" height="450"></canvas>
+            </div>
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+            <script type="text/javascript">
+                Chart.register(ChartDataLabels);
+
+
+                const data = [
+                    {{ chart_data }}
+                        { year: "{{ year }}", sunny: {{ sunny }}, rainy: {{ rainy }} }  {{ if not last }}, {{ /if }}
+                    {{ /chart_data }}
+                 ];
+
+
+                const chart = new Chart(document.getElementById("chart"), {
+                    type: "{{chart_type}}",
+                    data: {
+                        labels: data.map((row) => row.year),
+                        datasets: [
+                            {
+                                label: "",
+                                data: data.map((row) => row.sunny || 0),
+                                backgroundColor: "#2251FF",
+                            },
+                            {
+                                label: "",
+                                data: data.map((row) => row.rainy || 0),
+                                backgroundColor: "#F2F2F2",
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                right: 0
+                            }
+                        },
+                        scales: {
+                            x: {
+                                stacked: true
+                            },
+                            y: {
+                                stacked: true
+                            }
+                        },
+                        interaction: {
+                            mode: "index",
+                            intersect: false
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 0,
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    afterFooter: (items) => {
+                                        const sum = items
+                                            .map((item) => {
+                                                return +item.formattedValue;
+                                            })
+                                            .reduce((total, datapoint) => {
+                                                return total + datapoint;
+                                            }, 0);
+
+                                        return `Total: ${sum}`;
+                                    }
+                                }
+                            },
+                            datalabels: {
+                                display: true,
+                                color: "black",
+                                align: "end",
+                                anchor: "center",
+                                font: {
+                                    size: '10px'
+                                },
+                                formatter: (value, context) => {
+                                    const { datasets } = context.chart.data;
+                                    const stacksCount = Object.keys(context.chart._stacks).length;
+
+                                    if (context.datasetIndex > datasets.length - 1 - stacksCount) {
+                                        return datasets[context.datasetIndex].stack;
+                                    } else {
+                                        return '';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+
+            </script>
+        </div>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-8 lg:gap-10 xl:gap-14 2xl:gap-16">
+            {{about_highlights}}
+            <div class="border-t border-t-gray-700 pt-6 md:pt-8 xl:pt-12">
+                <h4
+                    class="lg:text-25 sm:text-20 text-lg lg:mb-4 mb-3 leading-lineHeight text-black font-Larken font-medium">
+                    {{title}}</h4>
+                <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>
+            </div>
+            {{/about_highlights}}
+        </div>
+    </div>
+</div>

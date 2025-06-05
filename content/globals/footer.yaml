@@ -1,0 +1,53 @@
+title: Footer
+data:
+  footer_about: 'BigMentor provides personalized business mentoring to accelerate growth and refine strategies. Our expert mentors deliver actionable insights, empowering leaders and teams to overcome challenges and achieve their highest potential'
+  footer_logo:
+    - image/main-logo.svg
+  footer_navs: footer
+  copyright_text: '© Copyright by BigMentor - All right reserved.'
+  policies:
+    -
+      id: ma24gu98
+      title: 'Privacy Policy'
+      link: /privacy-policy
+    -
+      id: ma24hdos
+      title: 'Terms & Conditions'
+      link: /terms-and-conditions
+  social_media:
+    -
+      id: ma3wf7co
+      link: 'https://medium.com/'
+      icon_class: fa-medium
+    -
+      id: ma3wgtbs
+      link: 'https://www.youtube.com/'
+      icon_class: fa-youtube
+    -
+      id: ma3wguvs
+      link: 'https://x.com/home?lang=en'
+      icon_class: fa-twitter
+    -
+      id: ma3wgw74
+      link: 'https://www.instagram.com/'
+      icon_class: fa-instagram
+    -
+      id: ma3wh5jc
+      link: 'https://www.facebook.com/'
+      icon_class: fa-facebook-f
+    -
+      id: ma3wi2yg
+      link: 'https://www.linkedin.com/'
+      icon_class: fa-linkedin
+  placeholder: 'Type about here...'
+  bottun:
+    -
+      id: ma3uth5k
+      text: Subscribe
+      link: /
+      icon: image/redirect.svg
+  form: newsletter
+  privacy_consent_text: |-
+    *I have read thed 
+    <a href="/privacy-policy" class="underline text-white hover:no-underline">Privacy Policy</a> 
+    an agree to its terms.

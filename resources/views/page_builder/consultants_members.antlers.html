@@ -1,0 +1,57 @@
+<div class="relative 2xl:py-[120px] xl:py-20 lg:py-16 md:py-14 md:py-12 py-10">
+    <div class="container">
+        <div class="flex items-center justify-between flex-col gap-8 md:gap-10 lg:gap-14 xl:gap-18 2xl:gap-20 md:flex-row">
+            <div class="w-full max-w-[640px]">
+                <div class="relative before:content-[''] before:pt-[121%] before:block">
+                    {{page_builder}}
+                    {{if type == "consultants_members"}}
+                        <img class="absolute top-0 left-0 w-full h-full object-top object-cover" src="{{image}}" alt="members">
+                    {{/if}}
+                    {{/page_builder}}
+                </div>
+            </div>
+            <div class="w-full max-w-[700px] bg-white flex items-center justify-center">
+                <div class="text-black">
+                    <h2 class="2xl:text-45 lg:text-3xl sm:text-1xl text-28 mb-3 md:mb-4 leading-none text-black font-Larken font-medium">{{title}}</h2>
+                    <p class="lg:text-20 md:text-18 text-md leading-lineHeight mb-3 md:mb-5 lg:mb-[30px] font-normal text-gray-800 uppercase">- {{position}}</p>
+                    <p class="lg:text-20 md:text-18 text-md leading-lineHeight mb-5 lg:mb-7 xl:mb-9 2xl:mb-11 font-normal text-gray-800">{{about}}</p>
+                    <h3 class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-3 md:mb-5 leading-lineHeight text-black font-Larken font-medium">{{experience}}</h3>
+                    <ul class="mb-5 lg:mb-7 xl:mb-9 2xl:mb-11">
+                        {{key_points}}
+                        <li class="flex items-center lg:gap-4 gap-2 lg:text-20 md:text-18 text-md mb-3 leading-lineHeight text-gray-800 font-Satoshi">
+                            <img class="lg:w-5 lg:h-5 w-4 h-4 object-contain" src="{{icon}}" alt="check-arrow">
+                            <span>{{key}}: {{point}}</span>
+                        </li>
+                        {{/key_points}}
+                    </ul>
+                    <h3 class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black font-Larken font-medium">{{social_text}}</h3>
+                    <p class="2xl:text-lg text-md leading-lineHeight mb-3 md:mb-5 lg:mb-[30px] font-normal text-gray-800">Email:<a href="mailto:{{email}}" class="hover:text-vividblue-400">{{email}}</a></p>
+                    <ul class="flex flex-wrap gap-3">
+                    {{page_builder}}
+                        {{ social_media }}
+                        <li>
+                            {{ if icon}}
+                            {{if icon ends_with ".svg"}}
+                            <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                                href="{{link}}"> {{ svg src="{{icon}}" class="ml-1" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none"
+                                }}</a>
+                                
+                                {{ else }}
+                                <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                                href="{{link}}"><img src="{{ icon }}" class="ml-1" width="16" height="16" alt=""></a></li>
+                                
+                                {{ /if }}
+                                {{ else }}
+                                <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                                href="{{link}}"><i class="{{icon_class}}"></i></a></li>
+                                {{ /if }}
+                                {{ /social_media }}
+                            </li>
+                    {{ /page_builder }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
