@@ -450,7 +450,6 @@ video {
     font-size: 18px;
   }
 }
-
     .btn-outline {
   display: inline-block;
   cursor: pointer;
@@ -469,21 +468,18 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
     .btn-outline:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(34 81 255 / var(--tw-text-opacity));
 }
-
     @media (min-width: 768px) {
 
   .btn-outline {
     font-size: 16px;
   }
 }
-
     @media (min-width: 992px) {
 
   .btn-outline {
@@ -494,7 +490,6 @@ video {
     font-size: 17px;
   }
 }
-
     @media (min-width: 1480px) {
 
   .btn-outline {
@@ -505,7 +500,6 @@ video {
     font-size: 18px;
   }
 }
-
     .swiper-button-prev,
     .swiper-button-next {
   margin-top: 0px;
@@ -523,13 +517,11 @@ video {
   --tw-text-opacity: 1;
   color: rgb(34 81 255 / var(--tw-text-opacity));
 }
-
     .swiper-button-prev:hover,
     .swiper-button-next:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(34 81 255 / var(--tw-bg-opacity));
 }
-
     @media (min-width: 992px) {
 
   .swiper-button-prev,
@@ -538,7 +530,6 @@ video {
     width: 2.5rem;
   }
 }
-
     @media (min-width: 1170px) {
 
   .swiper-button-prev,
@@ -547,15 +538,12 @@ video {
     width: 3rem;
   }
 }
-
     .swiper-button-prev {
   left: 0px;
 }
-
     .swiper-button-next {
   right: 0px;
 }
-
     .swiper-button-next:after {
   height: 100%;
   width: 1rem;
@@ -565,14 +553,12 @@ video {
   background-repeat: no-repeat;
   font-size: 0;
 }
-
     @media (min-width: 992px) {
 
   .swiper-button-next:after {
     width: 1.5rem;
   }
 }
-
     .swiper-button-prev:after {
   height: 100%;
   width: 1rem;
@@ -582,21 +568,18 @@ video {
   background-repeat: no-repeat;
   font-size: 0;
 }
-
     @media (min-width: 992px) {
 
   .swiper-button-prev:after {
     width: 1.5rem;
   }
 }
-
-.swiper-button-next:hover:after,
+    .swiper-button-next:hover:after,
     .swiper-button-prev:hover:after {
   --tw-brightness: brightness(0);
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-
     .accordion-title.open {
   --tw-text-opacity: 1;
   color: rgb(34 81 255 / var(--tw-text-opacity));
@@ -609,6 +592,163 @@ video {
     .accordion-title.open span svg {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+    .cmc_content_page h3 {
+  margin-bottom: 0.75rem;
+  font-family: "Larken", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: calc(100% + 10px);
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+    @media (min-width: 640px) {
+
+  .cmc_content_page h3 {
+    font-size: 22px;
+  }
+}
+    @media (min-width: 768px) {
+
+  .cmc_content_page h3 {
+    font-size: 24px;
+  }
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page h3 {
+    margin-bottom: 1.25rem;
+    font-size: 26px;
+  }
+}
+    @media (min-width: 1170px) {
+
+  .cmc_content_page h3 {
+    font-size: 28px;
+  }
+}
+    @media (min-width: 1480px) {
+
+  .cmc_content_page h3 {
+    font-size: 32px;
+  }
+}
+    .cmc_content_page h4 {
+  margin-bottom: 0.75rem;
+  font-family: "Larken", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: calc(100% + 10px);
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+    @media (min-width: 640px) {
+
+  .cmc_content_page h4 {
+    font-size: 20px;
+  }
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page h4 {
+    margin-bottom: 1.25rem;
+    font-size: 25px;
+  }
+}
+    .cmc_content_page p {
+  margin-bottom: 0.75rem;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  line-height: calc(100% + 10px);
+  --tw-text-opacity: 1;
+  color: rgb(88 88 88 / var(--tw-text-opacity));
+}
+    @media (min-width: 768px) {
+
+  .cmc_content_page p {
+    font-size: 18px;
+  }
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page p {
+    margin-bottom: 1.25rem;
+    font-size: 20px;
+  }
+}
+    .cmc_content_page p:last-child {
+  margin-bottom: 0px;
+}
+    .cmc_content_page ul li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  line-height: calc(100% + 10px);
+  --tw-text-opacity: 1;
+  color: rgb(88 88 88 / var(--tw-text-opacity));
+}
+    @media (min-width: 768px) {
+
+  .cmc_content_page ul li {
+    font-size: 18px;
+    padding-left: 30px;
+    position: relative;
+  }
+  .cmc_content_page ul li:before {
+    content: '';
+    background-image: url('../assets/image/check-arrow.svg');
+    position: absolute;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 2%;
+    left: 0;
+    top: 6px;
+    width: 100%;
+    height: 100%;
+  }
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page ul li {
+    margin-bottom: 1rem;
+    gap: 1rem;
+    font-size: 20px;
+  }
+}
+    .cmc_content_page ul li img {
+  height: 1rem;
+  width: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page ul li img {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+    .cmc_content_page ul + h2,
+    .cmc_content_page ul + h3,
+    .cmc_content_page ul + h4,
+    .cmc_content_page p + h2,
+    .cmc_content_page p + h3,
+    .cmc_content_page p + h4 {
+  margin-top: 2rem;
+}
+    @media (min-width: 768px) {
+
+  .cmc_content_page ul + h2,
+    .cmc_content_page ul + h3,
+    .cmc_content_page ul + h4,
+    .cmc_content_page p + h2,
+    .cmc_content_page p + h3,
+    .cmc_content_page p + h4 {
+    margin-top: 2.5rem;
+  }
 }
 
 *, ::before, ::after {
@@ -3601,6 +3741,10 @@ video {
     text-align: center;
   }
 
+  .md\:text-18 {
+    font-size: 18px;
+  }
+
   .md\:text-1xl {
     font-size: 35px;
   }
@@ -5375,9 +5519,6 @@ video {
     font-size: 16px;
   }
 }
-
-
-
 .wc-custom-select select {
   width: 100%;
   border-bottom: 1px solid #000;

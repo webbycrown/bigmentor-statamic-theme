@@ -25,81 +25,56 @@ fields:
       replicator_preview: true
       hide_display: false
   -
-    handle: section
+    handle: article
     field:
-      fields:
-        -
-          handle: heading
-          field:
-            input_type: text
-            antlers: false
-            type: text
-            display: Heading
-            listable: hidden
-            instructions_position: above
-            visibility: visible
-            replicator_preview: true
-            hide_display: false
-        -
-          handle: body
-          field:
-            antlers: false
-            type: textarea
-            display: Body
-            listable: hidden
-            instructions_position: above
-            visibility: visible
-            replicator_preview: true
-            hide_display: false
-        -
-          handle: list_items
-          field:
-            fields:
-              -
-                handle: icon
-                field:
-                  max_files: 1
-                  mode: list
-                  container: assets
-                  restrict: false
-                  allow_uploads: true
-                  show_filename: true
-                  show_set_alt: true
-                  type: assets
-                  display: Icon
-                  listable: hidden
-                  instructions_position: above
-                  visibility: visible
-                  replicator_preview: true
-                  hide_display: false
-              -
-                handle: text
-                field:
-                  input_type: text
-                  antlers: false
-                  type: text
-                  display: Text
-                  listable: hidden
-                  instructions_position: above
-                  visibility: visible
-                  replicator_preview: true
-                  hide_display: false
-            mode: table
-            reorderable: true
-            fullscreen: true
-            type: grid
-            display: 'List Items'
-            listable: hidden
-            instructions_position: above
-            visibility: visible
-            replicator_preview: true
-            hide_display: false
-      mode: table
-      max_rows: 15
-      reorderable: true
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - h1
+        - h4
+        - h5
+        - h6
+        - underline
+        - strikethrough
+        - small
+        - superscript
+        - subscript
+        - code
+        - codeblock
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      smart_typography: true
+      save_html: true
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      word_count: false
       fullscreen: true
-      type: grid
-      display: section
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: true
+      previews: true
+      type: bard
+      display: Article
       listable: hidden
       instructions_position: above
       visibility: visible

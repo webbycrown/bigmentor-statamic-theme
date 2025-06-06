@@ -1,66 +1,9 @@
 title: 'Body Content Artical Post'
 fields:
   -
-    handle: article_fild_type
-    field:
-      options:
-        bard: 'Bard filds'
-        markdown: 'Markdown filds'
-      taggable: false
-      push_tags: false
-      multiple: false
-      clearable: false
-      searchable: true
-      cast_booleans: false
-      type: select
-      display: 'Article Fild type'
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-      validate:
-        - required
-  -
     handle: article
     field:
-      restrict: false
       buttons:
-        - bold
-        - italic
-        - unorderedlist
-        - orderedlist
-        - quote
-        - link
-        - image
-        - table
-        - code
-        - codeblock
-      automatic_line_breaks: true
-      automatic_links: false
-      escape_markup: false
-      heading_anchors: true
-      smartypants: false
-      table_of_contents: false
-      antlers: true
-      type: markdown
-      display: Article
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-      validate:
-        - sometimes
-      always_save: true
-      if:
-        article_fild_type: 'equals markdown'
-  -
-    handle: bard_artical
-    field:
-      buttons:
-        - h2
-        - h3
         - bold
         - italic
         - unorderedlist
@@ -70,6 +13,9 @@ fields:
         - anchor
         - image
         - table
+        - h1
+        - h2
+        - h3
         - h4
         - h5
         - h6
@@ -104,14 +50,11 @@ fields:
       collapse: false
       previews: true
       type: bard
-      display: 'Bard Article'
+      display: Article
       listable: hidden
       instructions_position: above
       visibility: visible
       replicator_preview: true
       hide_display: false
       validate:
-        - sometimes
-      always_save: true
-      if:
-        article_fild_type: 'equals bard'
+        - required
