@@ -67,6 +67,17 @@ BigMentor is perfect for:
   - Error Page Setting
   - Common Settings "Like loader ect.."
 
+## Category Support
+
+- Easily assign multiple categories to entries using an intuitive tag-like interface  
+- Supports multiple categories like:  
+  - Small Business
+  - Blog
+  - Landing Page
+  - News
+  - Portfolio
+- Enhances organization and filtering of content across pages like blogs, services, and industries.
+
 ## Installation
 
 Follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit) to get started with BigMentor.
