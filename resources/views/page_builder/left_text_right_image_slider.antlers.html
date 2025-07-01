@@ -1,0 +1,68 @@
+<div class="wb-testimonials-section relative py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <div class="max-w-[675px] w-full pr-10">
+            <h2
+                class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-3 md:mb-5 xl:mb-8 2xl:mb-11 leading-lineHeight text-black font-Larken font-medium">
+                {{section_title}}</h2>
+        </div>
+        <div class="relative">
+
+            <div class="flex items-center justify-between md:flex-row flex-col gap-5">
+                <div class="w-full md:w-6/12 md:max-w-[562px] overflow-hidden">
+                    <div class="swiper wb-testimonials-slider-thumbs">
+                        <div class="swiper-wrapper">
+                            {{grid}}
+                            <div class="swiper-slide">
+                                <div class="relative w-full">
+                                    <div class="before:content-[''] before:block before:pt-[75%]">
+                                        <img class="w-full h-full absolute top-0 left-0 object-cover"
+                                            src="{{image}}" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                            {{/grid}}
+                          
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full md:w-6/12 md:max-w-[758px] relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[1px] before:h-[calc(100%-90px)] md:before:h-[calc(100%-100px)] lg:before:h-[calc(100%-110px)] before:bg-vividblue-400">
+                    <div class="swiper wb-testimonials-slider-view">
+                        <div class="swiper-wrapper">
+                            {{grid}}
+                            <div class="swiper-slide">
+                                <div class="w-full">
+                                    <p
+                                        class="2xl:text-24 xl:text-22 lg:text-20 text-lg leading-lineHeight tracking-wide mb-7 md:mb-10 lg:mb-12 pl-7 md:pl-10 lg:pl-12 text-black font-Satoshi font-normal">
+                                        {{description}}</p>
+                                    <div class="flex items-center gap-5">
+                                        <div class="w-full max-w-[60px] h-full overflow-hidden rounded-full">
+                                            <img src="{{user_image}}" alt="Kevin Walke">
+                                        </div>
+                                        <div class="testimonial-text">
+                                            <h4
+                                                class="leading-lineHeight font-bold text-black font-Larken text-lg lg:text-20 xl:text-22">
+                                                {{name}}</h4>
+                                            <span
+                                                class="leading-lineHeight tracking-wide font-medium text-gray-800 font-Satoshi text-sm lg:text-md">-
+                                                {{position}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/grid}}
+                           
+                        </div>
+                    </div>
+                    <div
+                        class="quote-img absolute right-0 2xl:w-16 xl:w-14 lg:w-12 md:w-10 w-8 h-auto bottom-0 bg-white z-10 pointer-events-none">
+                        <img src="{{quote_image}}" alt="quote icon">
+                    </div>
+                </div>
+            </div>
+            <div
+                class="swiper-pagination mt-3 md:-mt-5 xl:-mt-8 2xl:-mt-11 static md:absolute md:top-[-36px] md:right-2 md:ml-auto md:w-fit md:h-fit font-Satoshi font-normal text-black 2xl:text-24 xl:text-22 lg:text-20 text-lg">
+            </div>
+        </div>
+    </div>
+</div>

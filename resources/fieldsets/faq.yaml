@@ -1,0 +1,51 @@
+title: 'Frequently Asked Questions'
+fields:
+  -
+    handle: section_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'section title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: questions_answers
+    field:
+      fields:
+        -
+          handle: questions
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Questions
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: answers
+          field:
+            antlers: false
+            type: textarea
+            display: Answers
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Questions & Answers'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

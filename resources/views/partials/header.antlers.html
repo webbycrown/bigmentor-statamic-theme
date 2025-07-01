@@ -1,0 +1,563 @@
+<!-- ====== Header ====== -->
+{{ if url == '/' or url == '/industries/{slug}'  }}
+<div class="absolute top-0 left-0 w-full header-style-1 z-30 bg-transparent border-b border-b-lightborder-100 header-transparent transition-all"
+id="header">
+
+<div class="container">
+    <div class="top-bar">
+        <div class="flex justify-between items-center border-b border-b-lightborder-100 md:py-2 py-1">
+            <ul class="flex items-center lg:gap-7 md:gap-5 gap-3 contact-info">
+                {{ header }}
+                {{ contact_info }}
+                <li>
+                    {{if count == 1}}
+                    <a href="tel:{{ text }}"
+                    class="text-white text-[0] hover:opacity-80 transition-all lg:text-sm font-medium flex items-center leading-lineHeight">
+                    {{ svg src="{{icon}}" class="icon mr-[6px] fill-current" }}
+                    {{ text }}
+                </a>
+                {{elseif count == 2}}
+                <a href="mailto:{{ text }}"
+                class="text-white text-[0] hover:opacity-80 transition-all lg:text-sm font-medium flex items-center leading-lineHeight">
+                {{ if icon }}
+                {{ svg src="{{icon}}" class="icon mr-[6px] fill-current" }}
+                {{ /if }}
+                {{ text }}
+            </a>
+            {{/if}}
+        </li>
+        {{ /contact_info }}
+
+    </ul>
+
+    <ul class="flex items-center gap-4">
+
+        {{ social_media }}
+        <li class="social-icon lg:inline-block hidden">
+
+            <a href="{{ link }}"
+            class="text-white text-lg font-light hover:opacity-80 transition-all leading-lineHeight">
+            {{ if icon }}
+            {{ svg src="{{icon}}" class="icon mr-[6px] fill-current" }}
+            {{else}}
+            <i class="fa-brands {{ icon_class }}"></i>
+            {{ /if }}
+        </a>
+    </li>
+    {{ /social_media }}
+</ul>
+</div>
+</div>
+
+<div class="header-middle">
+    <div class="flex items-center justify-between transition-all relative lg:py-0 py-1">
+        <div class="site-logo w-2/4 md:w-1/5">
+            <a href="{{site:url}}" class="md:w-[190px] w-[130px] block">
+
+                <img 
+                src="{{ main_logo }}{{ url }}{{ /main_logo }}" 
+                alt="main-logo" 
+                title="main-logo" 
+                class="white-img wc_header_logo" 
+                data-hover-logo="{{ black_logo }}{{ url }}{{ /black_logo }}" 
+                data-main-logo="{{ main_logo }}{{ url }}{{ /main_logo }}" 
+                />
+
+            </a>
+        </div>
+        <div class="w-2/8 md:w-4/5">
+            <div class="flex items-center justify-between">
+                <div class="w-[0] lg:w-full 1xl:w-[84%] 2xl:w-[82%] z-10">
+
+                    <nav id="mainmenu"
+                    class="main-menu bg-vividblue-400 lg:bg-transparent lg:static fixed w-full h-full lg:max-h-auto max-h-[100vh] overflow-auto lg:overflow-visible lg:left-auto left-full top-0 z-100 transition-all">
+                    <div
+                    class="text-end flex justify-between items-center lg:hidden px-6 lg:hidden block bg-vividblue-400 sticky top-0 left-0 w-full z-30">
+                    <div class="logo py-2 self-center">
+
+                        <a href="{{site:url}}"><img src="{{white_logo}}" alt="main-logo-white"
+                            class="white-img m-auto w-[190px] xl:w-[210px] w-[180px]"></a>
+                        </div>
+
+                        <button name="close" class="text-white text-[22px] group py-3" aria-label="Close">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            class="fill-none stroke stroke-[1.5px] transition-all duration-500 ease-in-out group-hover:rotate-180 stroke-white">
+                            <path d="M18 6L6 18"></path>
+                            <path d="M6 6L18 18"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="main-nav group default w-full lg:flex items-center justify-center">
+                    {{ nav:navigation }}
+                    <li
+                    class="mega-item group group/item xl:ml-6 lg:ml-3 2xl:ml-9 flex lg:flex-nowrap flex-wrap lg:items-center lg:border-b-2 border-transparent lg:border-t-0 border-t border-t-gray-900/10 lg:hover:border-white transition-all">
+                    <a class="text-white xl:text-lg text-md lg:inline-block w-auto grow flex justify-between items-center font-medium font-Satoshi px-6 lg:px-0 py-4 lg:py-5"
+                    href="{{ url }}">{{ title }}</a>
+
+                    {{ if children }}
+                    <span
+                    class="px-3 lg:px-0 py-0 lg:py-3.5 group cursor-pointer flex items-center justify-center">
+                    <svg width="10" height="5" viewBox="0 0 14 8" fill="none"
+                    class="lg:group-[.active]:rotate-0 group-[.active]:rotate-180 lg:group-hover/item:rotate-180 inline-block stroke-white ml-2 xl:ml-2">
+                    <path
+                    d="M1 1L6.2929 6.68541C6.6834 7.10487 7.3166 7.10487 7.7071 6.68541L13 1"
+                    class="stroke-[1.5px]"></path>
+                </svg>
+            </span>
+
+            <div class="2xl:py-8 py-6 mega-menu lg:shadow-xl bg-white hidden lg:group-hover/item:block lg:absolute w-full left-0 z-10 top-full border-t border-gray-700 lg:overflow-y-auto lg:h-[60vh]"
+            id="menu_open">
+            <div
+            class="container mx-auto w-full flex flex-wrap justify-between px-5 md:px-4 lg:px-6 2xl:px-8">
+            <p
+            class="w-full sm:text-[25px] text-20 font-Larken font-medium mb-2 leading-lineHeight lg:mb-5 text-black">
+            {{ title }}
+        </p>
+        {{ if layouts == "category-based-grouping" }}
+
+        <div
+        class="grow lg:gap-y-8 md:gap-y-6 gap-y-5 2xl:gap-x-14 1xl:gap-x-12 xl:gap-x-10 lg:gap-x-8 md:gap-x-6 gap-x-5 grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 max-w-full">
+        {{ children }}
+        <div class="block">
+            <p
+            class="relative before:absolute before:content-[''] before:bottom-0 before:left-0 before:bg-gray-700 before:w-full before:h-[1px] after:absolute after:content-[''] after:bottom-0 after:left-0 after:bg-vividblue-400 after:w-3/12 after:h-[2px] text-md 2xl:text-lg font-bold mb-3 pb-3 text-black">
+            {{ title }}
+        </p>
+
+        {{ if children }}
+        <ul class="nav list-disc marker:text-gray-900 pl-5">
+            {{ children }}
+            <li>
+                <a class="text-gray-900 font-medium hover:text-black text-sm 2xl:text-md my-2 inline-block"
+                href="{{ url }}">{{ title }}</a>
+            </li>
+            {{ /children }}
+        </ul>
+        {{ /if }}
+    </div>
+    {{ /children }}
+</div>
+{{ elseif layouts == "grid" }}
+<div
+class="grow flex flex-wrap max-w-full border-b border-t border-gray-700 w-full relative grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[1px] before:h-full before:bg-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-white">
+{{ children }}
+<div
+class="block bg-white border-l border-b border-gray-700 px-6 lg:px-8 xl:px-10 2xl:px-12 py-5 lg:py-6 xl:py-8 2xl:py-10">
+{{ if icon }}
+<div
+class="shrink-0 w-8 h-8 2xl:w-10 2xl:h-10 rounded-full bg-theme-900 flex items-center justify-center text-white">
+<img src="{{ icon }}" alt="{{ title }}"
+class="block w-8 h-8 2xl:w-10 2xl:h-10 object-contain" />
+</div>
+{{ /if }}
+<p
+class="mt-4 text-md md:text-lg font-medium text-black hover:text-vividblue-400">
+<a class="block text-current" href="{{ url }}">{{ title
+}}</a>
+</p>
+</div>
+{{ /children }}
+</div>
+{{/if }}
+</div>
+</div>
+{{ /if }}
+</li>
+
+{{ /nav:navigation }}
+</ul>
+</nav>
+</div>
+{{ /header }}
+<div class="flex items-center">
+    <div class="lg:hidden">
+        <button name="mobile-menu-view" class="w-[35px] block p-2" aria-label="Close">
+            <span class="w-full bg-white h-[2px] mb-1 block"></span>
+            <span class="w-full bg-white h-[2px] mb-1 block"></span>
+            <span class="w-full bg-white h-[2px] mb-0 block"></span>
+        </button>
+    </div>
+    <div class="primary-nav__search flex justify-center ml-auto mr-0">
+        <div id="nav-site-search" class="site-search">
+
+            <button
+            class="site-search__open lg:p-0 p-2 text-white flex items-center justify-center">
+            <span class="xl:text-lg text-md mr-3 font-medium lg:block hidden">
+                Explore
+            </span>
+            <span class="icon-search hover:text-vividblue-400">
+                <svg width="20" height="20" class="w-[20px] h-[20px] lg:order-1 order-2"
+                viewBox="0 0 20 20" fill="none">
+                <path
+                d="M13.35 14.675C11.843 15.8447 9.9468 16.3962 8.04746 16.2172C6.14812 16.0382 4.3884 15.1421 3.12648 13.7113C1.86456 12.2805 1.19531 10.4226 1.25495 8.51582C1.31459 6.60899 2.09865 4.79656 3.44752 3.44746C4.79663 2.09859 6.60906 1.31453 8.51588 1.25489C10.4227 1.19525 12.2806 1.8645 13.7114 3.12642C15.1421 4.38833 16.0382 6.14806 16.2173 8.0474C16.3963 9.94674 15.8448 11.8429 14.675 13.35L18.475 17.15C18.5984 17.2645 18.6886 17.4103 18.7362 17.5719C18.7837 17.7334 18.7867 17.9048 18.745 18.068C18.7033 18.2311 18.6184 18.38 18.4991 18.4989C18.3799 18.6179 18.2308 18.7024 18.0675 18.7437C17.9045 18.7853 17.7334 18.7824 17.5719 18.7351C17.4105 18.6878 17.2648 18.5979 17.15 18.475L13.35 14.675ZM14.375 8.74996C14.3861 8.00447 14.2489 7.2642 13.9713 6.57223C13.6937 5.88026 13.2813 5.2504 12.758 4.71928C12.2348 4.18816 11.6111 3.76639 10.9234 3.47851C10.2356 3.19062 9.49747 3.04237 8.75189 3.04237C8.00632 3.04237 7.26818 3.19062 6.58043 3.47851C5.89267 3.76639 5.26903 4.18816 4.74577 4.71928C4.22251 5.2504 3.81009 5.88026 3.53249 6.57223C3.25489 7.2642 3.11765 8.00447 3.12877 8.74996C3.15079 10.2268 3.75291 11.6357 4.80506 12.6722C5.8572 13.7088 7.27491 14.2899 8.75189 14.2899C10.2289 14.2899 11.6466 13.7088 12.6987 12.6722C13.7509 11.6357 14.353 10.2268 14.375 8.74996Z"
+                fill="currentColor" />
+            </svg>
+        </span>
+    </button>
+
+    <!-- Search form -->
+    <div class="site-search__form-wrap">
+        <form class="site-search__search-form flex grow flex-nowrap">
+            <!-- Search submit button -->
+            <button class="site-search__search-submit" title="search">
+                <span class="icon-search">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M13.8378 5.41208C13.2864 4.85045 12.6292 4.40363 11.9042 4.09743C11.1791 3.79123 10.4006 3.63171 9.6135 3.6281C8.82644 3.62448 8.04646 3.77683 7.31862 4.07636C6.59077 4.37589 5.92948 4.81665 5.37294 5.37319C4.8164 5.92973 4.37564 6.59102 4.07611 7.31887C3.77659 8.04671 3.62423 8.82669 3.62785 9.61375C3.63147 10.4008 3.79098 11.1793 4.09718 11.9044C4.40339 12.6295 4.85021 13.2867 5.41184 13.8381C6.5327 14.9385 8.04275 15.5519 9.6135 15.5446C11.1842 15.5374 12.6886 14.9102 13.7993 13.7995C14.91 12.6888 15.5372 11.1845 15.5444 9.61375C15.5516 8.043 14.9383 6.53294 13.8378 5.41208ZM4.11567 4.11592C5.52076 2.71118 7.4094 1.89628 9.39538 1.83785C11.3814 1.77941 13.3146 2.48187 14.7999 3.80157C16.2851 5.12126 17.2101 6.95849 17.3857 8.93756C17.5613 10.9166 16.9742 12.888 15.7445 14.4486L20.6441 19.3482L19.3479 20.6443L14.4483 15.7448C12.8873 16.9699 10.9176 17.5534 8.94106 17.376C6.96455 17.1987 5.13015 16.274 3.81205 14.7906C2.49395 13.3072 1.79146 11.3767 1.84788 9.39307C1.9043 7.40943 2.71538 5.52205 4.11567 4.11592Z"
+                    fill="#2251FF" />
+                </svg>
+            </span>
+        </button>
+        <!-- Search input field -->
+        <input id="site-search-input" class="site-search__search-input border p-2" name="searchValue" type="text"
+        placeholder="Search..." autocomplete="off" />
+        <div id="search-loader" class="hidden"
+        style="position: absolute; right: 45px; top: 35px; transform: translateY(-50%); z-index: 20;">
+        <svg width="22"
+        height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+        style="z-index: 50; animation: spin 1s linear infinite; -webkit-animation: spin 1s linear infinite;">
+        <path
+        d="M12 2c-.6 0-1 .4-1 1v3c0 .6.4 1 1 1s1-.4 1-1V3c0-.6-.4-1-1-1zm2.5 5.7c.2.1.3.1.5.1.3 0 .7-.2.9-.5l1.5-2.6c.3-.5.1-1.1-.4-1.4-.5-.3-1.1-.1-1.4.4l-1.5 2.6c-.2.5-.1 1.1.4 1.4zm1.8 1.8c.2.3.5.5.9.5.2 0 .3 0 .5-.1l2.6-1.5c.5-.3.6-.9.4-1.4-.3-.5-.9-.6-1.4-.4l-2.6 1.5c-.5.3-.6.9-.4 1.4zM21 11h-3c-.6 0-1 .4-1 1s.4 1 1 1h3c.6 0 1-.4 1-1 0-.5-.4-1-1-1zm-.7 4.7-2.6-1.5c-.5-.3-1.1-.1-1.4.4-.3.5-.1 1.1.4 1.4l2.6 1.5c.2.1.3.1.5.1.3 0 .7-.2.9-.5.2-.6.1-1.2-.4-1.4zm-4.5 1c-.3-.5-.9-.6-1.4-.4-.5.3-.6.9-.4 1.4l1.5 2.6c.2.3.5.5.9.5.2 0 .3 0 .5-.1.5-.3.6-.9.4-1.4l-1.5-2.6zM12 17c-.5 0-1 .4-1 1v3c0 .6.4 1 1 1 .5 0 1-.4 1-1v-3c0-.5-.5-1-1-1zm-2.5-.7c-.5-.3-1.1-.1-1.4.4l-1.5 2.6c-.3.5-.1 1.1.4 1.4.2.1.3.1.5.1.3 0 .7-.2.9-.5l1.5-2.6c.2-.5.1-1.1-.4-1.4zm-1.8-1.8c-.3-.5-.9-.6-1.4-.4l-2.6 1.5c-.5.3-.6.9-.4 1.4.2.3.5.5.9.5.2 0 .3 0 .5-.1l2.6-1.5c.5-.3.6-.9.4-1.4zM6 13c.5 0 1-.4 1-1s-.4-1-1-1H3c-.5 0-1 .4-1 1s.4 1 1 1h3zM3.7 8.3l2.6 1.5c.2.1.4.2.5.2.3 0 .7-.2.9-.5.3-.5.1-1.1-.4-1.4L4.7 6.6c-.4-.3-1-.1-1.3.3-.3.5-.1 1.1.3 1.4z" />
+    </svg>
+</div>
+
+
+<!-- Suggestions and results block -->
+<div class="site-search__suggestions-block py-6 lg:px-10 px-6">
+    <div id="combined-search-results"></div>
+
+</div>
+</form>
+
+<!-- Button to close the search interface -->
+<button role="button" class="site-search__close" aria-label="Close search">
+    <span class="icon-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 6L19 19M6 19L19 6" stroke="black" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ====== Header ====== -->
+
+{{ else }}
+<!-- ====== Header ====== -->
+<div class="w-full header-style-2 z-30 bg-white border-b border-b-gray-200 transition-all" id="header">
+    <div class="container">
+        <div class="top-bar">
+            <div class="flex justify-between items-center border-b border-b-gray-200 md:py-2 py-1">
+                <ul class="flex items-center lg:gap-7 md:gap-5 gap-3 contact-info">
+                    {{ header }}
+                    {{ contact_info }}
+                    <li>
+                        {{ if count == 1 }}
+                        <a href="tel:{{ text }}"
+                        class="text-black hover:opacity-80 transition-all lg:text-sm font-medium flex items-center leading-lineHeight">
+                        {{ svg src="{{icon}}" class="icon mr-[6px] fill-current" }}
+                        {{ text }}
+                    </a>
+                    {{ elseif count == 2 }}
+                    <a href="mailto:{{ text }}"
+                    class="text-black hover:opacity-80 transition-all lg:text-sm font-medium flex items-center leading-lineHeight">
+                    {{ if icon }}
+                    {{ svg src="{{icon}}" class="icon mr-[6px] fill-current" }}
+                    {{ /if }}
+                    {{ text }}
+                </a>
+                {{ /if }}
+            </li>
+            {{ /contact_info }}
+        </ul>
+
+        <ul class="flex items-center gap-4">
+            {{ social_media }}
+            <li class="social-icon lg:inline-block hidden">
+                <a href="{{ link }}"
+                class="text-black text-lg font-light hover:text-vividblue-400 transition-all leading-lineHeight">
+                {{ if icon }}
+                {{ svg src="{{icon}}" class="icon mr-[6px] fill-current" }}
+                {{ else }}
+                <i class="fa-brands {{ icon_class }}"></i>
+                {{ /if }}
+            </a>
+        </li>
+        {{ /social_media }}
+    </ul>
+</div>
+</div>
+
+<div class="header-middle">
+    <div class="flex items-center justify-between transition-all relative lg:py-0 py-1">
+        <div class="site-logo w-2/4 md:w-1/5">
+            <a href="{{site:url}}" class="md:w-[190px] w-[130px] block">
+                <img src="{{black_logo}}" alt="main-logo" title="main-logo" class="white-img" />
+            </a>
+        </div>
+        <div class="w-2/8 md:w-4/5">
+            <div class="flex items-center justify-between">
+                <div class="w-[0] lg:w-full 1xl:w-[84%] 2xl:w-[82%] z-10">
+
+                    <nav id="mainmenu"
+                    class="main-menu bg-vividblue-400 lg:bg-transparent lg:static fixed w-full h-full lg:max-h-auto max-h-[100vh] overflow-auto lg:overflow-visible lg:left-auto left-full top-0 z-100 transition-all">
+                    <div
+                    class="text-end flex justify-between items-center lg:hidden px-6 lg:hidden block bg-vividblue-400 sticky top-0 left-0 w-full z-30">
+                    <div class="logo py-2 self-center">
+
+                        <a href="{{site:url}}"><img src="{{white_logo}}" alt="main-logo-white"
+                            class="white-img m-auto w-[190px] xl:w-[210px] w-[180px]"></a>
+                        </div>
+
+                        <button name="close" class="text-white text-[22px] group py-3" aria-label="Close">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            class="fill-none stroke stroke-[1.5px] transition-all duration-500 ease-in-out group-hover:rotate-180 stroke-white">
+                            <path d="M18 6L6 18"></path>
+                            <path d="M6 6L18 18"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="main-nav group default w-full lg:flex items-center justify-center">
+                    {{ nav:navigation }}
+                    <li
+                    class="mega-item group group/item xl:ml-6 lg:ml-3 2xl:ml-9 flex lg:flex-nowrap flex-wrap lg:items-center lg:border-b-2 border-transparent lg:border-t-0 border-t border-t-gray-900/10 lg:hover:border-white transition-all">
+                    <a class="text-black xl:text-lg text-md lg:inline-block w-auto grow flex justify-between items-center font-medium font-Satoshi px-6 lg:px-0 py-4 lg:py-5"
+                    href="{{ url }}">{{ title }}</a>
+
+                    {{ if children }}
+                    <span class="px-3 lg:px-0 py-0 lg:py-3.5 group cursor-pointer flex items-center justify-center">
+                        <svg width="10" height="5" viewBox="0 0 14 8" fill="none" class="lg:group-[.active]:rotate-0 group-[.active]:rotate-180 lg:group-hover/item:rotate-180 inline-block lg:stroke-black stroke-white ml-2 xl:ml-2">
+                            <path d="M1 1L6.2929 6.68541C6.6834 7.10487 7.3166 7.10487 7.7071 6.68541L13 1" class="stroke-[1.5px]"></path>
+                        </svg>
+                    </span>
+
+                    <div class="2xl:py-8 py-6 mega-menu lg:shadow-xl bg-white hidden lg:group-hover/item:block lg:absolute w-full left-0 z-10 top-full border-t border-gray-700 lg:overflow-y-auto lg:h-[60vh]"
+                    id="menu_open">
+                    <div
+                    class="container mx-auto w-full flex flex-wrap justify-between px-5 md:px-4 lg:px-6 2xl:px-8">
+                    <p
+                    class="w-full sm:text-[25px] text-20 font-Larken font-medium mb-2 leading-lineHeight lg:mb-5 text-black">
+                    {{ title }}
+                </p>
+                {{ if layouts == "category-based-grouping" }}
+
+                <div
+                class="grow lg:gap-y-8 md:gap-y-6 gap-y-5 2xl:gap-x-14 1xl:gap-x-12 xl:gap-x-10 lg:gap-x-8 md:gap-x-6 gap-x-5 grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 max-w-full">
+                {{ children }}
+                <div class="block">
+                    <p
+                    class="relative before:absolute before:content-[''] before:bottom-0 before:left-0 before:bg-gray-700 before:w-full before:h-[1px] after:absolute after:content-[''] after:bottom-0 after:left-0 after:bg-vividblue-400 after:w-3/12 after:h-[2px] text-md 2xl:text-lg font-bold mb-3 pb-3 text-black">
+                    {{ title }}
+                </p>
+
+                {{ if children }}
+                <ul class="nav list-disc marker:text-gray-900 pl-5">
+                    {{ children }}
+                    <li>
+                        <a class="text-gray-900 font-medium hover:text-black text-sm 2xl:text-md my-2 inline-block"
+                        href="{{ url }}">{{ title }}</a>
+                    </li>
+                    {{ /children }}
+                </ul>
+                {{ /if }}
+            </div>
+            {{ /children }}
+        </div>
+        {{ elseif layouts == "grid" }}
+        <div
+        class="grow flex flex-wrap max-w-full border-b border-t border-gray-700 w-full relative grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[1px] before:h-full before:bg-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-white">
+        {{ children }}
+        <div
+        class="block bg-white border-l border-b border-gray-700 px-6 lg:px-8 xl:px-10 2xl:px-12 py-5 lg:py-6 xl:py-8 2xl:py-10">
+        {{ if icon }}
+        <div
+        class="shrink-0 w-8 h-8 2xl:w-10 2xl:h-10 rounded-full bg-theme-900 flex items-center justify-center text-white">
+        <img src="{{ icon }}" alt="{{ title }}"
+        class="block w-8 h-8 2xl:w-10 2xl:h-10 object-contain" />
+    </div>
+    {{ /if }}
+    <p
+    class="mt-4 text-md md:text-lg font-medium text-black hover:text-vividblue-400">
+    <a class="block text-current" href="{{ url }}">{{ title
+    }}</a>
+</p>
+</div>
+{{ /children }}
+</div>
+{{/if }}
+</div>
+</div>
+{{ /if }}
+</li>
+
+{{ /nav:navigation }}
+</ul>
+</nav>
+</div>
+{{ /header }}
+<div class="flex items-center">
+    <div class="lg:hidden">
+        <button name="mobile-menu-view" class="w-[35px] block p-2" aria-label="Close">
+            <span class="w-full bg-black h-[2px] mb-1 block"></span>
+            <span class="w-full bg-black h-[2px] mb-1 block"></span>
+            <span class="w-full bg-black h-[2px] mb-0 block"></span>
+        </button>
+    </div>
+    <div class="primary-nav__search flex justify-center ml-auto mr-0">
+        <div id="nav-site-search" class="site-search">
+
+            <button class="site-search__open lg:p-0 p-2 text-black flex items-center justify-center">
+                <span class="xl:text-lg text-md mr-3 font-medium lg:block hidden">
+                    Explore
+                </span>
+                <span class="icon-search hover:text-vividblue-400">
+                    <svg width="20" height="20" class="w-[20px] h-[20px] lg:order-1 order-2" viewBox="0 0 20 20" fill="none">
+                        <path d="M13.35 14.675C11.843 15.8447 9.9468 16.3962 8.04746 16.2172C6.14812 16.0382 4.3884 15.1421 3.12648 13.7113C1.86456 12.2805 1.19531 10.4226 1.25495 8.51582C1.31459 6.60899 2.09865 4.79656 3.44752 3.44746C4.79663 2.09859 6.60906 1.31453 8.51588 1.25489C10.4227 1.19525 12.2806 1.8645 13.7114 3.12642C15.1421 4.38833 16.0382 6.14806 16.2173 8.0474C16.3963 9.94674 15.8448 11.8429 14.675 13.35L18.475 17.15C18.5984 17.2645 18.6886 17.4103 18.7362 17.5719C18.7837 17.7334 18.7867 17.9048 18.745 18.068C18.7033 18.2311 18.6184 18.38 18.4991 18.4989C18.3799 18.6179 18.2308 18.7024 18.0675 18.7437C17.9045 18.7853 17.7334 18.7824 17.5719 18.7351C17.4105 18.6878 17.2648 18.5979 17.15 18.475L13.35 14.675ZM14.375 8.74996C14.3861 8.00447 14.2489 7.2642 13.9713 6.57223C13.6937 5.88026 13.2813 5.2504 12.758 4.71928C12.2348 4.18816 11.6111 3.76639 10.9234 3.47851C10.2356 3.19062 9.49747 3.04237 8.75189 3.04237C8.00632 3.04237 7.26818 3.19062 6.58043 3.47851C5.89267 3.76639 5.26903 4.18816 4.74577 4.71928C4.22251 5.2504 3.81009 5.88026 3.53249 6.57223C3.25489 7.2642 3.11765 8.00447 3.12877 8.74996C3.15079 10.2268 3.75291 11.6357 4.80506 12.6722C5.8572 13.7088 7.27491 14.2899 8.75189 14.2899C10.2289 14.2899 11.6466 13.7088 12.6987 12.6722C13.7509 11.6357 14.353 10.2268 14.375 8.74996Z" fill="currentColor"/>
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Search form -->
+            <div class="site-search__form-wrap">
+                <form class="site-search__search-form flex grow flex-nowrap">
+                    <!-- Search submit button -->
+                    <button class="site-search__search-submit" title="search">
+                        <span class="icon-search">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.8378 5.41208C13.2864 4.85045 12.6292 4.40363 11.9042 4.09743C11.1791 3.79123 10.4006 3.63171 9.6135 3.6281C8.82644 3.62448 8.04646 3.77683 7.31862 4.07636C6.59077 4.37589 5.92948 4.81665 5.37294 5.37319C4.8164 5.92973 4.37564 6.59102 4.07611 7.31887C3.77659 8.04671 3.62423 8.82669 3.62785 9.61375C3.63147 10.4008 3.79098 11.1793 4.09718 11.9044C4.40339 12.6295 4.85021 13.2867 5.41184 13.8381C6.5327 14.9385 8.04275 15.5519 9.6135 15.5446C11.1842 15.5374 12.6886 14.9102 13.7993 13.7995C14.91 12.6888 15.5372 11.1845 15.5444 9.61375C15.5516 8.043 14.9383 6.53294 13.8378 5.41208ZM4.11567 4.11592C5.52076 2.71118 7.4094 1.89628 9.39538 1.83785C11.3814 1.77941 13.3146 2.48187 14.7999 3.80157C16.2851 5.12126 17.2101 6.95849 17.3857 8.93756C17.5613 10.9166 16.9742 12.888 15.7445 14.4486L20.6441 19.3482L19.3479 20.6443L14.4483 15.7448C12.8873 16.9699 10.9176 17.5534 8.94106 17.376C6.96455 17.1987 5.13015 16.274 3.81205 14.7906C2.49395 13.3072 1.79146 11.3767 1.84788 9.39307C1.9043 7.40943 2.71538 5.52205 4.11567 4.11592Z" fill="#2251FF"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <!-- Search input field -->
+                    <input id="site-search-input" class="site-search__search-input border p-2" name="searchValue" type="text"
+                    placeholder="Search..." autocomplete="off" />
+                    <div id="search-loader" class="hidden"
+                    style="position: absolute; right: 45px; top: 35px; transform: translateY(-50%); z-index: 20;">
+                    <svg 
+                    width="22" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    style="z-index: 50; animation: spin 1s linear infinite; -webkit-animation: spin 1s linear infinite;">
+                    <path
+                    d="M12 2c-.6 0-1 .4-1 1v3c0 .6.4 1 1 1s1-.4 1-1V3c0-.6-.4-1-1-1zm2.5 5.7c.2.1.3.1.5.1.3 0 .7-.2.9-.5l1.5-2.6c.3-.5.1-1.1-.4-1.4-.5-.3-1.1-.1-1.4.4l-1.5 2.6c-.2.5-.1 1.1.4 1.4zm1.8 1.8c.2.3.5.5.9.5.2 0 .3 0 .5-.1l2.6-1.5c.5-.3.6-.9.4-1.4-.3-.5-.9-.6-1.4-.4l-2.6 1.5c-.5.3-.6.9-.4 1.4zM21 11h-3c-.6 0-1 .4-1 1s.4 1 1 1h3c.6 0 1-.4 1-1 0-.5-.4-1-1-1zm-.7 4.7-2.6-1.5c-.5-.3-1.1-.1-1.4.4-.3.5-.1 1.1.4 1.4l2.6 1.5c.2.1.3.1.5.1.3 0 .7-.2.9-.5.2-.6.1-1.2-.4-1.4zm-4.5 1c-.3-.5-.9-.6-1.4-.4-.5.3-.6.9-.4 1.4l1.5 2.6c.2.3.5.5.9.5.2 0 .3 0 .5-.1.5-.3.6-.9.4-1.4l-1.5-2.6zM12 17c-.5 0-1 .4-1 1v3c0 .6.4 1 1 1 .5 0 1-.4 1-1v-3c0-.5-.5-1-1-1zm-2.5-.7c-.5-.3-1.1-.1-1.4.4l-1.5 2.6c-.3.5-.1 1.1.4 1.4.2.1.3.1.5.1.3 0 .7-.2.9-.5l1.5-2.6c.2-.5.1-1.1-.4-1.4zm-1.8-1.8c-.3-.5-.9-.6-1.4-.4l-2.6 1.5c-.5.3-.6.9-.4 1.4.2.3.5.5.9.5.2 0 .3 0 .5-.1l2.6-1.5c.5-.3.6-.9.4-1.4zM6 13c.5 0 1-.4 1-1s-.4-1-1-1H3c-.5 0-1 .4-1 1s.4 1 1 1h3zM3.7 8.3l2.6 1.5c.2.1.4.2.5.2.3 0 .7-.2.9-.5.3-.5.1-1.1-.4-1.4L4.7 6.6c-.4-.3-1-.1-1.3.3-.3.5-.1 1.1.3 1.4z" />
+                </svg>
+            </div>
+
+
+            <!-- Suggestions and results block -->
+            <div class="site-search__suggestions-block py-6 lg:px-10 px-6">
+
+                <div id="combined-search-results"></div>
+
+
+            </div>
+        </form>
+
+        <!-- Button to close the search interface -->
+        <button role="button" class="site-search__close" aria-label="Close search">
+            <span class="icon-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 6L19 19M6 19L19 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </button>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ====== End of Header ====== -->
+{{/header}}
+
+{{ /if }}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const input = document.getElementById('site-search-input');
+        const resultBox = document.getElementById('combined-search-results');
+        const loader = document.getElementById('search-loader');
+        const svg = document.querySelector('#search-loader svg');
+        let angle = 0;
+
+        function rotate() {
+            angle = (angle + 6) % 360;
+            svg.style.transform = `rotate(${angle}deg)`;
+            requestAnimationFrame(rotate);
+        }
+
+        rotate();
+
+        if (!input || !resultBox || !loader) {
+            return;
+        }
+
+        let timeout = null;
+
+
+        input.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                const query = input.value.trim();
+                if (query.length > 0) {
+                    window.location.href = `/search-result?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+
+        input.addEventListener('keyup', function () {
+            const query = input.value.trim();
+            clearTimeout(timeout);
+
+            if (query.length < 2) {
+                resultBox.innerHTML = '';
+                resultBox.classList.remove('show');
+                loader.classList.add('hidden');
+                return;
+            }
+
+
+            loader.classList.remove('hidden'); // Show loader immediately
+            timeout = setTimeout(() => {
+                fetch(`/ajax-search-careers-insights?q=${encodeURIComponent(query)}`)
+                .then(response => {
+                    if (!response.ok) throw new Error(`Network error: ${response.status}`);
+                    return response.text();
+                })
+                .then(html => {
+                    resultBox.innerHTML = html;
+                    resultBox.classList.add('show');
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    resultBox.innerHTML = '<p class="text-red-600">Error loading results.</p>';
+                    resultBox.classList.add('show');
+                })
+                .finally(() => {
+                        loader.classList.add('hidden'); // Hide loader
+                    });
+            }, 500);
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!resultBox.contains(event.target) && !input.contains(event.target)) {
+                resultBox.classList.remove('show');
+                resultBox.innerHTML = '';
+                loader.classList.add('hidden');
+            }
+        });
+    });
+</script>

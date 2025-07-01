@@ -1,0 +1,116 @@
+{{if layout == "insights"}}
+<div class="relative bg-cover bg-center before:absolute before:bottom-0 before:left-0 before:w-full before:h-2/6 before:bg-custom-gradient-600 2xl:min-h-[650px] flex flex-col justify-end"
+    style="background-image: url('{{ bg_image }}');">
+    <div class="container 2xl:pt-64 xl:pt-56 lg:pt-52 md:pt-40 sm:pt-36 pt-28 pb-14">
+        <div class="flex justify-between flex-col gap-5 relative z-1">
+            <div class="w-full max-w-[900px] mx-auto">
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <label
+                        class="font-Satoshi font-bold text-white text-13 border border-white py-1 px-[14px] rounded-2xl uppercase">{{date
+                        }}</label>
+                    <div
+                        class="font-Satoshi font-normal text-white text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-white before:rounded-full before:rounded-full">
+                        {{author}} - {{categories:title}}</div>
+                </div>
+                <h2
+                    class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-white font-Larken font-medium">
+                    {{title}}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<section
+    class="relative overflow-hidden pt-10 pb-7 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-14 2xl:pb-16 mb-7 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16">
+    <div class="container relative z-1">
+        <div class="max-w-[900px] w-full mx-auto">
+
+            <ul class="flex flex-wrap gap-3 w-full border-b border-gray-700 md:pb-10 pb-8 md:mb-10 mb-8">
+                {{page_builder}}
+                {{ social_media }}
+                <li>
+                    {{ if icon}}
+                    {{if icon ends_with ".svg"}}
+                    <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                        href="{{link}}"> {{ svg src="{{icon}}" class="ml-1" width="16" height="16" viewBox="0 0 16 16"
+                        fill="none"
+                        }}</a>
+
+                    {{ else }}
+                    <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                        href="{{link}}"><img src="{{ icon }}" class="ml-1" width="16" height="16" alt=""></a>
+                </li>
+
+                {{ /if }}
+                {{ else }}
+                <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                    href="{{link}}"><i class="{{icon_class}}"></i></a></li>
+                {{ /if }}
+                {{ /social_media }}
+                </li>
+                {{ /page_builder }}
+            </ul>
+            <div class="cmc_content_page"> 
+                {{ article }}
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}
+{{if layout == "case_studies"}}
+<section
+    class="relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:md:h-1/6 before:h-80 before:bg-gray-200 overflow-hidden 2xl:pt-16 xl:pt-14 lg:pt-12 md:pt-10 sm:pt-8 pt-7 pb-7 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-14 2xl:pb-16 2xl:mb-20 xl:mb-16 lg:mb-14 md:mb-12 sm:mb-8 mb-7">
+    <div class="container relative z-1">
+        <div class="max-w-[900px] w-full mx-auto ">
+            <div>
+                <div class="flex flex-wrap lg:gap-6 md:gap-5 gap-3 mb-6">
+                    <label
+                        class="font-Satoshi font-bold text-black text-13 border border-black py-1 px-[14px] rounded-2xl uppercase">{{date}}</label>
+                    <div
+                        class="font-Satoshi font-normal text-black text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full before:rounded-full">
+                        {{author}} - {{categories:title}}</div>
+                </div>
+                <h2
+                    class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium lg:mb-9 md:mb-7 mb-6">
+                    {{title}}</h2>
+                <div class="w-full relative before:pt-[50%] before:content-[''] before:block md:mb-10 mb-8">
+                    {{page_builder}}
+                    {{if type == "insights_blog_page"}}
+                    <img src="{{ bg_image }}" alt="" class="absolute top-0 left-0 w-full h-full object-cover">
+                    {{/if}}
+                    {{/page_builder}}
+                </div>
+                <ul class="flex flex-wrap gap-3 w-full border-b border-gray-700 md:pb-10 pb-8 md:mb-10 mb-8">
+                    {{page_builder}}
+                    {{ social_media }}
+                    <li>
+                        {{ if icon}}
+                        {{if icon ends_with ".svg"}}
+                        <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                            href="{{link}}"> {{ svg src="{{icon}}" class="ml-1" width="16" height="16" viewBox="0 0 16
+                            16"
+                            fill="none"
+                            }}</a>
+
+                        {{ else }}
+                        <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                            href="{{link}}"><img src="{{ icon }}" class="ml-1" width="16" height="16" alt=""></a>
+                    </li>
+
+                    {{ /if }}
+                    {{ else }}
+                    <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
+                        href="{{link}}"><i class="{{icon_class}}"></i></a></li>
+                    {{ /if }}
+                    {{ /social_media }}
+                    </li>
+                    {{ /page_builder }}
+                </ul>
+            </div>
+
+            <div class="cmc_content_page"> 
+                {{ article }}
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}

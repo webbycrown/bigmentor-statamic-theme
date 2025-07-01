@@ -1,0 +1,33 @@
+tree:
+  -
+    id: f52c90b9-5d64-4336-b0ef-d93f88dcee5e
+    title: 'About us'
+    url: /about-us
+  -
+    id: 52be4809-c777-4704-8e05-224ae98dbfeb
+    title: Industries
+    url: /industries
+  -
+    id: c9144676-129c-4af1-90aa-1a81bca339ba
+    title: 'Our Services'
+    url: /services
+  -
+    id: 29070e70-9dfe-423b-8dce-935e47c86bd2
+    title: 'Our Insights'
+    url: /insights
+  -
+    id: d0d84f74-e133-4bf9-a317-b57f780d1dc8
+    title: 'Case Studies'
+    url: /case-studies
+  -
+    id: a07f4945-2165-479a-ad74-f77b4a903b83
+    title: 'Our Consultants'
+    url: /consultants
+  -
+    id: 2fa8d3ee-789d-40a1-879c-6731cab26f4b
+    title: Careers
+    url: /careers
+  -
+    id: 4a73cb8f-06ff-4fde-a489-218d4394eed5
+    title: 'Contact us'
+    url: /contact-us

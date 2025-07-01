@@ -1,0 +1,83 @@
+{{ if prev_page }}
+        <a href="{{ prev_page }}"
+            class="relative mr-2 border border-gray-700 inline-flex items-center justify-center p-1 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 text-black hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor"
+                style="transform: rotate(180deg);">
+                <path
+                    d="M1.22186 9.00031L16.7782 9.00034M16.7782 9.00034L9.3111 16.4674M16.7782 9.00034L9.31113 1.5333"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+        {{ /if }}
+
+        {{ links:segments}}
+        
+
+        {{ if slider }}
+
+            <span
+            class="relative inline-flex items-center justify-center p-1 text-sm 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg font-bold text-black focus:outline-offset-0">...</span>
+
+            {{ slider }}
+                {{ if page == current_page }}
+                    <a href="{{ url }}" aria-current="page"
+                    class="relative z-10 inline-flex items-center justify-center bg-vividblue-400 p-1 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg text-sm font-bold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vividblue-400">{{ page }}</a>
+                {{ else }}
+                    <a href="{{ url }}"
+                        class="relative {{ if is_current }}z-10 bg-vividblue-400 text-white{{ else }}text-black hover:bg-gray-50{{ /if }} inline-flex items-center justify-center p-1 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg text-sm font-bold focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vividblue-400">
+                        {{ page }}
+                    </a>
+                {{ /if }}
+            {{ /slider }}
+
+            <span
+            class="relative inline-flex items-center justify-center p-1 text-sm 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg font-bold text-black focus:outline-offset-0">...</span>
+
+        {{ else }}
+
+            {{first}}
+                {{ if page == current_page }}
+                <a href="{{ url }}" aria-current="page"
+                    class="relative z-10 inline-flex items-center justify-center bg-vividblue-400 p-1 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg text-sm font-bold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vividblue-400">{{ page }}</a>
+                {{ else }}
+                <a href="{{ url }}"
+                    class="relative {{ if is_current }}z-10 bg-vividblue-400 text-white{{ else }}text-black hover:bg-gray-50{{ /if }} inline-flex items-center justify-center p-1 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg text-sm font-bold focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vividblue-400">
+                    {{ page }}
+                </a>
+                {{ /if }}
+            {{/first}}
+
+            {{ if last }}
+                <span
+                class="relative inline-flex items-center justify-center p-1 text-sm 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg font-bold text-black focus:outline-offset-0">...</span>
+            {{ /if }}
+
+            {{ last }}
+                {{ if page == current_page }}
+                    <a href="{{ url }}" aria-current="page"
+                        class="relative z-10 inline-flex items-center justify-center bg-vividblue-400 p-1 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg text-sm font-bold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vividblue-400">{{ page }}</a>
+                {{ else }}
+                    <a href="{{ url }}"
+                        class="relative {{ if is_current }}z-10 bg-vividblue-400 text-white{{ else }}text-black hover:bg-gray-50{{ /if }} inline-flex items-center justify-center p-1 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 lg:text-lg text-sm font-bold focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vividblue-400">
+                        {{ page }}
+                    </a>
+                {{ /if }}
+            {{ /last }}
+
+        {{ /if }}
+
+
+        
+        {{ /links:segments }}
+
+        {{ if next_page }}
+        <a href="{{ next_page }}"
+            class="relative ml-2 border border-gray-700 inline-flex items-center justify-center p-1 2xl:w-11 2xl:h-11 lg:w-9 lg:h-9 w-8 h-8 text-black hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                <path
+                    d="M1.22186 9.00031L16.7782 9.00034M16.7782 9.00034L9.3111 16.4674M16.7782 9.00034L9.31113 1.5333"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+{{ /if }}
+

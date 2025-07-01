@@ -1,0 +1,147 @@
+title: 'Feature Grid Section'
+fields:
+  -
+    handle: image_2_title_or_facility
+    field:
+      default: false
+      type: toggle
+      display: '2 image & title or facility'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      always_save: false
+  -
+    handle: title_description_video
+    field:
+      default: false
+      type: toggle
+      display: 'title description & video'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: image_1_title_description_facility
+    field:
+      default: false
+      type: toggle
+      display: 'image 1 title description & facility'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: image_1
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'image 1'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      unless:
+        title_description_video: 'equals true'
+  -
+    handle: image_2
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'image 2'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      always_save: true
+      unless:
+        image_1_title_description_facility: 'equals true'
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: title
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: description
+    field:
+      antlers: false
+      type: textarea
+      display: description
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      unless:
+        image_2_title_or_facility: 'equals true'
+  -
+    handle: facility
+    field: feature_split_section.facility
+    config:
+      unless:
+        title_description_video: 'equals true'
+      always_save: true
+  -
+    handle: video_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'video title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        title_description_video: 'equals true'
+  -
+    handle: video_description
+    field:
+      antlers: false
+      type: textarea
+      display: 'video description'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        title_description_video: 'equals true'
+  -
+    handle: video
+    field:
+      type: video
+      display: Video
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        title_description_video: 'equals true'
+        title_description_facility: 'not true'

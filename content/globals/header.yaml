@@ -1,0 +1,41 @@
+title: Header
+data:
+  contact_info:
+    -
+      id: m9y6xncr
+      text: +91-855-556-3942
+      icon: image/phone.svg
+    -
+      id: m9y6zdyr
+      text: info@bigmentor.com
+      icon: image/email.svg
+  main_logo: image/main-logo.svg
+  white_logo: image/main-logo-white.svg
+  black_logo: image/main-logo-black.svg
+  navigation: header
+  language:
+    -
+      id: ma23lqaw
+      lag_code: es
+      lang_name: English
+    -
+      id: ma23mahs
+      lag_code: es
+      lang_name: Spanish
+    -
+      id: ma23mrbc
+      lag_code: fr
+      lang_name: French
+  social_media:
+    -
+      id: ma3xcek2
+      link: 'https://www.facebook.com/'
+      icon_class: fa-facebook-f
+    -
+      id: ma3xchq2
+      link: 'https://www.linkedin.com/'
+      icon_class: fa-linkedin
+    -
+      id: ma3xcjwi
+      link: 'https://www.instagram.com/'
+      icon_class: fa-instagram

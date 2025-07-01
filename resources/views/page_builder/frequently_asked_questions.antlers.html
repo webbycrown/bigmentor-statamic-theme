@@ -1,0 +1,27 @@
+<div class="relative py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16 mb-5 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16">
+    <div class="container">
+        <div class="flex flex-col md:flex-row md:justify-between gap-5">
+            <div class="inline-block w-full md:max-w-[350px]">
+                <h2 class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium">{{section_title}}</h2>
+            </div>
+            <div id="accordion" class="w-full max-w-[955px]">
+                {{ questions_answers }}
+                    <div class="border border-gray-700 md:mb-[22px] mb-4 py-4 md:px-7 p-4">
+                        <h4 class="accordion-title js-accordion-title flex items-center justify-between gap-4 relative text-black hover:text-vividblue-400 xl:text-22 lg:text-20 text-lg leading-lineHeight font-bold font-Larken cursor-pointer {{ if index == 0 }}open{{ /if }}">
+                            {{ questions }}
+                            <span>
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.9998 0.0251951C5.86647 0.0251951 5.73714 0.0501957 5.6118 0.100196C5.48647 0.150196 5.38247 0.216862 5.2998 0.300196L0.699804 4.9002C0.516471 5.08353 0.424805 5.31686 0.424805 5.6002C0.424805 5.88353 0.516471 6.11686 0.699804 6.3002C0.883138 6.48353 1.11647 6.5752 1.3998 6.5752C1.68314 6.5752 1.91647 6.48353 2.0998 6.3002L5.9998 2.4002L9.8998 6.3002C10.0831 6.48353 10.3165 6.5752 10.5998 6.5752C10.8831 6.5752 11.1165 6.48353 11.2998 6.3002C11.4831 6.11686 11.5748 5.88353 11.5748 5.6002C11.5748 5.31686 11.4831 5.08353 11.2998 4.9002L6.6998 0.300196C6.5998 0.200196 6.49147 0.129195 6.3748 0.0871954C6.25814 0.0451956 6.13314 0.0245285 5.9998 0.0251951Z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </h4>
+                        <div class="accordion-content {{ if index != 0 }}hidden{{ /if }} mt-3">
+                            <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-4">{{ answers }}</p>
+                        </div>
+                    </div>
+                {{ /questions_answers }}
+            </div>
+            
+        </div>
+    </div>
+</div>

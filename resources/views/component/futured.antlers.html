@@ -1,0 +1,112 @@
+{{ if filter_type == "random" }}
+
+<div class="relative bg-gray-200">
+    <div class="container 2xl:pb-[90px] 2xl:pt-[70px] xl:py-16 lg:py-14 md:py-12 py-10">
+        <div class="w-full max-w-[900px] mx-auto">
+
+            <h2
+                class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium lg:mb-8 md:mb-6 mb-2">
+                {{section_title}}</h2>
+            <div class="grid sm:grid-cols-2 grid-cols-1 gap-6 md:gap-8">
+                {{ collection:{collection} limit="{limit}" id:not="{ exclude_id }" }}
+
+                <div class="bg-white border border-gray-700 border-t-0">
+                    <div class="relative w-full before:content-[''] before:block before:pt-[63%] overview-hidden mb-0">
+                        {{page_builder}}
+                        {{if type == "insights_blog_page"}}
+                        <img src="{{ thumb_image:url }}" alt=""
+                            class="absolute top-0 left-0 w-full h-full object-cover">
+                        {{/if}}
+                        {{/page_builder}}
+
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-3 mb-4">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">{{date}}</label>
+                            <a href="{{url}}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full before:rounded-full">{{author}}</a>
+                        </div>
+                        <h4
+                            class="lg:text-25 sm:text-20 text-lg mb-2 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a href="{{url}}" class="text-currentColor">{{title}}</a>
+                        </h4>
+                        {{page_builder}}
+                        {{if type == "insights_blog_page"}}
+                        <p class="text-md leading-lineHeight font-normal text-gray-800">{{thumb_description
+                            truncate="80"}}</p>
+                        {{/if}}
+                        {{/page_builder}}
+
+                        <a href="{{url}}"
+                            class="mt-5 font-bold flex items-center md:text-lg text-md hover:text-black text-vividblue-400">
+                            Read more
+                            <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.42969 14.1428L13.5725 3M13.5725 3V13.6972M13.5725 3H2.87541"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                {{/collection:{collection} }}
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+{{if filter_type == "latest" }}
+<div
+    class="relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-2/4 before:h-full before:bg-gray-200 py-10 md:py-12 lg:py-14 xl:py-16 2xl:py-20 mt-7 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 2xl:mt-16">
+    <div class="container relative">
+        <h2
+            class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium mb-5 md:mb-9">
+            {{section_title}}</h2>
+        <div class="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:gap-8 lg:gap-10">
+
+            {{ collection:{collections} limit="{limit}" sort="date:desc" taxonomy:categories="{ categories:slug }"
+            id:not="{ exclude_id }"}}
+            <div class="bg-white border border-gray-700 border-t-0">
+                <div
+                    class="relative before:content-[''] before:block before:pt-[63%] overview-hidden w-[calc(100%+2px)] mx-[-1px]">
+                    {{page_builder}}
+                    {{if type == "insights_blog_page"}}
+                    <img src="{{ thumb_image:url }}" alt="" class="absolute top-0 left-0 w-full h-full object-cover">
+                    {{/if}}
+                    {{/page_builder}}
+                </div>
+                <div class="px-6 py-7">
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <label
+                            class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">{{date}}</label>
+                        <a href="{{url}}"
+                            class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full before:rounded-full">{{author}}</a>
+                    </div>
+                    <h4
+                        class="lg:text-25 sm:text-20 text-lg mb-2 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                        <a href="{{url}}" class="text-currentColor">{{title}}</a>
+                    </h4>
+                    {{page_builder}}
+                    {{if type == "insights_blog_page"}}
+                    <p class="text-md leading-lineHeight font-normal text-gray-800">{{thumb_description
+                        truncate="80"}}</p>
+                    {{/if}}
+                    {{/page_builder}}
+                    <a href="{{url}}"
+                        class="mt-5 font-bold flex items-center md:text-lg text-md hover:text-black text-vividblue-400">
+                        Read more
+                        <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.42969 14.1428L13.5725 3M13.5725 3V13.6972M13.5725 3H2.87541"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {{/collection:{collections} }}
+        </div>
+    </div>
+</div>
+{{/if}}

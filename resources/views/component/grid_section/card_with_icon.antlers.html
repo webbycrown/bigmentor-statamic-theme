@@ -1,0 +1,43 @@
+<div
+    class="relative bg-gray-500 2xl:py-[100px] xl:py-20 lg:py-16 md:py-12 py-10 my-7 sm:my-8 md:my-10 lg:my-12 xl:my-14 2xl:my-16">
+    <div class="container">
+        <h2
+            class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium mb-3">
+            {{section_title}}</h2>
+        <p
+            class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-5 md:mb-8 lg:mb-9 xl:mb-10 2xl:mb-11">
+            {{if description !== ""}}
+            {{description}}
+            {{/if}}
+        </p>
+
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:gap-[30px]">
+            {{card_with_icon_grid}}
+            <div class="border border-gray-700 bg-white 2xl:py-9 2xl:px-[30px] xl:p-7 lg:p-6 md:p-5 p-4">
+                <div
+                    class="text-black w-[60px] h-[60px] bg-vividblue-400 p-3 rounded-full flex items-center justify-center xl:mb-[22px] lg:mb-4 mb-3">
+                    <img src="{{icon}}" alt="img" class="w-8 h-8 object-contain object-center">
+                </div>
+                <h4
+                    class="lg:text-25 sm:text-20 text-lg leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium mb-3">
+                    {{if link != ''}}
+                    <a href="{{link}}" class="text-currentColor">{{title}}</a>
+                    {{else}}
+                    <p class="text-currentColor">{{title}}</p>
+                    {{/if}}
+                </h4>
+                <p class="lg:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-4 md:mb-[18px]">
+                    {{description}}</p>
+                <a href="{{link}}"
+                    class="flex items-center lg:text-lg text-md hover:text-black gap-3 text-vividblue-400">
+                    Read more
+                    <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M1.42871 12.1428L12.5716 1M12.5716 1V11.6972M12.5716 1H1.87443" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+            {{/card_with_icon_grid}}
+        </div>
+    </div>
+</div>

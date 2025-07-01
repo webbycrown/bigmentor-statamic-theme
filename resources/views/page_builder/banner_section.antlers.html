@@ -1,0 +1,271 @@
+{{if layout == "hero"}}
+{{if hero_layout == 'with_transparent_header'}}
+<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-500"
+    style="background-image: url('{{ image }}')">
+    <div
+        class="container 2xl:pt-64 xl:pt-56 lg:pt-52 md:pt-40 sm:pt-36 pt-28 2xl:pb-44 xl:pb-36 lg:pb-28 md:pb-20 sm:pb-16 pb-14">
+        <div class="flex justify-between flex-col gap-5 relative z-1">
+            {{ if title }}
+            <div class="w-full max-w-fit">
+                <h1
+                    class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-white font-Larken font-medium">
+                    {{ title }}
+                </h1>
+            </div>
+            {{ /if }}
+
+            {{ if short_description }}
+            <div class="w-full max-w-[885px]">
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-white">
+                    {{ short_description }}
+                </p>
+            </div>
+            {{ /if }}
+        </div>
+    </div>
+</div>
+{{/if}}
+{{if hero_layout == "with_back_button"}}
+<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-100"
+    {{ if image }}style="background-image: url('{{ image:url }}')" {{ /if }}>
+    <div class="container pt-10 2xl:pb-44 xl:pb-36 lg:pb-28 md:pb-20 sm:pb-16 pb-14 min-h-[400px] lg:min-h-[550px]">
+        <div class="flex justify-between flex-col relative z-1">
+            {{if button}}
+            {{button}}
+            <a href="{{link}}"
+                class="flex items-center xl:text-20 lg:text-lg text-md hover:text-vividblue-400 gap-3.5 text-white 2xl:mb-[110px] xl:mb-20 lg:mb-16 md:mb-12 mb-10">
+                <span>
+                    {{if icon ends_with ".svg"}}
+                    {{ svg src='{icon}' width="11" height="14" viewBox="0 0 11 14" fill="none"}}
+                    {{else}}
+                    <img src="{{icon}}" alt="" width="11" height="14" viewBox="0 0 11 14" fill="none">
+                    {{/if}}
+                </span>
+                {{text}}
+            </a>
+            {{/button}}
+            {{/if}}
+            {{ if title }}
+            <h1
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-white font-Larken font-medium mb-[18px]">
+                {{ title }}
+            </h1>
+            {{ /if }}
+
+            {{ if short_description }}
+            <div class="w-full max-w-[687px]">
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-white">
+                    {{ short_description }}
+                </p>
+            </div>
+            {{ /if }}
+        </div>
+    </div>
+</div>
+{{/if}}
+{{if hero_layout == "with_card_content"}}
+<div class="relative bg-cover bg-center mb-7 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16" {{ if image
+    }}style="background-image: url('{{ image:url }}')" {{ /if }}>
+
+    <div class="container py-10 min-h-[400px] lg:min-h-[550px] flex justify-center flex-col relative z-1">
+        <div
+            class="p-5 sm:p-8 md:p-10 lg:p-12 xl:p-14 2xl:py-[] 2xl:px-16 backdrop-blur-md bg-[#FFFFFFB2] max-w-[870px]">
+            {{ if title }}
+            <h1
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-black font-Larken font-medium mb-[18px]">
+                {{ title }}
+            </h1>
+            {{ /if }}
+
+            {{ if short_description }}
+            <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800">
+                {{ short_description }}
+            </p>
+            {{ /if }}
+        </div>
+    </div>
+</div>
+{{/if}}
+
+{{/if}}
+{{if layout == "work_showcase"}}
+
+<div class="relative">
+    <div class="relative">
+        <div
+            class="lg:min-h-[550px] min-h-[400px] before:z-1 before:absolute before:bottom-0 before:left-0 before:w-full before:h-[calc(100%-250px)] before:bg-custom-gradient-400">
+            <img src="{{ image }}" class="w-full h-full object-cover object-center absolute top-0 left-0" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div
+            class="px-4 2xl:pt-[55px] 2xl:pb-20 xl:py-16 lg:py-14 md:py-12 py-10 bg-white border-b border-gray-700 -mt-28 relative z-1">
+            <div class="max-w-[1320px] mx-auto">
+                <h2
+                    class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium mb-3.5">
+                    {{title}}</h2>
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800">
+                    {{short_description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section
+    class="relative overflow-hidden 2xl:mt-[100px] xl:mt-20 lg:mt-16 md:mt-12 mt-10 mb-7 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16">
+    <div class="container">
+        {{ if collections == "our_insights" }}
+            {{ collection:{collections} id:in="{our_insights}" }}
+        {{ elseif collections == "industries" }}
+            {{ collection:{collections} id:in="{industries}" }}
+        {{ /if }}      
+
+         {{ if count%2 != 0}}
+            {{ page_builder }}
+                {{ if type == "insights_blog_page" }}
+                    <div class="flex justify-between flex-col-reverse md:flex-row pt-10 md:pt-12 lg:pt-14 xl:pt-16 2xl:pt-20">
+                        <div class="overflow-hidden w-full md:max-w-[690px] md:w-[50%]">
+                            <img src="{{ thumb_image:url }}" class="w-full h-full object-cover object-center" alt="">
+                        </div>
+                        <div class="w-full md:w-[50%] flex items-center justify-center">
+                            <div
+                                class="w-full py-8 px-7 md:pr-0 md:py-12 md:pl-8 lg:py-14 lg:pl-10 xl:py-16 xl:pl-12 2xl:pt-[70px] 2xl:pb-[83px] 2xl:pl-[50px]">
+                                <label
+                                    class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase mb-3 md:mb-5 inline-block">{{
+                                    date }}</label>
+                                <h3
+                                    class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-3.5 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                                    <a href="{{url}}" class="text-currentColor">{{ title }}</a>
+                                </h3>
+                                <p class="tracking-[0.02em] lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{
+                                    thumb_description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{/if}}
+
+                {{ if type == "banner_section" and layout == "hero" }}
+                <div class="flex justify-between flex-col-reverse md:flex-row pt-10 md:pt-12 lg:pt-14 xl:pt-16 2xl:pt-20">
+                    <div class="overflow-hidden w-full md:max-w-[690px] md:w-[50%]">
+                        <img src="{{ thumb_image:url }}" class="w-full h-full object-cover object-center" alt="">
+                    </div>
+                    <div class="w-full md:w-[50%] flex items-center justify-center">
+                        <div
+                            class="w-full py-8 px-7 md:pr-0 md:py-12 md:pl-8 lg:py-14 lg:pl-10 xl:py-16 xl:pl-12 2xl:pt-[70px] 2xl:pb-[83px] 2xl:pl-[50px]">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase mb-3 md:mb-5 inline-block">{{
+                                date }}</label>
+                            <h3
+                                class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-3.5 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                                <a href="{{url}}" class="text-currentColor">{{ title }}</a>
+                            </h3>
+                            <p class="tracking-[0.02em] lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{
+                                thumb_description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+            {{ /page_builder }}
+        {{ else }}
+            {{ page_builder }}
+
+                {{ if type == "insights_blog_page" }}
+                    <div class="flex justify-between flex-col-reverse md:flex-row pt-10 md:pt-12 lg:pt-14 xl:pt-16 2xl:pt-20">
+                        <div class="w-full md:w-[50%] flex items-center justify-center">
+                            <div
+                                class="w-full py-8 px-7 md:pl-0 md:py-12 md:pr-8 lg:py-14 lg:pr-10 xl:py-16 xl:pr-12 2xl:pt-[70px] 2xl:pb-[83px] 2xl:pr-[50px]">
+                                <label
+                                    class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase mb-3 md:mb-5 inline-block">{{
+                                    date }}</label>
+                                <h3
+                                    class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-3.5 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                                    <a href="{{url}}" class="text-currentColor">{{ title }}</a>
+                                </h3>
+                                <p class="tracking-[0.02em] lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{
+                                    thumb_description }}</p>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden w-full md:max-w-[690px] md:w-[50%]">
+                            <img src="{{ thumb_image:url }}" class="w-full h-full object-cover object-center" alt="">
+                        </div>
+                    </div>
+                {{ /if }}
+
+                {{ if type == "banner_section" and layout == "hero" }}
+                <div class="flex justify-between flex-col-reverse md:flex-row pt-10 md:pt-12 lg:pt-14 xl:pt-16 2xl:pt-20">
+                    <div class="w-full md:w-[50%] flex items-center justify-center">
+                        <div
+                            class="w-full py-8 px-7 md:pl-0 md:py-12 md:pr-8 lg:py-14 lg:pr-10 xl:py-16 xl:pr-12 2xl:pt-[70px] 2xl:pb-[83px] 2xl:pr-[50px]">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase mb-3 md:mb-5 inline-block">{{
+                                date }}</label>
+                            <h3
+                                class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-3.5 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                                <a href="{{url}}" class="text-currentColor">{{ title }}</a>
+                            </h3>
+                            <p class="tracking-[0.02em] lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{
+                                thumb_description }}</p>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden w-full md:max-w-[690px] md:w-[50%]">
+                        <img src="{{ thumb_image:url }}" class="w-full h-full object-cover object-center" alt="">
+                    </div>
+                </div>
+                {{ /if }}
+            {{ /page_builder }}
+        {{ /if }}
+        {{ /collection:{collections} }}
+
+    </div>
+</section>
+
+
+
+{{/if}}
+{{if layout == "info"}}
+
+<div class="relative mt-7 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 2xl:mt-16">
+    <div class="relative">
+        <div
+            class="lg:min-h-[550px] min-h-[400px] before:z-1 before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-40">
+            <img src="{{image}}" class="w-full h-full object-cover object-center absolute top-0 left-0" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <div
+            class="px-4 2xl:py-[60px] xl:py-16 lg:py-14 md:py-12 py-10 bg-white border-b border-gray-700 -mt-28 relative z-1">
+            <div class="overflow-hidden w-full max-w-[280px] mx-auto mb-8">
+                <img src="{{overlay_image}}" class="w-full h-full object-cover object-center" alt="">
+            </div>
+            <div class="max-w-[1300px] mx-auto">
+                <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800 text-center">
+                    {{short_description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{/if}}
+{{ if layout == "content_over_image" }}
+<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-100 2xl:min-h-[550px] xl:min-h-[450px] lg:min-h-[400px] min-h-[350px]"
+    style="background-image: url('{{ image }}');">
+</div>
+
+<div class="container relative z-1 pb-7">
+    <div
+        class="2xl:-mt-[110px] xl:-mt-[90px] lg:-mt-[70px] -mt-[60px] md:p-10 p-8 bg-white min-h-[250px] flex justify-between flex-col md:flex-row gap-7 border-b border-t md:rounded-xl shadow-lg">
+        <div class="w-full max-w-fit">
+            <h1
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-black font-Larken font-medium">
+                {{ title }}
+            </h1>
+        </div>
+        <div class="w-full max-w-[885px]">
+            <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800">
+                {{ short_description }}
+            </p>
+        </div>
+    </div>
+</div>
+{{ /if }}

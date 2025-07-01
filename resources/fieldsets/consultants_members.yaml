@@ -1,0 +1,136 @@
+title: 'Consultants Members'
+fields:
+  -
+    handle: image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Image
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: position
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: position
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: about
+    field:
+      antlers: false
+      type: textarea
+      display: about
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: experience
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: experience
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: key_points
+    field:
+      fields:
+        -
+          handle: key
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: key
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: point
+          field:
+            antlers: false
+            type: textarea
+            display: point
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 5
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'key points'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: social_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Social text'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: email
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Email
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+        - email

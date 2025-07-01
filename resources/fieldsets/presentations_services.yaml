@@ -1,0 +1,94 @@
+title: 'Presentations Services'
+fields:
+  -
+    handle: background_image
+    field:
+      type: assets
+      container: assets
+      max_files: 1
+      mode: list
+      allow_uploads: true
+      display: 'Background Image'
+  -
+    handle: background_video
+    field:
+      type: video
+      display: 'Background Video'
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: description
+    field:
+      type: textarea
+      display: Description
+  -
+    handle: reviews
+    field:
+      type: replicator
+      sets:
+        main:
+          display: Main
+          instructions: null
+          icon: null
+          sets:
+            review_group:
+              display: 'Review Group'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: review_title
+                  field:
+                    type: text
+                    display: 'Review Title'
+                -
+                  handle: avatars
+                  field:
+                    type: grid
+                    display: Avatars
+                    fields:
+                      -
+                        handle: image
+                        field:
+                          type: assets
+                          max_files: 1
+                          display: Image
+                          instructions_position: above
+                          listable: hidden
+                          visibility: visible
+                          replicator_preview: true
+                          mode: list
+                          container: assets
+                          restrict: false
+                          allow_uploads: true
+                          show_filename: true
+                          show_set_alt: true
+                          hide_display: false
+                    instructions_position: above
+                    listable: hidden
+                    visibility: visible
+                    replicator_preview: true
+                    mode: table
+                    reorderable: true
+                    fullscreen: true
+                    hide_display: false
+                    max_rows: 5
+                    min_rows: 3
+                -
+                  handle: stars
+                  field:
+                    type: integer
+                    display: 'Star Rating (out of 5)'
+      display: Reviews
+      instructions_position: above
+      listable: hidden
+      visibility: visible
+      replicator_preview: true
+      collapse: true
+      previews: true
+      max_sets: 1
+      fullscreen: true
+      hide_display: false

@@ -1,0 +1,61 @@
+
+<div class="wb-bigmentor-section relative bg-gray-200">
+    <div class="container 2xl:pt-[85px] 2xl:pb-24 xl:pt-20 xl:pb-20 lg:pt-16 lg:pb-16 md:pt-14 md:pb-14 sm:pt-12 md:pb-12 pt-10 pb-10">
+        <div class="flex items-center justify-between md:flex-row flex-col gap-6">
+            <div class="w-full">
+                <h2 class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-0 leading-lineHeight text-black font-Larken font-medium">{{section_title}}</h2>
+            </div>
+            <div class="w-full">
+                <div thumbsSlider="" class="swiper wb-hero-bigmentor-thumbs">
+                    <div class="swiper-wrapper">
+                        {{replicator_field}}
+                        <div class="swiper-slide pb-[1px] !w-auto group">
+                            <a href="javascript:;" class="py-[18px] px-5 text-center text-md group-[.swiper-slide-thumb-active]:border-b-vividblue-400 hover:border-b-vividblue-400 lg:text-lg border-b border-b-lightborder-200 block">{{tab}}</a>
+                        </div>
+                        {{/replicator_field}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-8 sm:pt-10 md:pt-12 lg:pt-14 xl:pt-[-70px] block">
+            <div class="swiper wb-bigmentor-slider-view">
+                <div class="swiper-wrapper">
+                    {{replicator_field}}
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-between md:flex-row flex-col-reverse gap-7 sm:gap-10 md:gap-14 lg:gap-20 xl:gap-24 2xl:gap-28">
+                            <div class="w-full max-w-[620px]">
+                                <h2 class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 lg:mb-[18px] mb-3 leading-lineHeight text-black font-Larken font-medium">{{title}}</h2>
+                                <p class="2xl:text-lg text-md leading-lineHeight mb-4 lg:mb-7 font-normal text-gray-800">{{description}}</p>
+                                {{button}}
+                                <a class="all-btn btn-outline bg-vividblue-400 mb-4 lg:mb-7" href="{{link}}">
+                                    {{text}}
+                                    {{if icon ends_with ".svg"}}
+                                        {{ svg src="{{ icon }}" class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13" }}
+                                    {{else}}
+                                        <img src="{{ icon }}" alt="" class="ml-2 inline-block" width="14" height="13">
+                                    {{/if}}
+                                </a>
+                                {{/button}}
+                                  
+                                </a>
+                            </div>
+                            <div class="w-full max-w-[712px]">
+                                <div class="w-full relative before:pt-[100%] before:content-[''] before:block">
+                                    <img src="{{image:url}}" class="absolute top-0 left-0 w-full h-full object-cover" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/replicator_field}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="absolute z-1 w-full h-full top-2/4 -translate-y-2/4 pointer-events-none">
+        <div class="container max-w-[1620px] relative w-full h-full flex justify-between">
+            <div class="swiper-button-next pointer-events-auto"></div>
+            <div class="swiper-button-prev pointer-events-auto  "></div>
+        </div>
+    </div>
+</div>

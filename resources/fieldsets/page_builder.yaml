@@ -1,0 +1,249 @@
+title: 'All Page Builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            home_hero_section:
+              display: 'Home Hero Section'
+              instructions: null
+              icon: flash-bolt-lightning
+              fields:
+                -
+                  import: home_hero
+            collaboration:
+              display: Collaboration
+              instructions: null
+              icon: edit-design-compare-ab-testing
+              fields:
+                -
+                  import: collaboration
+            company_overview_section:
+              display: 'Company Overview Section'
+              instructions: null
+              icon: addon-boxes-stack
+              fields:
+                -
+                  import: company_overview
+            expert_team_section:
+              display: 'Expert Team Section'
+              instructions: null
+              icon: alert-alarm-bell
+              fields:
+                -
+                  import: expert_team_section
+            our_mentoring_services:
+              display: 'Our Mentoring Services'
+              instructions: null
+              icon: calendar-date
+              fields:
+                -
+                  import: our_mentoring_services
+            presentations_services:
+              display: 'Presentations Services'
+              instructions: null
+              icon: alert-help-question
+              fields:
+                -
+                  import: presentations_services
+            tab_with_slider:
+              display: 'Tab with Slider'
+              instructions: null
+              icon: user-multiple
+              fields:
+                -
+                  import: tab_with_slider
+            consultants_members:
+              display: 'consultants members'
+              instructions: null
+              icon: fire-flame-burn-hot
+              fields:
+                -
+                  import: consultants_members
+            banner_section:
+              display: 'Banner Section'
+              instructions: null
+              icon: computer-desktop
+              fields:
+                -
+                  import: banner_section
+            insights_blog_page:
+              display: 'Insights & blog Page'
+              instructions: null
+              icon: arrow-right
+              fields:
+                -
+                  import: article_header
+                -
+                  import: body_content_of_a_artical_post
+            left_image_right_text_section:
+              display: 'Left Image Right Text Section'
+              instructions: null
+              icon: edit-pin
+              fields:
+                -
+                  import: left_image_right_text_section
+            left_about_right_image:
+              display: 'Left About Right Image'
+              instructions: null
+              icon: alert-alarm-bell
+              fields:
+                -
+                  import: left_about_right_image
+            left_text_right_image_slider:
+              display: 'Left Text Right image Slider'
+              instructions: null
+              icon: travel-map
+              fields:
+                -
+                  import: left_text_right_image_slider
+            feature_split_section:
+              display: 'Feature Split Section'
+              instructions: null
+              icon: favorite-star
+              fields:
+                -
+                  import: feature_split_section
+            feature_grid_section:
+              display: 'Feature Grid Section'
+              instructions: null
+              icon: alert-help-question
+              fields:
+                -
+                  import: feature_grid_section
+            call-to-action:
+              display: Call-to-Action
+              instructions: null
+              icon: arrow-left
+              fields:
+                -
+                  import: call-to-action
+            project_gallery:
+              display: 'Project Gallery'
+              instructions: null
+              icon: addon-boxes-stack
+              fields:
+                -
+                  import: project_gallery
+            intro_section:
+              display: 'Intro Section'
+              instructions: null
+              icon: addon-boxes-stack
+              fields:
+                -
+                  import: intro_section
+            frequently_asked_questions:
+              display: 'Frequently Asked Questions'
+              instructions: null
+              icon: alert-help-question
+              fields:
+                -
+                  import: faq
+            help_section:
+              display: 'Help Section'
+              instructions: null
+              icon: favorite-like
+              fields:
+                -
+                  import: help
+            social_media:
+              display: 'Social Media'
+              instructions: 'Social Media'
+              icon: social-instagram
+              fields:
+                -
+                  handle: social_media
+                  field: common_settings.social_media
+            button:
+              display: Button
+              instructions: null
+              icon: text-formatting-image-bottom
+              fields:
+                -
+                  handle: button
+                  field: common_settings.button
+            grid_showcase:
+              display: 'Grid Showcase'
+              instructions: null
+              icon: media-computer-screen-tv
+              fields:
+                -
+                  import: grid_view
+            process_grid:
+              display: 'Process  Grid'
+              instructions: null
+              icon: computer-voice-mail-microphone
+              fields:
+                -
+                  import: process_grid
+            terms_and_conditions:
+              display: 'Terms and Conditions'
+              instructions: null
+              icon: alert-help-question
+              fields:
+                -
+                  import: terms_and_conditions
+            grid_section:
+              display: 'Grid Section'
+              instructions: null
+              icon: dashboard-layout-3
+              fields:
+                -
+                  import: grid
+            contact-us_section:
+              display: 'Contact-Us Section'
+              instructions: null
+              icon: user-avatar
+              fields:
+                -
+                  import: contact-us
+            article:
+              display: Article
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: body_content_of_a_artical_post
+            two-column_text_section:
+              display: 'Two-Column Text Section'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: two-column_text_section
+            growth_highlights_graph:
+              display: 'Growth Highlights Graph'
+              instructions: null
+              icon: addon-boxes-stack
+              fields:
+                -
+                  import: growth_highlights
+            icon_with_sector:
+              display: 'Icon With Sector'
+              instructions: null
+              icon: dashboard-layout
+              fields:
+                -
+                  import: icon_with_sector
+            opportunity:
+              display: 'Opportunity Listing Section'
+              instructions: null
+              icon: addon-boxes-stack
+              fields:
+                -
+                  import: opportunity
+      type: replicator
+      display: 'Page Builder'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

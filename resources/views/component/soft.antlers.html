@@ -1,0 +1,66 @@
+<section class=" relative overflow-hidden py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <div class="mb-8 md:mb-10 xl:mb-14">
+            <div class="flex items-center justify-between flex-wrap">
+                <h2
+                    class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium max-w-[738px]">
+                    {{section_title}}</h2>
+                <div class="mt-5 lg:mt-0">
+                    {{section_button}}
+                    <a href="{{link}}"
+                        class="all-btn border-black text-black bg-white hover:bg-vividblue-400 hover:text-white hover:border-vividblue-400">
+                        {{text}}
+                        {{svg src="{icon}" class="ml-2 inline-block" fill="none"}}
+                    </a>
+                    {{/section_button}}
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="grid grid-cols-1 border-b border-t border-gray-700 sm:grid-cols-2 lg:grid-cols-3 relative before:content-[''] before:absolute before:left-0 before:top-0 before:w-[1px] before:h-full before:bg-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-white">
+
+            {{ collection:{collections} limit="{limit}" sort="date:asc" }}
+            {{page_builder}}
+            {{if type == 'banner_section'}}
+            {{if layout == "hero"}}
+            <div
+                class="border-l border-b border-gray-700 py-5 sm:p-5 2xl:px-0 2xl:pt-[60px] 2xl:pb-[50px] xl:pt-12 xl:pb-11 lg:py-8 md:py-6">
+                <div class="md:max-w-[380px] md:mx-auto">
+                    <div
+                        class="shrink-0 w-8 h-8 2xl:w-10 2xl:h-10 rounded-full bg-theme-900 flex items-center justify-center text-white">
+                        <img src="{{thumb_image:url}}" class="block w-8 h-8 2xl:w-10 2xl:h-10 object-contain"
+                            alt="Business Strategy Development">
+                    </div>
+                    <div class="w-full mt-7">
+                        <h4
+                            class="lg:text-25 sm:text-20 text-lg lg:mb-4 mb-3 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a href="{{url}}" class="text-currentColor">{{title}}</a>
+                        </h4>
+                        <p class="2xl:text-lg text-md leading-lineHeight mb-4 lg:mb-5 font-normal text-gray-800">
+                            {{thumb_description}}</p>
+                        {{block}}
+                        {{if button}}
+                        {{button }}
+                        <a href="{{url}}"
+                            class="font-bold inline-flex items-center md:text-lg text-md hover:text-black text-vividblue-400">
+                            {{text}}
+                            {{if icon ends_with ".svg"}}
+                            {{ svg src='{icon}' class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none"}}
+                            {{else}}
+                            <img src="{{icon}}" class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            {{/if}}
+                        </a>
+                        {{/button}}
+                        {{/if}}
+                        {{/block}}
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            {{/if}}
+            {{/page_builder}}
+            {{ /collection:{collections} }}
+        </div>
+    </div>
+</section>

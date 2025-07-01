@@ -1,0 +1,49 @@
+<div class="relative">
+    <div class="container 2xl:pt-[100px] xl:pt-20 lg:pt-16 md:pt-12 pt-10 pb-7 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-14 2xl:pb-16">
+        <div class="flex items-center justify-between md:flex-row flex-col-reverse gap-7 sm:gap-10 md:gap-14 lg:gap-20 xl:gap-24 2xl:gap-32">
+            <div class="w-full h-full">
+                <span class="border uppercase py-1 px-5 border-vividblue-400 text-black rounded-2xl font-bold mb-4 lg:mb-6 inline-block">{{tag_title}}</span>
+                <h2 class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-0 leading-lineHeight text-black font-Larken font-medium mb-4">{{title}}</h2>
+                <p class="2xl:text-lg text-md leading-lineHeight mb-4 lg:mb-7 xl:mb-[35px] font-normal text-gray-800">{{description}}</p>
+                <ul class="grid min-[425px]:grid-cols-2 grid-cols-1 lg:gap-5 md:gap-4 gap-3">
+                    {{facility}}
+                    <li class="gap-3 flex items-center xl:text-lg text-md inline-block text-black">
+                        {{if icon ends_with ".svg"}}
+                            {{ svg src="{{ icon }}" class="text-vividblue-400 md:w-5 w-4" width="22" height="22" viewBox="0 0 22 22" fill="none"}}
+                        {{else}}
+                            <img src="{{ icon }}" alt="" class="text-vividblue-400 md:w-5 w-4" width="22" height="22">
+                        {{/if}}
+                        {{service}}
+                       
+                    </li>
+                    {{/facility}}
+                   
+                </ul>
+            </div>
+            <div class="w-full h-full">
+                <div class="flex">
+                    <div class="flex flex-col justify-between gap-3 z-1 mr-[-200px] max-w-[350px] w-full">
+                        <div class="w-full max-w-[180px] relative before:pt-[112%] before:content-[''] before:block mt-10 ml-5">
+                            <img src="{{overlay_image}}" class="absolute top-0 left-0 w-full h-full object-cover" alt="">
+                        </div>
+                        <div class="flex items-center w-full max-w-[350px] bg-vividblue-400 px-4 lg:px-7 xl:px-8 py-4 lg:py-5 xl:py-6 mb-[53px]">
+                            {{experience_years}}
+                            <div class="pr-5 relative before:content-[''] before:absolute before:top-0 before:right-0 before:block before:h-full before:w-[1px] before:border-r before:border-white before:opacity-15">
+                                <h3 class="text-white font-Satoshi 2xl:text-4xl lg:text-3xl sm:text-1xl text-xl mb-1 leading-lineHeight font-medium">{{number}}</h3>
+                                <span class="block text-white font-Satoshi lg:text-lg text-md leading-lineHeight font-normal">{{experience}}</span>
+                            </div>
+                            <div class="pl-6">
+                                <p class="block text-white font-Satoshi lg:text-lg text-md leading-lineHeight font-normal">{{years_of_experience}}</p>
+                            </div>
+                            {{/experience_years}}
+                        </div>
+                    </div>
+
+                    <div class="w-full h-full relative before:pt-[100%] before:content-[''] before:block">
+                        <img src="{{main_image}}" class="absolute top-0 left-0 w-full h-full object-cover" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

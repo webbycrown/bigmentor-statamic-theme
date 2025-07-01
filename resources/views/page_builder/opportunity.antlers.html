@@ -1,0 +1,266 @@
+<section class="relative overflow-hidden my-7 sm:my-8 md:my-10 lg:my-12 xl:my-14 2xl:my-16">
+    <div class="container">
+        <div class="text-center 2xl:mb-16 xl:mb-14 lg:mb-12 md:mb-10 mb-8">
+            <h2
+                class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 md:mb-5 mb-3 leading-lineHeight text-black font-Larken font-medium">
+                {{ section_title }}
+            </h2>
+            <p class="lg:text-lg text-md leading-lineHeight font-normal text-gray-800">
+                {{ section_description }}
+            </p>
+        </div>
+
+        <div class="w-full overflow-auto">
+            <table class="border-collapse w-full align-middle">
+                <tbody>
+                    {{ collection:{collections} }}
+                    {{ ids = id }}
+
+                    <tr class="border-t border-gray-700">
+                        <td class="xl:py-12 lg:py-8 py-5 px-3 whitespace-nowrap pl-0">
+                            <h4
+                                class="lg:text-25 sm:text-20 text-lg mb-2 leading-lineHeight text-black font-Larken font-medium">
+                                <p class="text-currentColor">{{ title }}</a>
+                            </h4>
+                            <p class="text-md leading-lineHeight font-normal text-black">{{ salary_range }}</p>
+                        </td>
+                        <td class="xl:py-12 lg:py-8 py-5 px-3 whitespace-nowrap">
+                            <p class="text-md leading-lineHeight font-normal text-black flex items-center">
+                                <span class="mr-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.25 5.31746H16.4V4.21164C16.3991 3.62535 16.1671 3.06332 15.7547 2.64874C15.3423 2.23417 14.7832 2.00088 14.2 2H9.8C9.21679 2.00088 8.65772 2.23417 8.24533 2.64874C7.83294 3.06332 7.60087 3.62535 7.6 4.21164V5.31746H3.75C3.02083 5.31805 2.3217 5.6095 1.8061 6.12783C1.2905 6.64615 1.00058 7.34899 1 8.08201V19.1402C1.00058 19.8732 1.2905 20.5761 1.8061 21.0944C2.3217 21.6127 3.02083 21.9042 3.75 21.9048H20.25C20.9792 21.9042 21.6783 21.6127 22.1939 21.0944C22.7095 20.5761 22.9994 19.8732 23 19.1402V8.08201C22.9994 7.34899 22.7095 6.64615 22.1939 6.12783C21.6783 5.6095 20.9792 5.31805 20.25 5.31746ZM8.7 4.21164C8.7 3.91836 8.81589 3.63709 9.02218 3.42971C9.22847 3.22233 9.50826 3.10582 9.8 3.10582H14.2C14.4917 3.10582 14.7715 3.22233 14.9778 3.42971C15.1841 3.63709 15.3 3.91836 15.3 4.21164V5.31746H8.7V4.21164ZM21.9 19.1402C21.9 19.5801 21.7262 20.002 21.4167 20.3131C21.1073 20.6242 20.6876 20.7989 20.25 20.7989H3.75C3.31239 20.7989 2.89271 20.6242 2.58327 20.3131C2.27384 20.002 2.1 19.5801 2.1 19.1402V11.9822L8.5262 14.1364C8.58233 14.1547 8.64098 14.1641 8.7 14.164H15.3C15.359 14.1641 15.4177 14.1547 15.4738 14.1364L21.9 11.9822V19.1402ZM21.9 10.8532C21.8413 10.851 21.7825 10.8585 21.7262 10.8753L15.2109 13.0582H8.7891L2.2738 10.8742C2.21745 10.8574 2.15875 10.8499 2.1 10.8521V8.08201C2.1 7.64209 2.27384 7.22018 2.58327 6.90911C2.89271 6.59804 3.31239 6.42328 3.75 6.42328H20.25C20.6876 6.42328 21.1073 6.59804 21.4167 6.90911C21.7262 7.22018 21.9 7.64209 21.9 8.08201V10.8532Z"
+                                            fill="currentColor" stroke="currentColor" stroke-width="0.4" />
+                                    </svg>
+                                </span>
+                                {{ department:label }}
+                            </p>
+                        </td>
+                        <td class="xl:py-12 lg:py-8 py-5 px-3 whitespace-nowrap">
+                            <p class="text-md leading-lineHeight font-normal text-black flex items-center">
+                                <span class="mr-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 1C9.82441 1 7.69767 1.64514 5.88873 2.85383C4.07979 4.06253 2.66989 5.78049 1.83733 7.79048C1.00477 9.80047 0.786929 12.0122 1.21137 14.146C1.6358 16.2798 2.68345 18.2398 4.22183 19.7782C5.76021 21.3165 7.72022 22.3642 9.85401 22.7886C11.9878 23.2131 14.1995 22.9952 16.2095 22.1627C18.2195 21.3301 19.9375 19.9202 21.1462 18.1113C22.3549 16.3023 23 14.1756 23 12C22.9969 9.08356 21.837 6.28746 19.7748 4.22523C17.7125 2.16299 14.9164 1.00308 12 1ZM12 21.3077C10.1591 21.3077 8.35957 20.7618 6.82893 19.7391C5.29829 18.7163 4.10529 17.2627 3.40082 15.5619C2.69634 13.8611 2.51202 11.9897 2.87116 10.1842C3.2303 8.37864 4.11677 6.72017 5.41847 5.41847C6.72018 4.11676 8.37865 3.23029 10.1842 2.87115C11.9897 2.51201 13.8611 2.69634 15.5619 3.40081C17.2627 4.10529 18.7163 5.29828 19.7391 6.82892C20.7618 8.35956 21.3077 10.1591 21.3077 12C21.3049 14.4677 20.3234 16.8335 18.5784 18.5784C16.8335 20.3234 14.4677 21.3049 12 21.3077ZM18.7692 12C18.7692 12.2244 18.6801 12.4396 18.5214 12.5983C18.3627 12.757 18.1475 12.8462 17.9231 12.8462H12C11.7756 12.8462 11.5604 12.757 11.4017 12.5983C11.243 12.4396 11.1538 12.2244 11.1538 12V6.07692C11.1538 5.85251 11.243 5.63729 11.4017 5.4786C11.5604 5.31992 11.7756 5.23077 12 5.23077C12.2244 5.23077 12.4396 5.31992 12.5983 5.4786C12.757 5.63729 12.8462 5.85251 12.8462 6.07692V11.1538H17.9231C18.1475 11.1538 18.3627 11.243 18.5214 11.4017C18.6801 11.5604 18.7692 11.7756 18.7692 12Z"
+                                            fill="currentColor" />
+                                    </svg>
+                                </span>
+                                {{ employment_type:label }}
+                            </p>
+                        </td>
+                        <td class="xl:py-12 lg:py-8 py-5 px-3 whitespace-nowrap">
+                            <p class="text-md leading-lineHeight font-normal text-black flex items-center">
+                                <span class="mr-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16 11C16 11.5253 15.8965 12.0454 15.6955 12.5307C15.4945 13.016 15.1999 13.457 14.8284 13.8284C14.457 14.1999 14.016 14.4945 13.5307 14.6955C13.0454 14.8965 12.5253 15 12 15C11.4747 15 10.9546 14.8965 10.4693 14.6955C9.98396 14.4945 9.54301 14.1999 9.17157 13.8284C8.80014 13.457 8.5055 13.016 8.30448 12.5307C8.10346 12.0454 8 11.5253 8 11C8 9.93913 8.42143 8.92172 9.17157 8.17157C9.92172 7.42143 10.9391 7 12 7C13.0609 7 14.0783 7.42143 14.8284 8.17157C15.5786 8.92172 16 9.93913 16 11Z"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12 2C17.1406 2 21.5 6.23487 21.5 11.3728C21.5 16.5916 17.0698 20.2552 12.9785 22.7449C12.6798 22.9121 12.3428 23 12 23C11.6572 23 11.3202 22.9121 11.0215 22.7449C6.9365 20.2321 2.5 16.6115 2.5 11.3738C2.5 6.23487 6.85944 2 12 2Z"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                {{ location }}
+                            </p>
+                        </td>
+                        <td class="xl:py-12 lg:py-8 py-5 px-3 whitespace-nowrap pr-0">
+
+                            <a class="popup-with-form all-btn btn-outline bg-vividblue-400 border-vividblue-400"
+                                href="#careers-popup" data-jobid="{{ id }}" data-title="{{ title }}">
+                                Apply<svg class="ml-2 inline-block " width="14" height="13" viewBox="0 0 14 13"
+                                    fill="none">
+                                    <path d="M1.42871 12.1428L12.5716 1M12.5716 1V11.6972M12.5716 1H1.87443"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </a>
+                        </td>
+                    </tr>
+                    {{ /collection:{collections} }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- Job Application Form Popup -->
+<div id="careers-popup" class="white-popup-block mfp-hide relative max-w-[810px] mx-auto my-5">
+    <div class="xl:py-[46px] xl:px-[50px] lg:p-10 md:p-8 p-6 bg-white">
+        <div class="text-center max-w-[600px] mx-auto">
+            <h2
+                class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 lg:mb-[15px] mb-3 leading-lineHeight text-black font-Larken font-medium">
+                Job Application Form</h2>
+            <p class="2xl:text-lg text-md leading-lineHeight mb-10 font-normal text-gray-800">Please fill out the form
+                below to apply for the desired position. Ensure all information is accurate and up-to-date.</p>
+        </div>
+
+        <form class="apply-screen-form" id="apply-screen-form" method="POST" action="javascript:void(0);">
+            {{ csrf_field }}
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-7 lg:gap-y-[55px] gap-y-7 mb-10">
+                <div>
+                    <input type="text" name="first_name"
+                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
+                        placeholder="First name">
+                    <span class="error error-first_name text-red-500 text-sm"></span>
+                </div>
+                <div>
+                    <input type="text" name="last_name"
+                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
+                        placeholder="Last name">
+                    <span class="error error-last_name text-red-500 text-sm"></span>
+                </div>
+                <div>
+                    <input type="email" name="email"
+                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
+                        placeholder="Email address">
+                    <span class="error error-email text-red-500 text-sm"></span>
+                </div>
+                <div>
+                    <input type="tel" name="phone"
+                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
+                        placeholder="Phone number">
+                    <span class="error error-phone text-red-500 text-sm"></span>
+                </div>
+                <div>
+
+                    <input type="hidden" id="applied_job" name="applied_job" value="">
+                    <input type="hidden" id="position_title" name="applied_position" value="">
+                    <input type="text" id="position_title_display" name="applied_position" disabled
+                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium"
+                        placeholder="Position" value="">
+                    <span class="error error-applied_position text-red-500 text-sm"></span>
+                </div>
+                <div>
+                    <input type="date" name="application_date"
+                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
+                        placeholder="Earliest Possible Start Date">
+                    <span class="error error-application_date text-red-500 text-sm"></span>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col items-center justify-center px-6 py-6 border border-black border-dashed rounded bg-gray-200 mb-6">
+                <svg class="mx-auto h-10 w-10 text-gray-400 mb-2" width="35" height="27" viewBox="0 0 35 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M18.75 26.75V19.25H23.75L17.5 11.75L11.25 19.25H16.25V26.75H10V26.6875C9.79 26.7 9.59 26.75 9.375 26.75C6.8886 26.75 4.50403 25.7623 2.74587 24.0041C0.98772 22.246 0 19.8614 0 17.375C0 12.565 3.6375 8.645 8.305 8.1075C8.71424 5.96824 9.85613 4.03844 11.5343 2.65002C13.2124 1.26159 15.3219 0.501335 17.5 0.5C19.6784 0.501204 21.7882 1.26136 23.4668 2.64976C25.1454 4.03815 26.2878 5.96802 26.6975 8.1075C31.365 8.645 34.9975 12.565 34.9975 17.375C34.9975 19.8614 34.0098 22.246 32.2516 24.0041C30.4935 25.7623 28.1089 26.75 25.6225 26.75C25.4125 26.75 25.21 26.7 24.9975 26.6875V26.75H18.75Z"
+                        fill="#585858" />
+                </svg>
+                <label for="file_upload"
+                    class="xl:text-lg lg:text-md text-sm relative cursor-pointer font-bold text-black leading-lineHeight mb-1 hover:text-vividblue-400">
+                    <span>Upload a File</span>
+                    <input id="file_upload" name="file_upload" type="file" class="sr-only" accept=".doc,.docx,.pdf">
+                </label>
+                <p class="text-sm text-gray-800">Drag and drop file here.</p>
+                <span class="error error-file_upload text-red-500 text-sm mt-2"></span>
+            </div>
+
+            <div class="mb-6">
+                <textarea name="about" rows="3" placeholder="About info..."
+                    class="block resize-none w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"></textarea>
+                <span class="error error-about text-red-500 text-sm"></span>
+            </div>
+
+            <div class="text-right">
+                <button type="submit" class="all-btn focus:outline-none focus:ring-0">
+                    Submit<svg class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                        <path d="M1.42871 12.1428L12.5716 1M12.5716 1V11.6972M12.5716 1H1.87443" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="apply-response" class="mt-4"></div>
+        </form>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // Initialize Magnific Popup
+        $('.popup-with-form').magnificPopup({
+            type: 'inline',
+            preloader: false,
+            focus: '#first_name',
+            callbacks: {
+                beforeOpen: function () {
+                    var $trigger = $(this.st.el);
+                    var jobTitle = $trigger.data('title') || '';
+                    var JobId = $trigger.data('jobid') || '';
+
+
+                    // Fill the hidden input
+                    $('#applied_job').val(JobId);
+                    $('#position_title').val(jobTitle);
+                    $('#position_title_display').val(jobTitle);
+                },
+                close: function () {
+                    // Reset form when popup closes
+                    $('#apply-screen-form')[0].reset();
+
+                    // Clear any error messages
+                    $('#apply-screen-form .error').html('');
+
+                    // Clear global response message
+                    $('#apply-response').html('');
+                }
+            }
+        });
+
+        // AJAX form submission
+        $(document).on("submit", "#apply-screen-form", function (e) {
+            e.preventDefault();
+
+            const form = $(this)[0];
+            const formData = new FormData(form);
+
+            $.ajax({
+                url: "{{ route:apply.submit }}", // Replace with correct backend route if needed
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                headers: { 'X-Requested-With': 'XMLHttpRequest' },
+                success: function (data) {
+                    const $res = $('#apply-response');
+                    $res.html(''); // Clear any previous global response
+
+                    // Clear individual field errors
+                    $('#apply-screen-form .error').html('');
+
+                    if (data.status === 'success') {
+                        $res.html(`<span class="text-green-600" style="color:green;">${data.message}</span>`);
+                        $('#apply-screen-form')[0].reset();
+
+                        setTimeout(function () {
+                            $('.mfp-close').click(); // Close popup
+                            // window.location.reload();
+                        }, 2000);
+
+                    } else if (data.status === 'validation') {
+                        Object.entries(data.errors).forEach(([key, msg]) => {
+                            // Example: <div class="error error-name"></div>
+                            $(`#apply-screen-form .error-${key}`).html(`<span class="text-red-600" style="color:red;">${msg}</span>`);
+                        });
+
+                    } else if (data.status === 'error') {
+                        $res.html(`<span class="text-red-600" style="color:red;">${data.message}</span>`);
+
+                    } else {
+                        $res.html(`<span class="text-red-600" style="color:red;">Something went wrong. Please try again.</span>`);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    $('#apply-response').html(`<span class="text-red-600" style="color:red;">Please try again later.</span>`);
+                }
+            });
+
+            return false;
+        });
+    });
+</script>

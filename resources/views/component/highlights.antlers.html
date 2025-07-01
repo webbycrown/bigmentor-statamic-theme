@@ -1,0 +1,31 @@
+<div class="relative py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <h2
+            class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-0 leading-lineHeight text-black font-Larken font-medium text-center mb-6 lg:mb-10 xl:mb-[60px]">
+            {{section_title}}</h2>
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-9">
+            </h2>
+            
+            {{ collection:{collections} id:in="{sector_expertise}" limit="{limit}" }}
+            <div class="w-full relative mb-6">
+                <div class="w-full h-full before:pt-[66%] before:content-[''] before:block">
+                    {{ page_builder scope="block" }}
+                    {{if type == "banner_section" }}
+                    <img src="{{ thumb_image }}" class="absolute top-0 left-0 w-full h-full object-cover">
+                    {{/if}}
+                    {{ /page_builder }}
+                </div>
+                <div class="p-3 relative z-1 bg-gray-950 text-center mx-auto w-[calc(100%-50px)] -mt-6">
+                    <h4
+                        class="lg:text-20 text-lg leading-lineHeight text-black tracking-wide hover:text-vividblue-400 font-Satoshi font-bold">
+                        <a href="{{ url }}" class="text-currentColor">
+                            {{ title }}
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            {{ /collection:{collections} }}
+
+        </div>  
+    </div>
+</div>

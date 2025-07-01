@@ -1,0 +1,118 @@
+{{if tag_title != '' }}
+<section class="relative overflow-hidden py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <div class="flex flex-col justify-between gap-7 md:flex-row">
+            <div class="w-full max-w-[432px]">
+                {{ if section_title != '' }}
+                <span
+                    class="border uppercase py-1 px-5 border-vividblue-400 rounded-2xl text-sm font-bold mb-4 md:mb-6 uppercase inline-block">{{
+                    tag_title }}</span>
+                <h2
+                    class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium">
+                    {{ section_title }}
+                </h2>
+                {{ /if }}
+            </div>
+
+            {{ collection:{collections} as="data" limit="{limit}" paginate="true" }}
+            <div class="w-full max-w-[840px]">
+                <div id="case-studies-list">
+
+                    {{ data }}
+                    <div class="border-b border-gray-700 2xl:pb-11 2xl:pt-10 xl:py-10 lg:py-9 md:py-8 py-6">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black font-Larken font-medium">
+                            <a href="{{url}}" class="text-currentColor">{{ title }}</a>
+                        </h3>
+                        <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-3">
+                            {{ page_builder }}
+                            {{ thumb_description }}
+                            {{ /page_builder }}
+                        </p>
+                        <div class="flex items-center justify-between gap-3">
+                            <div class="flex flex-wrap gap-3">
+                                <label
+                                    class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">{{
+                                    date }}</label>
+                                <a href="{{url}}"
+                                    class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">{{
+                                    author }}</a>
+                            </div>
+                            <a href="{{url}}"
+                            class="2xl:w-24 xl:w-20 lg:w-16 md:w-12 w-10 2xl:h-24 xl:h-20 lg:h-16 md:h-12 h-10 rounded-full border border-gray-700 hover:text-white hover:bg-vividblue-400 hover:border-vividblue-400 flex items-center justify-center text-vividblue-400 p-3 bg-white ">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <path d="M1 28.9999L29 1M29 1V27.8801M29 1H2.12001" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            </a>
+                        </div>
+                    </div>
+                    {{ /data }}
+                </div>
+
+                {{ section_button }}
+                {{ if text != '' }}
+                {{ if paginate:next_page }}
+                <div class="text-center mt-6">
+                    <button id="load-more-btn" data-next-page="{{ paginate:next_page }}"
+                        class="all-btn xl:mt-[50px] lg:mt-10 mt-8">
+                        Load more<svg class="ml-2 inline-block " width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M1 11C1 16.523 5.477 21 11 21C16.523 21 21 16.523 21 11C21 5.477 16.523 1 11 1"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17 11C17 7.6865 14.3135 5 11 5C7.6865 5 5 7.6865 5 11C5 14.3135 7.6865 17 11 17"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </button>
+                </div>
+                {{ /if }}
+                {{ /if }}
+                {{ /section_button }}
+            </div>
+
+            {{ /collection:{collections} }}
+        </div>
+    </div>
+</section>
+
+{{/if}}
+
+
+{{if tag_title == '' }}
+<div class="relative bg-gray-200">
+    <div class="container 2xl:pb-20 2xl:pt-[70px] xl:py-16 lg:py-14 md:py-12 py-10">
+        <div class="w-full max-w-[900px] mx-auto">
+            <h2
+                class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium lg:mb-8 md:mb-6 mb-5">
+                {{section_title}}</h2>
+            {{collection:{collections} id:not='{ids}' limit="{limit}"  }}
+            <div class="border border-gray-700 bg-white xl:pl-10 xl:pr-11 2xl:pb-11 2xl:pt-10 xl:py-10 lg:p-9 p-8">
+                <h3
+                    class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black font-Larken font-medium">
+                    {{title}}</h3>
+                <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-3">
+                    {{page_builder}}
+                    {{thumb_description}}
+                    {{/page_builder}}</p>
+                <div class="flex items-center justify-between gap-3">
+                    <div class="flex flex-wrap gap-3">
+                        <label
+                            class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">{{date}}</label>
+                        <a href="{{url}}"
+                            class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full before:rounded-full">{{author}}</a>
+                    </div>
+
+                    <a href="{{url}}"
+                        class="2xl:w-24 xl:w-20 lg:w-16 md:w-12 w-10 2xl:h-24 xl:h-20 lg:h-16 md:h-12 h-10 rounded-full border border-gray-700 hover:text-white hover:bg-vividblue-400 hover:border-vividblue-400 flex items-center justify-center text-vividblue-400 p-3 bg-white ">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M1 28.9999L29 1M29 1V27.8801M29 1H2.12001" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {{/collection:{collections} }}
+        </div>
+    </div>
+</div>
+{{/if}}

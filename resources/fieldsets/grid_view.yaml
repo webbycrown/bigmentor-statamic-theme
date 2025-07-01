@@ -1,0 +1,276 @@
+title: 'Grid Showcase'
+fields:
+  -
+    handle: if_have_a_tag_title
+    field:
+      default: false
+      type: toggle
+      display: 'if have a tag title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: layouts_grid
+    field:
+      options:
+        column: 'Column Based Grid'
+        row: 'Row Based Grid'
+        soft: 'Soft Grid'
+        hard: 'Hard Grid'
+        highlights: 'highlights Grid'
+        futured: 'Futured Grid'
+        accordion: 'Accordion Grid'
+        gutters: 'Gutters Grid'
+        card-based: 'Card-Based Grid Layout'
+        asymmetric: 'Asymmetric blog grid'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'layouts grid'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: card_based_grid
+    field:
+      options:
+        profile: 'Profile Card'
+        post: 'Like a "Blog" post'
+        'masonry ': 'Masonry grid Like "Insights"'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Card Based Grid'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layouts_grid: 'equals card-based'
+      validate:
+        - sometimes
+  -
+    handle: tag_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'tag title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        if_have_a_tag_title: 'equals true'
+  -
+    handle: section_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'section title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      unless:
+        layouts_grid: 'equals card-based'
+  -
+    handle: section_button
+    field:
+      fields:
+        -
+          handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: text
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 1
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'section button'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      unless:
+        layouts_grid: 'equals column'
+      always_save: true
+  -
+    handle: collections
+    field:
+      max_items: 1
+      mode: select
+      type: collections
+      display: Collections
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+      validate:
+        - required
+  -
+    handle: limit
+    field:
+      type: integer
+      display: limit
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+      validate:
+        - sometimes
+      unless:
+        layouts_grid: 'equals asymmetric'
+  -
+    handle: filter_type
+    field:
+      options:
+        random: 'Random Post'
+        latest: 'Latest Post'
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: filter_type
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      default: random
+      validate:
+        - sometimes
+      if:
+        layouts_grid: 'equals futured'
+      always_save: true
+  -
+    handle: button
+    field:
+      fields:
+        -
+          handle: text
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 1
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: button
+      listable: false
+      instructions_position: above
+      visibility: hidden
+      replicator_preview: true
+      hide_display: false
+      unless:
+        layouts_grid: 'equals asymmetric'
+  -
+    handle: pagination
+    field:
+      options:
+        'true': 'True'
+        'false': 'False'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: pagination
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layouts_grid: 'equals card-based'

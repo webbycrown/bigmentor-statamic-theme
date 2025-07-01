@@ -1,0 +1,8 @@
+title: Categories
+preview_targets:
+  -
+    label: Term
+    url: '{permalink}'
+    refresh: true
+term_template: our_insights/index
+layout: our_insights/show

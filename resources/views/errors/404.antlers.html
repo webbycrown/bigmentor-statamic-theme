@@ -1,0 +1,44 @@
+{{error_page}}
+<section
+    class="relative overflow-hidden bg-cover bg-error-bg w-full before:content-[''] before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-black before:opacity-60">
+    <div class="container relative z-1">
+        <div class="flex items-center justify-center flex-col min-h-screen py-10">
+            <h1
+                class="2xl:text-[180px] xl:text-[150px] lg:text-9xl sm:text-8xl text-6xl mb-3 md:mb-5 leading-lineHeight text-white font-Satoshi font-bold">
+                {{title}}</h1>
+            <p class="text-center lg:text-25 sm:text-20 text-lg leading-lineHeight text-white font-Satoshi">
+                {{description}}</p>
+
+            <!-- ✅ Updated Search Form -->
+            <form action="/search-result" method="GET" class="max-w-[700px] w-full mx-auto my-10">
+                <div class="relative overflow-hidden">
+                    <input type="search" name="q"
+                        class="block w-full md:py-4 md:px-6 py-3 px-4 font-Satoshi 2xl:text-lg lg:text-md text-sm leading-lineHeight font-normal text-white placeholder:text-white bg-transparent border-0 focus:outline-0 focus:ring-0 relative z-1"
+                        placeholder="Search here..." required />
+                    <div class="absolute top-0 left-0 w-full h-full bg-white bg-opacity-40 backdrop-blur-[8px]"></div>
+                    <button type="submit"
+                        class="flex items-center justify-center md:w-12 md:h-12 w-8 h-8 text-white absolute top-1/2 -translate-y-2/4 right-[5px] z-1 cursor-pointer bg-vividblue-400 hover:bg-white hover:text-black focus:ring-0 focus:outline-none p-2">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.8369 4.41208C12.2855 3.85045 11.6282 3.40363 10.9032 3.09743C10.1781 2.79123 9.39958 2.63171 8.61252 2.6281C7.82546 2.62448 7.04549 2.77683 6.31764 3.07636C5.5898 3.37589 4.92851 3.81665 4.37197 4.37319C3.81543 4.92973 3.37466 5.59102 3.07514 6.31887C2.77561 7.04671 2.62326 7.82669 2.62687 8.61375C2.63049 9.4008 2.79001 10.1793 3.09621 10.9044C3.40241 11.6295 3.84923 12.2867 4.41086 12.8381C5.53172 13.9385 7.04177 14.5519 8.61252 14.5446C10.1833 14.5374 11.6876 13.9102 12.7983 12.7995C13.909 11.6888 14.5362 10.1845 14.5434 8.61375C14.5506 7.043 13.9373 5.53294 12.8369 4.41208ZM3.11469 3.11592C4.51978 1.71118 6.40842 0.896278 8.3944 0.837846C10.3804 0.779414 12.3137 1.48187 13.7989 2.80157C15.2842 4.12126 16.2091 5.95849 16.3847 7.93756C16.5603 9.91663 15.9732 11.888 14.7435 13.4486L19.6431 18.3482L18.3469 19.6443L13.4474 14.7448C11.8863 15.9699 9.91659 16.5534 7.94008 16.376C5.96358 16.1987 4.12917 15.274 2.81107 13.7906C1.49297 12.3072 0.790482 10.3767 0.846903 8.39307C0.903324 6.40943 1.7144 4.52205 3.11469 3.11592Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+            {{button}}
+            <a class="all-btn btn-outline bg-white hover:bg-vividblue-400 hover:border-vividblue-400 text-black hover:text-white shrink-0"
+                href="{{link}}">
+                {{text}}
+                {{if icon .ends_with ".svg"}}
+                {{svg src="{icon}" class="ml-2 inline-block" fill="none"}}
+                {{else}}
+                <img src="{{icon}}" class="ml-2 inline-block" width="14" height="13" alt="">
+                {{/if}}
+            </a>
+            {{/button}}
+        </div>
+    </div>
+</section>
+{{/error_page}}

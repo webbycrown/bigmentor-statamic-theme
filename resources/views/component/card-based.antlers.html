@@ -1,0 +1,154 @@
+{{if card_based_grid == "post"}}
+<div
+    class="wb-insights-from-section relative 2xl:pt-[100px] 2xl:pb-[120px] xl:pt-20 xl:pb-20 lg:pt-16 lg:pb-16 md:pt-14 md:pb-14 sm:pt-12 md:pb-12 pt-10 pb-10">
+    <div class="container">
+        {{ collection:{collections} as="list" paginate={pagination} limit="{limit}" }}
+        {{button = button}}
+
+        <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:gap-8 lg:gap-10">
+            {{list}}
+
+            {{page_builder}}
+            {{ if type == "banner_section" }}
+            <div class="border border-gray-700 p-6">
+                <h4
+                    class="lg:text-25 sm:text-20 text-lg lg:mb-4 mb-3 leading-lineHeight text-black font-Larken font-medium">
+                    {{title}}</h4>
+                <div class="-mr-6">
+                    <div class="relative w-full before:content-[''] before:block before:pt-[64%]">
+                        <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{thumb_image}}" alt="">
+                        <div class="sm:w-11/12 w-full px-6 py-5 -ml-6 bg-gray-200 rounded-tr-2xl relative">
+                            <p class="text-md leading-lineHeight font-normal text-gray-800">{{thumb_description
+                                truncate="80"}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{ block:button }}
+                <a href="{{url}}"
+                    class="mt-5 font-bold flex items-center md:text-lg text-md hover:text-black text-vividblue-400">
+                    {{text}}
+                    {{ if icon ends_with ".svg" }}
+                    {{ svg src='{{icon}}' class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" }}
+                    {{ else }}
+                    <img src="{{ icon }}" class="ml-1" width="16" height="16" alt="">
+                    {{ /if }}
+                </a>
+                {{ /block:button }}
+            </div>
+            {{ /if }}
+            {{ /page_builder }}
+
+
+            {{/list}}
+        </div>
+
+        <div class="text-center pt-6 md:pt-8 lg:pt-10 xl:pt-12 2xl:pt-[60px]">
+            <nav class="isolate inline-flex" aria-label="Pagination">
+                {{ paginate }}
+                {{partial:pagination}}
+                {{ /paginate }}
+            </nav>
+        </div>
+
+        {{ /collection:{collections} }}
+
+    </div>
+</div>
+{{elseif card_based_grid == 'profile'}}
+<div
+    class="relative 2xl:pt-[100px] 2xl:pb-[120px] xl:pt-20 xl:pb-20 lg:pt-16 lg:pb-16 md:pt-14 md:pb-14 sm:pt-12 md:pb-12 pt-10 pb-10">
+    <div class="container">
+        {{ collection:{collections} as="list" paginate={pagination} limit="{limit}" }}
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
+            {{list}}
+            {{page_builder}}
+            {{if type == 'consultants_members'}}
+            <div class="relative group">
+                <div
+                    class="w-full h-full before:pt-[100%] before:content-[''] before:block after:bg-custom-gradient after:absolute after:bottom-0 after:left-0 after:w-full after:h-4/6 after:content-[''] after:block">
+                    <img src="{{image}}" class="absolute top-0 left-0 w-full h-full object-cover" alt="">
+
+                    <div class="py-6 px-7 relative z-1 bg-custom-gradient">
+                        <h4
+                            class="lg:text-25 sm:text-20 text-lg mb-1 leading-lineHeight text-white tracking-wide group-hover:text-vividblue-400 font-Larken font-bold">
+                            <a href="{{url}}" class="text-currentColor">{{title}}</a>
+                        </h4>
+                        <p class="text-md leading-lineHeight font-medium text-white tracking-wide">- {{position}}</p>
+                    </div>
+
+                </div>
+            </div>
+            {{/if}}
+            {{ /page_builder }}
+            {{ /list }}
+
+        </div>
+        <div class="text-center pt-6 md:pt-8 lg:pt-10 xl:pt-12 2xl:pt-[60px]">
+            <nav class="isolate inline-flex" aria-label="Pagination">
+                {{ paginate }}
+                {{partial:pagination}}
+                {{ /paginate }}
+            </nav>
+        </div>
+
+        {{ /collection:{collections} }}
+    </div>
+</div>
+{{elseif card_based_grid == 'masonry'}}
+
+
+
+
+{{ collection:{collections} as="list" paginate={pagination} limit="{limit}" }}
+<div class="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:gap-8 lg:gap-10">
+    {{list}}
+    {{page_builder}}
+    {{ if type == "insights_blog_page" }}
+    <div class="bg-white border border-gray-700 border-t-0">
+        <div class="relative w-full before:content-[''] before:block before:pt-[63%] overview-hidden mb-0">
+            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{thumb_image}}" alt="">
+        </div>
+        <div class="p-6">
+            <div class="flex flex-wrap gap-3 mb-4">
+                <label
+                    class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">{{date}}</label>
+                <a href="{{url}}"
+                    class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full before:rounded-full">{{author}}</a>
+            </div>
+            <h4
+                class="lg:text-25 sm:text-20 text-lg mb-2 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                <a href="{{url}}" class="text-currentColor">{{title}}</a>
+            </h4>
+            <p class="text-md leading-lineHeight font-normal text-gray-800">{{thumb_description}}</p>
+            {{button}}
+            <a href="{{url}}"
+                class="mt-5 font-bold flex items-center md:text-lg text-md hover:text-black text-vividblue-400">
+                {{text}}
+                <!-- <svg class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none"> <path d="M1.42871 12.1428L12.5716 1M12.5716 1V11.6972M12.5716 1H1.87443" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </svg> -->
+                {{ if icon ends_with ".svg" }}
+                {{ svg src='{{icon}}' class="ml-1" width="16" height="16" viewBox="0 0 16 16" fill="none" }}
+                {{ else }}
+                <img src="{{ icon }}" class="ml-1" width="16" height="16" alt="">
+                {{ /if }}
+            </a>
+            {{ /button }}
+        </div>
+    </div>
+    {{/if}}
+    {{ /page_builder }}
+    {{/list}}
+</div>
+
+
+<div class="text-center pt-6 md:pt-8 lg:pt-10 xl:pt-12 2xl:pt-[50px]">
+    <nav class="isolate inline-flex" aria-label="Pagination">
+        {{ paginate }}
+        {{partial:pagination}}
+        {{ /paginate }}
+    </nav>
+</div>
+
+
+{{ /collection:{collections} }}
+
+{{/if}}

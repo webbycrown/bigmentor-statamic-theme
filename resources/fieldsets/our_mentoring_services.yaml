@@ -1,0 +1,183 @@
+title: "Our Mentoring Services"
+fields:
+  - handle: tag_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: "tag title"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  - handle: listing
+    field:
+      fields:
+        - handle: counts
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: counts
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        - handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: listing
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  - handle: description
+    field:
+      antlers: false
+      type: textarea
+      display: Description
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  - handle: button
+    field:
+      fields:
+        - handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        - handle: text
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        - handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Button
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      max_rows: 1
+  - handle: card_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: "card title"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  - handle: card_description
+    field:
+      antlers: false
+      type: textarea
+      display: "card description"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  - handle: card_btn
+    field:
+      fields:
+        - handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        - handle: text
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        - handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: "card btn"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      max_rows: 1

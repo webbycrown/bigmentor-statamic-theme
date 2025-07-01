@@ -1,0 +1,97 @@
+{{footer}}
+<footer>
+    <div class="relative h-full footer-wrap bg-black 2xl:pt-24 xl:pt-20 lg:pt-18 md:pt-16 pt-10 lg:px-4">
+        <div class="container">
+            <div class="flex flex-col">
+                <div class="flex flex-col md:flex-row lg:order-none order-3 pb-8 lg:pb-0 md:gap-5 gap-7 justify-between">
+                    <div class="w-full max-w-[600px]">
+                        <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight text-white block mb-0">{{footer_about}}</p>
+                    </div>
+                    <div class="w-full max-w-[569px]">
+                        {{ form:newsletter }}
+                            <div class="block">
+                                <div class="w-full flex mb-3">
+                                    <input 
+                                        class="w-full py-2 ps-6 px-4 text-sm md:text-md lg:text-lg text-white font-normal border-0 placeholder:text-white focus:text-white focus:outline-none bg-gray-600" 
+                                        type="email" 
+                                        name="email" 
+                                        placeholder="{{ placeholder }}" 
+                                        required>
+                    
+                                    <button type="submit" class="all-btn btn-outline bg-vividblue-400 border-vividblue-400 hover:border-white shrink-0 ml-3">
+                                        {{ bottun:0:text }}
+                                        {{svg src='{{ bottun:0:icon }}' class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13" fill="none"}} 
+                                    </button>
+                                </div>
+                    
+                                {{ if errors:email }}
+                                    <span class="text-red-500 text-sm" role="alert">Please enter a valid email address.</span>
+                                {{ /if }}
+                            </div>
+                    
+                            <label class="flex items-center">
+                                <input 
+                                    name="privacy_policy" 
+                                    type="checkbox" 
+                                    required 
+                                    class="form-checkbox text-blue-500"
+                                    aria-describedby="privacy-error">
+                    
+                                <p class="text-md text-white font-normal ml-3">
+                                    {{privacy_consent_text}}
+                                </p>
+                                
+                            </label>
+                    
+                        {{ /form:newsletter }}
+                    </div>
+                    
+                </div>
+                <div class="flex lg:order-none order-1 gap-7 lg:pt-10 xl:pt-14 2xl:pt-16 flex-wrap justify-between">
+                    <a href="{{site:url}}">
+                        {{footer_logo}}
+                        <img alt="main-logo" class="white-img w-[200px] lg:w-auto" src="{{url}}">
+                        {{/footer_logo}}
+                    </a>
+                    <ul class="flex items-center gap-y-3 lg:gap-x-[30px] md:gap-x-6 gap-x-4">
+                        {{ social_media }}
+                            <li><a href="{{ link }}"><i class="fa-brands {{ icon_class }} text-white hover:text-white-100 w-4 h-4 md:w-6 md:h-6 text-md lg:text-[18px] inline-block"></i></a></li>
+                        {{ /social_media }}
+
+                    </ul>  
+                </div>
+                <div class="w-full lg:order-none order-2 py-7 sm:py-8 md:py-10 xl:py-14 2xl:py-16">
+                    <ul class="nav flex justify-start flex-wrap gap-y-2 gap-x-4 sm:gap-x-8 md:gap-x-10 lg:gap-x-12 xl:gap-x-14 2xl:gap-x-16">
+                        {{nav:footer_navs}}
+                        <li><a class="text-white hover:text-white-100 text-md lg:text-lg 2xl:text-[20px] font-normal block" href="{{url}}">{{title}}</a></li>
+                        {{/nav:footer_navs}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full border-t border-t-lightborder-100 bg-black">
+        <div class="container">
+            <div class="flex items-center gap-2 md:flex-nowrap flex-wrap justify-between py-3 md:py-5">
+                <p class="text-white-100 md:w-auto w-full text-center md:text-left 2xl:text-lg 1xl:text-md text-sm">{{copyright_text}}</p>
+                <ul class="flex items-center flex-wrap md:w-auto w-full md:justify-start justify-center">
+                    {{policies}}
+                    <li class="after:content-[''] last:after:hidden after:inline-block after:w-[1px] after:h-[10px] after:bg-white-100 md:after:mx-3 after:mx-2 after:align-middle">
+                        <a class="2xl:text-lg 1xl:text-md text-sm text-white-100 hover:text-white" href="{{link}}">{{title}}</a>
+                    </li>
+                    {{/policies}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ====== Footer ====== -->
+
+<!-- ====== Float right icon ====== -->
+<div class="float-right-icon fixed overflow-hidden right-5 bottom-8 z-30">
+    <div id="scroll-to-top" class="relative transition-all p-0 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-vividblue-400 hover:border-vividblue-400 border border-white bg-vividblue-400 text-white animated off fadeInRight">
+        <i class="fa-solid fa-angle-up"></i>
+    </div>
+</div>
+{{/footer}}
+

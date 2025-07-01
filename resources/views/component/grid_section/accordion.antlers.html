@@ -1,0 +1,36 @@
+<div class="relative py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <div
+            class="flex flex-row justify-between gap-3 lg:flex-nowrap flex-wrap pb-6 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-14 2xl:pb-16">
+            <h2
+                class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium">
+                {{section_title}}</h2>
+            <div class="max-w-[633px]">
+                <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">
+                    {{if description !== ""}}
+                    {{description}}
+                    {{/if}}/p>
+            </div>
+        </div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:gap-8 lg:gap-[42px]">
+            {{accordion}}
+            <div
+                class="border border-gray-200 py-5 md:py-8 lg:py-10 xl:py-[45px] px-5 md:px-8 lg:px-10 xl:px-[50px] text-center">
+                <div
+                    class="text-black w-20 h-20 lg:w-[120px] lg:h-[120px] mx-auto bg-gray-200 p-3 rounded-full flex items-center justify-center xl:mb-[22px] lg:mb-4 mb-3">
+                    <img src="{{icon}}" alt="img" class="lg:w-14 lg:h-14 w-10 h-10 object-contain object-center">
+                </div>
+                <h4
+                    class="lg:text-25 sm:text-20 text-lg lg:mb-3.5 mb-2.5 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium ">
+                    {{if link != ''}}
+                    <a href="{{linl}}" class="text-currentColor">{{title}}</a>
+                    {{else}}
+                    <p class="text-currentColor">{{title}}</p>
+                    {{/if}}
+                </h4>
+                <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>
+            </div>
+            {{/accordion}}
+        </div>
+    </div>
+</div>

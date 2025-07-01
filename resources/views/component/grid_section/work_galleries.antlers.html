@@ -1,0 +1,17 @@
+<section class="relative overflow-hidden py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <div class="w-full h-full gap-5 grid xl:grid-cols-[848px_auto] lg:grid-cols-[650px_auto] md:grid-cols-2 grid-cols-1">
+            {{ work_galleries }}
+                {{ if image_style == "full" }}
+                <div class="w-full row-span-2 h-full relative before:md:pt-[53%] before:pt-[100%] before:content-[''] before:block">
+                    <img src="{{ image }}" alt="" class="absolute top-0 left-0 w-full h-full object-cover" loading="lazy">
+                </div>
+                {{ else }}
+                <div class="w-full h-full relative before:md:pt-[53%] before:pt-[100%] before:content-[''] before:block">
+                    <img src="{{ image }}" alt="" class="absolute top-0 left-0 w-full h-full object-cover" loading="lazy">
+                </div>
+                {{ /if }}
+            {{ /work_galleries }}
+        </div>
+    </div>
+</section>

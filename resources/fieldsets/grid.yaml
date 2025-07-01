@@ -1,0 +1,622 @@
+title: 'Grid Section'
+fields:
+  -
+    handle: layout
+    field:
+      options:
+        simple: 'Simple Grid'
+        'card ': 'Card Grid'
+        card_with_icon: 'Card With Icon Grid'
+        accordion: 'Accordion Grid'
+        gutters: 'Gutters Grid'
+        timeline: 'Timeline Grid'
+        feature: 'Feature Grid'
+        work_galleries: 'Work Galleries Grid'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: layout
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: section_tag
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'section tag'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals feature'
+  -
+    handle: section_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Section Title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      unless:
+        layout: 'equals work_galleries'
+  -
+    handle: description
+    field:
+      antlers: false
+      type: textarea
+      display: Description
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      always_save: true
+      unless_any:
+        layout: 'equals work_galleries'
+  -
+    handle: simple_grid
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Simple Grid'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals simple'
+  -
+    handle: card_grid
+    field:
+      fields:
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: description
+          field:
+            character_limit: '100'
+            antlers: false
+            type: textarea
+            display: Description
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Card Grid'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals card'
+  -
+    handle: card_with_icon_grid
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: description
+          field:
+            character_limit: '100'
+            antlers: false
+            type: textarea
+            display: Description
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Card With Icon Grid'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals card_with_icon'
+  -
+    handle: accordion
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: description
+          field:
+            character_limit: '100'
+            antlers: false
+            type: textarea
+            display: Description
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Accordion
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals accordion'
+  -
+    handle: gutters
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: description
+          field:
+            character_limit: '250'
+            antlers: false
+            type: textarea
+            display: Description
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Gutters
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals gutters'
+  -
+    handle: timeline_grid
+    field:
+      fields:
+        -
+          handle: image
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Image
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: title
+          field:
+            input_type: text
+            character_limit: 60
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: description
+          field:
+            character_limit: '200'
+            antlers: false
+            type: textarea
+            display: Description
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+      mode: table
+      max_rows: 4
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Timeline Grid'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals timeline'
+      always_save: true
+  -
+    handle: feature
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Icon
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: link
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: description
+          field:
+            character_limit: '250'
+            antlers: false
+            type: textarea
+            display: Description
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Feature
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals feature'
+  -
+    handle: work_galleries
+    field:
+      fields:
+        -
+          handle: image
+          field:
+            max_files: 1
+            mode: list
+            container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
+            type: assets
+            display: Image
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+        -
+          handle: image_style
+          field:
+            options:
+              half: 'Half Image'
+              full: 'Full image'
+            taggable: false
+            push_tags: false
+            multiple: false
+            clearable: false
+            searchable: true
+            cast_booleans: false
+            type: select
+            display: 'Image style'
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+            validate:
+              - required
+      mode: table
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'Work Galleries'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layout: 'equals work_galleries'

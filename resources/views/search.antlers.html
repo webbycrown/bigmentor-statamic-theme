@@ -1,0 +1,548 @@
+<section class="relative bg-gray-500">
+    <div class="container">
+        <div class="2xl:py-20 xl:py-16 lg:py-14 md:py-12 py-10">
+            <form class="flex items-center border border-gray-700 bg-white lg:py-5 lg:px-6 py-3 px-4 w-full"
+                name="search-input" onsubmit="return false">
+                <div class="flex items-center justify-between w-full">
+                    <div class="flex items-center gap-3 w-full">
+                        <button type="submit" class="hover:text-black text-vividblue-400 focus:outline-none">
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                <path
+                                    d="M13.0912 3.90407C12.4897 3.29138 11.7727 2.80394 10.9817 2.4699C10.1908 2.13586 9.34144 1.96185 8.48283 1.9579C7.62423 1.95396 6.77334 2.12016 5.97933 2.44692C5.18532 2.77367 4.46391 3.2545 3.85677 3.86164C3.24964 4.46877 2.76881 5.19018 2.44205 5.98419C2.1153 6.77821 1.94909 7.62909 1.95304 8.4877C1.95698 9.34631 2.131 10.1956 2.46504 10.9866C2.79908 11.7776 3.28652 12.4945 3.89921 13.0961C5.12196 14.2966 6.76929 14.9656 8.48283 14.9578C10.1964 14.9499 11.8375 14.2657 13.0492 13.054C14.2608 11.8424 14.945 10.2012 14.9529 8.4877C14.9608 6.77416 14.2917 5.12682 13.0912 3.90407ZM2.48521 2.49007C4.01802 0.957632 6.07836 0.068645 8.24489 0.00490101C10.4114 -0.0588429 12.5205 0.707472 14.1407 2.14714C15.761 3.58681 16.7701 5.59106 16.9616 7.75005C17.1532 9.90903 16.5127 12.0596 15.1712 13.7621L20.5162 19.1071L19.1022 20.5211L13.7572 15.1761C12.0542 16.5126 9.90545 17.1491 7.74926 16.9557C5.59308 16.7622 3.59191 15.7535 2.15398 14.1352C0.716055 12.5169 -0.0502975 10.4109 0.0112525 8.24697C0.0728025 6.083 0.957618 4.02403 2.48521 2.49007Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </button>
+                        <input id="site-search"
+                            class="w-full border-none focus:outline-none lg:text-20 sm:text-lg text-md leading-lineHeight text-black placeholder:text-black font-medium font-Satoshi"
+                            name="searchValue" type="search" placeholder="Search for consulting services or insights…"
+                            autocomplete="off" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Buttons -->
+        <div role="tablist"
+            class="flex xl:gap-[60px] lg:gap-12 md:gap-8 gap-6 whitespace-nowrap overflow-x-auto menu-filter">
+
+            <div class="pb-[1px] !w-auto group tab-button tab-active">
+                <button id="tab-1" aria-selected="true" aria-controls="tabpanel-1"
+                    class="pb-5 font-medium text-md group-[.tab-active]:border-b-vividblue-400 group-[.tab-active]:text-vividblue-400 hover:border-b-vividblue-400 hover:text-vividblue-400 lg:text-lg border-b-[3px] border-b-transparent block"
+                    data-filter=".all_results">All Results</button>
+            </div>
+
+            <div class="pb-[1px] !w-auto group tab-button">
+                <button id="tab-2" aria-selected="true" aria-controls="tabpanel-2" href="javascript:;"
+                    class="pb-5 font-medium text-md group-[.tab-active]:border-b-vividblue-400 group-[.tab-active]:text-vividblue-400 hover:border-b-vividblue-400 hover:text-vividblue-400 lg:text-lg border-b-[3px] border-b-transparent block"
+                    data-filter=".consulting">Consulting</button>
+            </div>
+
+            <div class="pb-[1px] !w-auto group tab-button">
+                <button id="tab-2" aria-selected="true" aria-controls="tabpanel-2" href="javascript:;"
+                    class="pb-5 font-medium text-md group-[.tab-active]:border-b-vividblue-400 group-[.tab-active]:text-vividblue-400 hover:border-b-vividblue-400 hover:text-vividblue-400 lg:text-lg border-b-[3px] border-b-transparent block"
+                    data-filter=".insights">Insights</button>
+            </div>
+
+            <div class="pb-[1px] !w-auto group tab-button">
+                <button id="tab-2" aria-selected="true" aria-controls="tabpanel-2" href="javascript:;"
+                    class="pb-5 font-medium text-md group-[.tab-active]:border-b-vividblue-400 group-[.tab-active]:text-vividblue-400 hover:border-b-vividblue-400 hover:text-vividblue-400 lg:text-lg border-b-[3px] border-b-transparent block"
+                    data-filter=".case_studies">Case Studies</button>
+            </div>
+            <div class="pb-[1px] !w-auto group tab-button">
+                <button id="tab-2" aria-selected="true" aria-controls="tabpanel-2" href="javascript:;"
+                    class="pb-5 font-medium text-md group-[.tab-active]:border-b-vividblue-400 group-[.tab-active]:text-vividblue-400 hover:border-b-vividblue-400 hover:text-vividblue-400 lg:text-lg border-b-[3px] border-b-transparent block"
+                    data-filter=".careers">Careers</button>
+            </div>
+            <div class="pb-[1px] !w-auto group tab-button">
+                <button id="tab-2" aria-selected="true" aria-controls="tabpanel-2" href="javascript:;"
+                    class="pb-5 font-medium text-md group-[.tab-active]:border-b-vividblue-400 group-[.tab-active]:text-vividblue-400 hover:border-b-vividblue-400 hover:text-vividblue-400 lg:text-lg border-b-[3px] border-b-transparent block"
+                    data-filter=".industries">Industries</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ====== Search Results Section ====== -->
+<section class="relative bg-white w-full pt-7 pb-7 sm:pb-8 md:pb-10 lg:pb-12 xl:pb-14 2xl:pb-16">
+    <div class="isotope container" id="combined-search">
+        <!-- Initial content or empty -->
+        {{if our_insights or case_studies or industries or our_consultant or job_careers}}
+        <article id="tabpanel-1" class="tab-panel item all_results w-full" role="tabpanel" tabindex="0">
+            <div class="results-wrap">
+
+                {{ our_insights }}
+                {{page_builder}}
+                {{if type == "insights_blog_page"}}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="{{ url }}">{{ title }}</a>
+                        </h3>
+                        <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                            <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{
+                                thumb_description }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                {{ date format="d M, Y" }}
+                            </label>
+                            <a href="{{ url }}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                {{ author }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="results-img sm:max-w-[360px] w-full">
+                        <div class="relative before:content-[''] before:pt-[56%] before:block">
+                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb_image }}"
+                                alt="{{ title }}">
+
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/page_builder}}
+                {{ /our_insights }}
+
+                {{ case_studies }}
+                {{page_builder}}
+                {{if type == "insights_blog_page"}}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="{{ url }}">{{ title }}</a>
+                        </h3>
+                        <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                            <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{
+                                thumb_description }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                {{ date format="d M, Y" }}
+                            </label>
+                            <a href="{{ url }}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                {{ author }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="results-img sm:max-w-[360px] w-full">
+                        <div class="relative before:content-[''] before:pt-[56%] before:block">
+
+                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb_image }}"
+                                alt="{{ title }}">
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/page_builder}}
+                {{ /case_studies }}
+
+                {{ industries }}
+                {{page_builder}}
+                {{if type == "banner_section"}}
+                {{if layout == "hero"}}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="{{ url }}">{{ title }}</a>
+                        </h3>
+                        <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                            <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{
+                                thumb_description }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                {{ date format="d M, Y" }}
+                            </label>
+                            <a href="{{ url }}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                {{ title }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="results-img sm:max-w-[360px] w-full">
+                        <div class="relative before:content-[''] before:pt-[56%] before:block">
+                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb_image }}"
+                                alt="{{ title }}">
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/if}}
+                {{/page_builder}}
+                {{ /industries }}
+
+                {{ our_consultant }}
+                {{page_builder}}
+                {{if type == "consultants_members"}}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="{{ url }}">{{ title }}</a>
+                        </h3>
+                        <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                            <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{ description
+                                }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                {{ date format="d M, Y" }}
+                            </label>
+                            <a href="{{ url }}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                {{ position }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/page_builder}}
+                {{ /our_consultant }}
+
+                {{ job_careers }}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="/careers">{{ title }}</a>
+
+                            <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                                <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">Position-{{
+                                    department:label }}
+
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <label
+                                    class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                    {{ date format="d M, Y" }}
+                                </label>
+                                <a href="/careers"
+                                    class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                    {{ department:label }}
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                {{ /job_careers }}
+            </div>
+        </article>
+        {{ if our_insights }}
+        <article id="tabpanel-our_insights" class="tab-panel item insights w-full" role="tabpanel" tabindex="0">
+            <div class="results-wrap">
+                {{ our_insights }}
+                {{page_builder}}
+                {{if type == "insights_blog_page"}}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="{{ url }}">{{ title }}</a>
+                        </h3>
+                        <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                            <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{
+                                thumb_description }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                {{ date format="d M, Y" }}
+                            </label>
+                            <a href="{{ url }}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                {{ author }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="results-img sm:max-w-[360px] w-full">
+                        <div class="relative before:content-[''] before:pt-[56%] before:block">
+                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb_image }}"
+                                alt="{{ title }}">
+
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/page_builder}}
+                {{ /our_insights }}
+            </div>
+        </article>
+        {{ /if }}
+
+        {{ if case_studies }}
+        <article id="tabpanel-case_studies" class="tab-panel item case_studies w-full" role="tabpanel" tabindex="0">
+            <div class="results-wrap">
+                {{ case_studies }}
+                {{page_builder}}
+                {{if type == "insights_blog_page"}}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="{{ url }}">{{ title }}</a>
+                        </h3>
+                        <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                            <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{
+                                thumb_description }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                {{ date format="d M, Y" }}
+                            </label>
+                            <a href="{{ url }}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                {{ author }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="results-img sm:max-w-[360px] w-full">
+                        <div class="relative before:content-[''] before:pt-[56%] before:block">
+
+                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb_image }}"
+                                alt="{{ title }}">
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/page_builder}}
+                {{ /case_studies }}
+            </div>
+        </article>
+        {{ /if }}
+
+        {{ if industries }}
+        <article id="tabpanel-industries" class="tab-panel item  industries w-full" role="tabpanel" tabindex="0">
+            <div class="results-wrap">
+                {{ industries }}
+                {{page_builder}}
+                {{if type == "banner_section"}}
+                {{if layout == "hero"}}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="{{ url }}">{{ title }}</a>
+                        </h3>
+                        <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                            <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{
+                                thumb_description }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                {{ date format="d M, Y" }}
+                            </label>
+                            <a href="{{ url }}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                {{ title }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="results-img sm:max-w-[360px] w-full">
+                        <div class="relative before:content-[''] before:pt-[56%] before:block">
+                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb_image }}"
+                                alt="{{ title }}">
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/if}}
+                {{/page_builder}}
+                {{ /industries }}
+            </div>
+        </article>
+        {{ /if }}
+
+        {{ if our_consultant }}
+        <article id="tabpanel-our_consultants" class="tab-panel item consulting w-full" role="tabpanel" tabindex="0">
+            <div class="results-wrap">
+                {{ our_consultant }}
+                {{page_builder}}
+                {{if type == "consultants_members"}}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="{{ url }}">{{ title }}</a>
+                        </h3>
+                        <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                            <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{ description
+                                }}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <label
+                                class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                {{ date format="d M, Y" }}
+                            </label>
+                            <a href="{{ url }}"
+                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                {{ position }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+                {{/page_builder}}
+                {{ /our_consultant }}
+            </div>
+        </article>
+        {{ /if }}
+        {{ if job_careers }}
+        <article id="tabpanel-our_consultants" class="tab-panel item careers w-full" role="tabpanel" tabindex="0">
+            <div class="results-wrap">
+                {{ job_careers }}
+                <div
+                    class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
+                    <div class="results-title">
+                        <h3
+                            class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                            <a class="text-current" href="/careers">{{ title }}</a>
+
+                            <div class="md:mb-6 mb-4 max-w-[734px] w-full">
+                                <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">Position-{{
+                                    department:label }}
+
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                <label
+                                    class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
+                                    {{ date format="d M, Y" }}
+                                </label>
+                                <a href="/careers"
+                                    class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
+                                    {{ department:label }}
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                {{ /job_careers }}
+            </div>
+        </article>
+        {{ /if }}
+        {{else}}
+        <p class="text-center lg:text-20 sm:text-lg text-md leading-lineHeight text-black font-medium font-Satoshi">No
+            results. Please try your search again.</p>
+
+        {{/if}}
+    </div>
+</section>
+
+<!-- ====== Results Section ====== -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var grid = $(".isotope").isotope({
+            itemSelector: ".item",
+            layoutMode: "fitRows",
+        });
+
+        $(".menu-filter button").on("click", function () {
+            var filterValue = $(this).attr("data-filter");
+            grid.isotope({ filter: filterValue });
+
+            $(".menu-filter button").removeClass("active");
+            $(this).addClass("active");
+
+
+        });
+        grid.isotope({ filter: '.all_results' });
+
+
+        const input = document.getElementById("site-search");
+        const resultBox = document.getElementById("combined-search");
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const q = urlParams.get("q");
+        if (q && input) {
+            input.value = decodeURIComponent(q.replace(/\+/g, " "));
+            triggerSearch(q); // 🔄 Auto-trigger on load
+        }
+
+        if (input && resultBox) {
+            let timeout = null;
+
+            input.addEventListener("keyup", function () {
+                const query = input.value.trim();
+
+                clearTimeout(timeout);
+
+                if (query.length < 2) {
+                    resultBox.innerHTML = "";
+                    resultBox.classList.remove("show");
+                    grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
+                    return;
+                }
+
+                timeout = setTimeout(() => {
+                    triggerSearch(query);
+                }, 300);
+            });
+        }
+
+        function triggerSearch(query) {
+            fetch(`/search_page_results?q=${encodeURIComponent(query)}`)
+                .then((response) => {
+                    if (!response.ok) throw new Error(`Network error: ${response.status}`);
+                    return response.text();
+                })
+                .then((fullHtml) => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(fullHtml, "text/html");
+                    const innerContent = doc.getElementById("combined-search");
+
+                    if (innerContent) {
+                        resultBox.innerHTML = innerContent.innerHTML;
+                        resultBox.classList.add("show");
+
+                        grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
+
+                        const newItems = resultBox.querySelectorAll(".item");
+                        if (newItems.length > 0) {
+                            grid.append(newItems).isotope("appended", newItems);
+                            grid.isotope("layout");
+                        }
+                    } else {
+                        resultBox.innerHTML = '<p class="text-red-600">No results found.</p>';
+                        resultBox.classList.add("show");
+                        grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
+                    }
+                })
+                .catch((error) => {
+                    console.error("Search error:", error);
+                    resultBox.innerHTML = '<p class="text-red-600">Error loading results.</p>';
+                    resultBox.classList.add("show");
+                    grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
+                });
+        }
+    });
+</script>

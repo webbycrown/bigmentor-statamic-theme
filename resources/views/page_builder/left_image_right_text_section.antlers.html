@@ -1,0 +1,106 @@
+{{if layout == "split_content"}}
+<div class="wb-hero-section relative bg-gray-200 mb-7 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16">
+    <div
+        class="container 2xl:pt-[85px] 2xl:pb-24 xl:pt-20 xl:pb-20 lg:pt-16 lg:pb-16 md:pt-14 md:pb-14 sm:pt-12 md:pb-12 pt-10 pb-10">
+        <div
+            class="flex items-center justify-between md:flex-row flex-col-reverse gap-7 sm:gap-10 md:gap-14 lg:gap-20 xl:gap-24 2xl:gap-32">
+            <div class="w-full h-full">
+                <span
+                    class="border uppercase py-1 px-5 border-vividblue-400 rounded-2xl text-sm font-bold mb-4 md:mb-6 lg:mb-8 inline-block">{{tag_title}}</span>
+                <h1
+                    class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl lg:mb-5 mb-3 leading-lineHeight text-black font-Larken font-medium">
+                    {{title}}</h1>
+                <p class="2xl:text-lg text-md leading-lineHeight mb-4 lg:mb-7 font-normal text-gray-800">{{description}}
+                </p>
+                {{button}}
+                <a class="all-btn btn-outline bg-vividblue-400 border-vividblue-400 mb-4 lg:mb-7" href="{{link}}">
+                    {{text}}
+                    {{if icon ends_with ".svg"}}
+                    {{ svg src="{{ icon }}" class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13" }}
+                    {{else}}
+                    <img src="{{ icon }}" alt="" class="ml-2 inline-block" width="14" height="13">
+                    {{/if}}
+                </a>
+                {{/button}}
+                <ul>
+                    <li class="py-1 px-3 text-md bg-white rounded inline-block text-black border border-gray-700">
+                        {{about}}</u></li>
+                </ul>
+            </div>
+            <div class="w-full h-full">
+                <div class="w-full h-full relative before:pt-[100%] before:content-[''] before:block">
+                    <img src="{{image}}" class="absolute top-0 left-0 w-full h-full object-cover" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+{{if layout == "two_column"}}
+
+<section class="relative md:bg-gray-200 overflow-hidden mb-7 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16">
+    <div class="container">
+        <div class="flex flex-col-reverse md:flex-row">
+            <div class="md:bg-gray-200 bg-white w-full md:w-[50%] flex items-center xl:min-h-[510px] md:min-h-[400px]">
+                <div class="w-full max-w-[720px] py-8 px-0 md:px-8 lg:px-10 xl:px-12 2xl:pl-0 2xl:pr-[120px]">
+                    <h1
+                        class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight lg:mb-5 mb-4 text-black font-Larken font-medium">
+                        {{title}}</h1>
+                    <p
+                        class="tracking-[0.02em] xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-5 md:mb-7 lg:mb-9 xl:mb-12 2xl:mb-14">
+                        {{description}}</p>
+
+                    {{button}}
+                    <a href="{{link}}"
+                        class="flex items-center xl:text-20 lg:text-lg text-md hover:text-black gap-3.5 text-vividblue-400">
+                        <span>
+                            {{if icon ends_with ".svg"}}
+                            {{ svg src="{{ icon }}" width="11" height="14" viewBox="0 0 11 14" fill="none"}}
+                            {{else}}
+                            <img src="{{ icon }}" alt="" width="11" height="14" viewBox="0 0 11 14" fill="none">
+                            {{/if}}
+                        </span>
+                        {{text}}
+                    </a>
+                    {{/button}}
+                </div>
+            </div>
+            <div class="overflow-hidden md:absolute left-auto right-0 top-0 bottom-0 h-full w-full md:w-[50%]">
+                <img src="{{image}}" class="w-full h-full object-cover object-center" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}
+{{if layout == "corp_section"}}
+<section class="relative overflow-hidden py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <div class="container">
+        <div class="flex flex-col-reverse md:flex-row">
+            <div class="bg-white w-full md:w-[50%] flex items-center justify-center">
+                <div
+                    class="w-full h-full  border-t-0 md:border-t-1 border md:border-r-0 border-gray-700 py-8 px-7 md:py-12 md:px-8 lg:py-14 lg:px-10 xl:py-16 xl:px-12 2xl:pt-[79px] 2xl:pb-[83px] 2xl:pl-[50px] 2xl:pr-[70px]">
+                    <h3
+                        class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black font-Larken font-medium">
+                        {{title}}</h3>
+                    <p
+                        class="tracking-[0.02em] lg:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-5 md:mb-7 lg:mb-8">
+                        {{description}}</p>
+                    {{button}}
+                    <a class="all-btn btn-outline bg-vividblue-400 border-vividblue-400 mb-4 lg:mb-7" href="{{link}}">
+                        {{text}}
+                        {{if icon ends_with ".svg"}}
+                        {{ svg src="{{ icon }}" class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13" }}
+                        {{else}}
+                        <img src="{{ icon }}" alt="" class="ml-2 inline-block" width="14" height="13">
+                        {{/if}}
+                    </a>
+                    {{/button}}
+                </div>
+            </div>
+            <div class="overflow-hidden w-full md:w-[50%]">
+                <img src="{{image:url}}" class="w-full h-full object-cover object-center" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+{{/if}}

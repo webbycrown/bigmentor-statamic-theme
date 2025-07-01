@@ -1,0 +1,50 @@
+<section class="relative overflow-hidden my-7 sm:my-8 md:my-10 lg:my-12 xl:my-14 2xl:my-16">
+    <div class="container">
+        <div class="flex flex-col-reverse md:flex-row">
+            <div class="bg-white w-full md:w-[calc(50%-30px)] max-w-[760px] flex items-center justify-center">
+                <div class="text-left text-black">
+
+                    <span
+                        class="border uppercase py-1 px-5 border-vividblue-400 rounded-2xl text-sm font-bold mb-5 md:mb-6 lg:mb-[51px] uppercase inline-block">{{tag_title}}</span>
+                    <div class="grid lg:grid-cols-2 lg:gap-8 gap-4 justify-between">
+                        {{listing}}
+                        <div class="w-full flex xl:gap-5 gap-3">
+                            <div
+                                class="font-Satoshi text-22 md:text-25 lg:text-28 xl:text-2xl 2xl:text-42 font-bold text-black leading-lineHeight">
+                                {{counts}}</div>
+                            <div class="font-Satoshi text-md lg:text-lg xl:text-22 font-bold text-gray-800">{{title}}
+                            </div>
+                        </div>
+                        {{/listing}}
+                    </div>
+                    <p class="2xl:text-lg text-md leading-lineHeight my-5 lg:my-8 xl:my-12 font-normal text-gray-800">
+                        {{description}}</p>
+                    {{button}}
+                    <a class="all-btn" href="{{link}}">
+                        {{text}}
+                        {{svg src="{{icon}}" width="14" height="13" viewBox="0 0 14 13" fill="none"}}
+                    </a>
+                    {{/button}}
+                </div>
+            </div>
+            <div
+                class="md:mb-0 mb-8 bg-vividblue-400 bg-financial_report_bg bg-cover bg-no-repeat flex items-center py-10 px-5 md:pl-10 lg:pl-14 xl:pl-16 2xl:pl-20 overflow-hidden md:absolute left-auto right-0 top-0 bottom-0 h-full w-full md:w-[calc(50%-30px)]">
+                <div class="ml-0 md:max-w-[860px] text-left text-black">
+                    <div class="ml-0 md:max-w-[533px]">
+                        <h2
+                            class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 mb-3 md:mb-5 leading-lineHeight text-white font-Larken font-medium">
+                            {{card_title}}</h2>
+                        <p class="2xl:text-lg text-md leading-lineHeight mb-5 lg:mb-10 font-normal text-white">
+                            {{card_description}}</p>
+                        {{card_btn}}
+                        <a class="all-btn btn-outline" href="{{link}}">
+                            {{text}}
+                            {{svg src="{{icon}}" width="14" height="13" viewBox="0 0 14 13" fill="none"}}
+                        </a>
+                        {{/card_btn}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="app-env" content="{{ config:app.env }}">
+    <title>{{ if title }}{{ title }} | {{ site:name }}{{ else }}{{ site:name }}{{ /if }}</title>
+    <!-- {{ vite src="resources/js/site.js|resources/css/site.css" }} -->
+    <link rel="icon" type="image/x-icon" href="{{ theme:asset src='image/favicon.png' }}">
+    <!-- {{ theme:asset src='css/styles.css' }} -->
+    <script type="text/javascript" src="{{ theme:asset src='js/jquery.min.js' }}"></script>
+    <!-- Alpine CDN js -->
+
+    <!-- Magnific Popup Js & CSS  -->
+    <script type="text/javascript" src="{{ theme:asset src='js/jquery.magnific-popup.min.js' }}"></script>
+    <link rel="stylesheet" href="{{ theme:asset src='css/magnific-popup.min.css' }}" />
+    <!-- Magnific Popup Js & CSS  -->
+
+    <!-- Swiper Slider Js & CSS  -->
+    <script type="text/javascript" src="{{ theme:asset src='js/swiper-bundle.min.js' }}"></script>
+    <link rel="stylesheet" href="{{ theme:asset src='css/swiper-bundle.min.css' }}" />
+    <!-- Swiper Slider Js & CSS  -->
+
+    <!-- font-awosome Js & CSS -->
+    <script type="text/javascript" src="{{ theme:asset src='js/all.min.js' }}"></script>
+    <link rel="stylesheet" type="text/css" href=" {{ theme:asset src='css/all.min.css' }}">
+    <!-- font-awosome Js & CSS -->
+
+    <!-- style.css -->
+    <script type="text/javascript" src="{{ theme:asset src='js/custom.js?ver=jfkdjhfjdfbh' }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ theme:asset src='css/custom.css?ver=hfjsdfhsdh' }}">
+    <link rel="stylesheet" href="{{ theme:asset src='css/styles.css?ver=zjsbfdnhfb' }}">
+
+    <script type="text/javascript" src="{{ theme:asset src='js/load_more_btn.js?ver=hfgjsdgfjsd' }}"></script>
+    <script type="text/javascript" src="{{ theme:asset src='js/job_apply.js?ver=hjsfbsdhfsdh' }}"></script>
+    <script type="text/javascript" src="{{ theme:asset src='js/cookies.js?ver=shdfsdvfhsdf' }}"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- ====== preloader ====== -->
+    {{ common_settings}}
+    <div
+        class="preloader fixed top-0 left-0 w-full h-full overflow-hidden flex items-center justify-center bg-black z-[9999]">
+        <img class="w-full md:max-w-20 max-w-10" src="{{ theme:asset src='{loader}' }}" alt="Loader">
+    </div>
+    <!-- ====== preloader ====== -->
+
+    <!-- ====== Cookie ====== -->
+    {{if url == "{site:url}"}}
+    <div
+        id="cookie-banner"
+        class="cookie-section fixed top-0 left-0 w-full h-full overflow-hidden flex items-center justify-center bg-black bg-opacity-60 z-[999] p-5">
+        <div
+            class="w-full max-w-[850px] bg-white 2xl:px-[70px] xl:px-14 lg:px-12 md:px-8 2xl:py-11 xl:py-10 lg:py-9 md:py-8 p-7">
+            <p class="2xl:text-lg text-md leading-lineHeight mb-5 lg:mb-8 xl:mb-9 font-normal text-black tracking-wide">
+                {{description}}
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                {{button_1}}
+                <button id="reject-cookies"
+                    class="all-btn w-full sm:w-auto text-center sm:text-left btn-outline text-vividblue-400 border-vividblue-400 hover:text-white hover:bg-vividblue-400 {{add_class}}">
+                    {{text}}
+                </button>
+                {{/button_1}}
+    
+                {{button_2}}
+                <button id="accept-cookies"
+                    class="all-btn w-full sm:w-auto text-center sm:text-left {{add_class}}">
+                    {{text}}
+                    {{if icon ends_with ".svg"}}
+                    {{svg src="{icon}" class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13"}}
+                    {{else}}
+                    <img src="{{icon}}" alt="" class="ml-2 inline-block" width="14" height="13">
+                    {{/if}}
+                </button>
+                {{/button_2}}
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    
+    {{/common_settings}}
+
+    <main class="h-full overflow-x-hidden">
+
+        {{partial:header}}
+
+        {{ bard_field }}
+        {{ if type == "paragraph" }}
+        <p>
+            {{ content }}
+            {{ if type == "text" }}
+            {{ text }}
+            {{ /if }}
+            {{ /content }}
+        </p>
+        {{ /if }}
+
+        {{template_content}}
+
+        {{partial:footer}}
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+{{ if image_2_title_or_facility == true}}
+<div class="relative bg-gray-500 2xl:py-[100px] xl:py-20 lg:py-16 md:py-14 sm:py-12 py-10">
+    <div class="container">
+        <div class="flex flex-col lg:flex-row 2xl:gap-[66px] xl:gap-14 lg:gap-10 gap-8">
+            <div class="w-full flex flex-col min-[575px]:flex-row gap-5 max-w-[685px]">
+                <div class="w-full md:w-6/12 block relative before:content-[''] before:block before:min-[575px]:pt-[115%] before:pt-[100%]">
+                    <img src="{{image_1}}" alt="" class="absolute top-0 left-0 w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-6/12 block relative before:content-[''] before:block before:min-[575px]:pt-[115%] before:pt-[100%]">
+                    <img src="{{image_2}}" alt="" class="absolute top-0 left-0 w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full max-w-[648px]">
+                <h2 class="2xl:text-45 lg:text-3xl sm:text-1xl text-28 2xl:mb-10 xl:mb-9 lg:mb-8 mb-5 leading-lineHeight text-black font-Larken font-medium">{{title}}</h2>
+                <ul class="grid sm:grid-cols-2 grid-cols-1 lg:gap-5 md:gap-4 gap-3">
+                    {{facility}}
+                    <li class="gap-3 flex items-center 2xl:text-20 xl:text-lg text-md inline-block text-black">
+                        {{ svg src="{{icon}}" class="text-vividblue-400 w-4 h-4 md:w-5 md:h-5 shrink-0" }}
+                        {{service}}
+                    </li>
+                    {{/facility}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+{{ if title_description_video == true}}
+
+<div class="video-container 2xl:py-[100px] xl:py-20 lg:py-16 md:py-14 sm:py-12 py-10">
+    <div class="container">
+        <div class="w-full">
+            <h2 class="2xl:text-45 lg:text-3xl sm:text-1xl text-28 lg:mb-5 mb-3 leading-lineHeight text-black font-Larken font-medium">{{title}}</h2>
+            <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800 xl:mb-9 lg:mb-7 md:mb-5 mb-4">{{description}}</p>
+
+            <ul class="flex flex-col lg:gap-5 md:gap-4 gap-3 2xl:mb-[100px] xl:mb-20 lg:mb-16 md:mb-14 sm:mb-12 mb-10">
+                {{facility}}
+                    <li class="gap-3 flex items-center 2xl:text-20 xl:text-lg text-md inline-block text-black">
+                        {{ svg src="{{icon}}" class="text-vividblue-400 w-4 h-4 md:w-5 md:h-5 shrink-0" }}
+                        {{service}}
+                    </li>
+                {{/facility}}
+            </ul>
+        </div>
+        <div class="w-full xl:mb-12 md:mb-10 mb-8">
+            <h2 class="2xl:text-45 lg:text-3xl sm:text-1xl text-28 lg:mb-5 mb-3 leading-lineHeight text-black font-Larken font-medium">{{video_title}}</h2>
+            <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800">{{video_description}}</p>
+        </div>
+
+        <div class="relative">
+            <div class="absolute inset-0 z-1 bg-black bg-opacity-20"></div>
+            <video poster="./image/achieve-bg.jpg" class="background-video z-[0] absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop playsinline>
+                <source src="{{video}}" type="video/mp4"/>
+            </video>
+            <div class="w-full h-full z-2 relative xl:min-h-[600px] lg:min-h-[500px] md:min-h-[400px] min-h-[350px] flex items-center justify-center">
+                <div class="play-btn cursor-pointer 2xl:w-[100px] 2xl:h-[100px] xl:w-20 xl:h-20 w-16 h-16 2xl:text-45 xl:text-3xl lg:text-1xl md:text-xl text-25 text-white bg-white bg-opacity-35 border-opacity-35 rounded-full border border-white flex items-center justify-center">
+                    <i class="fa-solid fa-pause"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+{{ if image_1_title_description_facility == true}}
+<div class="py-7 sm:py-8 md:py-10 lg:py-12 xl:py-14 2xl:py-16">
+    <section class="relative overflow-hidden">
+        <div class="container">
+            <div class="flex flex-col-reverse md:flex-row">
+                <div class="bg-white w-full md:w-[50%] flex items-center justify-center">
+                    <div class="w-full pt-7 md:pb-12 md:pr-8 lg:pr-10 xl:pr-16 2xl:pr-[83px]">
+                        <h2 class="2xl:text-45 lg:text-3xl sm:text-1xl text-28 2xl:mb-10 xl:mb-9 lg:mb-8 mb-5 leading-lineHeight text-black font-Larken font-medium">{{title}}</h2>
+                        <p class="tracking-[0.02em] lg:text-lg text-md leading-lineHeight font-normal text-gray-800 mb-5 md:mb-7 lg:mb-8">{{description}}</p>
+                        <ul class="flex flex-col lg:gap-5 md:gap-4 gap-3">
+                            {{facility}}
+                            <li class="gap-3 flex items-center 2xl:text-20 xl:text-lg text-md inline-block text-black">
+                            {{if icon ends_with ".svg"}}
+                                {{ svg src="{{ icon }}" class="text-vividblue-400 w-4 h-4 md:w-5 md:h-5 shrink-0" width="22" height="22" viewBox="0 0 22 22" fill="none"}}
+                            {{else}}
+                                <img src="{{ icon }}" alt="" class="text-vividblue-400 w-4 h-4 md:w-5 md:h-5 shrink-0" width="22" height="22" viewBox="0 0 22 22" fill="none" >
+                            {{/if}}
+                            {{service}}
+                            </li>
+                            {{/facility}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="overflow-hidden md:absolute left-auto right-0 top-0 bottom-0 h-full w-full md:w-[50%]">
+                    <img src="{{image_1}}" class="w-full h-full object-cover object-center" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{{/if}}

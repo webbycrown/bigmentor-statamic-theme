@@ -1,0 +1,118 @@
+title: 'Intro Section'
+fields:
+  -
+    handle: if_have_a_description
+    field:
+      default: false
+      type: toggle
+      display: 'if have a description'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: if_have_a_tag_title
+    field:
+      default: false
+      type: toggle
+      display: 'if have a tag title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: layouts_grid
+    field:
+      options:
+        row: Row
+        column: Column
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: row
+      type: select
+      display: 'layouts grid'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: title
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      validate:
+        - required
+  -
+    handle: tag_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'tag title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        if_have_a_tag_title: 'equals true'
+      always_save: true
+  -
+    handle: description
+    field:
+      antlers: false
+      type: textarea
+      display: description
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        if_have_a_description: 'equals true'
+  -
+    handle: left_right_text
+    field:
+      fields:
+        -
+          handle: text
+          field:
+            input_type: text
+            character_limit: 60
+            antlers: false
+            type: text
+            display: Text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      max_rows: 2
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: 'left & right text'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        layouts_grid: 'equals column'

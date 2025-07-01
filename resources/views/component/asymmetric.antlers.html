@@ -1,0 +1,70 @@
+<div class="grid gap-10 grid-cols-1 md:grid-cols-2 mb-12">
+    {{ collection:{collections} as="data_list" limit="3" sort="date:desc" }}
+
+    {{ data_list }}
+
+    {{ if count == 1 }}
+    {{ page_builder }}
+
+        {{ if type == "insights_blog_page" }}
+
+        <div class="max-w-[716px] w-full relative bg-cover bg-no-repeat md:min-h-fit min-h-80"
+            style="background-image: url('{{ thumb_image:url }}');">
+            <div class="w-full h-full flex flex-col justify-end relative z-1">
+                <div class="p-5 md:p-8 lg:p-10 xl:p-12 2xl:p-14 bg-custom-gradient-200">
+                    <span
+                        class="text-sm border uppercase py-1 px-4 border-white text-white rounded-2xl font-bold mb-3 md:mb-4 lg:mb-5 inline-block">
+                        {{ date format="d M, Y" }}
+                    </span>
+                    <h2
+                        class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-0 leading-lineHeight text-white hover:text-vividblue-400 font-Larken font-medium">
+                        <a href="{{url}}">{{ title }}</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        {{ /if }}
+
+    {{ /page_builder }}
+    {{/if}}
+  {{ /data_list }}
+
+    <div class="max-w-[681px] w-full">
+     {{data_list}}
+    {{ if count == 2 or count == 3 }}
+        {{ page_builder }}
+
+        {{ if type == "insights_blog_page" }}
+
+        <div class="w-full inline-flex items-center flex-col sm:flex-row gap-7 ">
+            <div class="w-full sm:max-w-[235px] block relative before:content-[''] before:block before:pt-[100%]">
+                <img src="{{thumb_image:url}}" alt="" class="absolute top-0 left-0 w-full h-full object-cover">
+            </div>
+            <div class="w-full">
+                <label
+                    class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase mb-3 md:mb-4 lg:mb-5 inline-block">
+                    {{ date format="d M, Y" }}
+                </label>
+                <h2
+                    class="lg:text-25 sm:text-20 text-lg mb-0 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium">
+                    <a href="{{url}}">{{ title }}</a>
+                </h2>
+                <p class="lg:text-lg text-md leading-lineHeight font-normal text-gray-800">
+                    {{ thumb_description truncate="150"}}
+                </p>
+            </div>
+        </div>
+        {{ /if }}
+
+        {{ /page_builder }}
+        {{ /if }}
+        
+        {{ /data_list }}
+    </div>
+
+    {{ /collection:{collections} }}
+</div>
+
+
+
+
