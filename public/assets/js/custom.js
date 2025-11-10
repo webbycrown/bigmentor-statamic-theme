@@ -236,6 +236,7 @@ jQuery( document ).ready(function() {
     jQuery('html, body').addClass('overflow-x-hidden');
     setTimeout(function() {
       jQuery('#nav-site-search').addClass('search_bar');
+      jQuery('.site-search__search-input').trigger('focus');
     }, 1000);
   });
   jQuery(".site-search__close").click(function() {
@@ -243,6 +244,7 @@ jQuery( document ).ready(function() {
     jQuery('#nav-site-search').removeClass('search_bar');
     setTimeout(function() {
       jQuery('#nav-site-search').removeClass("open");
+      jQuery('.site-search__search-input').val('');
     }, 1000);
   });
   jQuery(document).click(function(event) {
@@ -251,9 +253,11 @@ jQuery( document ).ready(function() {
       jQuery('html, body').removeClass('overflow-x-hidden');
       setTimeout(function() {
         jQuery('#nav-site-search').removeClass("open");
+        jQuery('.site-search__search-input').val('');
       }, 1000);
     }
   });
+
 
 
   // ===== Search Js ===== //
@@ -305,4 +309,296 @@ jQuery( document ).ready(function() {
     });
   });
 
+   $(document).on('submit','.get-free-quote-form', function(e) {
+  
+      e.preventDefault(); 
+      const $form = $(this);  
+      var $message = $form.find('.form-message');
+      const email = $form.find('#email').val();
+      const privacy_policy = $form.find('#privacy_policy').is(':checked');
+      $('.field-error').text('');
+
+      $.ajax({
+        url: newsLetterUrl,  
+        method: 'get',
+        data: {
+          email:email,
+          privacy_policy:privacy_policy ? 1 : 0
+        },
+        dataType: 'json',
+        success: function(response) {
+        // You get a JSON response from Statamic
+          if (response.status === true) {
+            $message.text(response.message).css('color', '#ffcb79').fadeIn();
+              setTimeout(() => {
+                $form[0].reset();
+              }, 1000);
+          } else {
+            
+            $message.text(response.message).addClass('text-red-500').fadeIn();           
+          }
+        },
+        error: function(response) {
+          
+          if (response.responseJSON.errors) {
+            $.each(response.responseJSON.errors, function (field, message) {
+              const $input = $form.find('[name="' + field + '"]');
+              const $errorContainer = $form.find('[data-error-for="' + field + '"]');
+
+              $input.addClass('error');
+              $errorContainer.html(Array.isArray(message) ? message.join('<br>') : message);
+            });
+          }
+        }
+      });
+    });
+
+   $(document).on('click', '.pagination a', function(e) {
+    e.preventDefault();
+      let url = $(this).attr('href'); // ✅ use `let`, not `const`
+      const appEnv = document.querySelector('meta[name="app-env"]')?.getAttribute('content');
+
+      if (appEnv === 'production') {
+        if (url && url.startsWith("http:")) {
+              url = url.replace(/^http:/, "https:"); // ✅ now valid
+            }
+          }
+          $('.grid_append').load(url + ' .grid_append > *');
+          $('.pagination-part').load(url + ' .pagination-part > *');
+        });
+
+  $(document).on('submit','#contactForm', function(e) {
+    e.preventDefault(); 
+
+    const $form = $(this);
+
+    var $message = $form.find('.form-message');
+    $message.html('');
+    $form.find('.field-error').html('');
+    $form.find('.form-control').removeClass('error');
+
+    const formData = new FormData(this);
+
+    $.ajax({
+        // Statamic sets form action automatically
+      url: $form.attr('action'),  
+      method: 'POST',
+      data: formData,
+      processData: false, 
+      contentType: false, 
+      success: function(response) {
+          // You get a JSON response from Statamic
+        if(response.success) {
+          $message.text("Thank you! We'll be in touch shortly.").css('color', '#0e5e6f').fadeIn();
+
+          $form[0].reset();
+        } 
+      },
+      error: function(response) {
+
+        if (response.responseJSON.error) {
+         $.each(response.responseJSON.error, function(field, message) {
+          const $input = $form.find('[name="' + field + '"]');
+          const $errorContainer = $form.find('[data-error-for="' + field + '"]');
+
+          $input.addClass('error');
+          $errorContainer.html(Array.isArray(message) ? message.join('<br>') : message);
+        });
+       }
+
+     }
+   });
+  });
+
+
+  $(document).on('submit','#apply-screen-form', function(e) {
+    e.preventDefault(); 
+
+    const $form = $(this);
+    
+    var $message = $form.find('.form-message');
+    $message.html('');
+    $form.find('.field-error').html('');
+    $form.find('.form-control').removeClass('error');
+    
+    const formData = new FormData(this);
+
+    $.ajax({
+        // Statamic sets form action automatically
+      url: $form.attr('action'),  
+      method: 'POST',
+      data: formData,
+      processData: false, 
+      contentType: false, 
+      success: function(response) {
+          // You get a JSON response from Statamic
+        if(response.success) {
+          $message.text("Thank you! We'll be in touch shortly.").css('color', '#0e5e6f').fadeIn();
+
+          setTimeout(function(){
+            $('.mfp-close').click();
+            $form[0].reset();
+            $message.text('');
+          }, 1000);
+        } 
+      },
+      error: function(response) {
+
+        if (response.responseJSON.error) {
+         $.each(response.responseJSON.error, function(field, message) {
+          const $input = $form.find('[name="' + field + '"]');
+          const $errorContainer = $form.find('[data-error-for="' + field + '"]');
+
+          $input.addClass('error');
+          $errorContainer.html(Array.isArray(message) ? message.join('<br>') : message);
+        });
+       }
+       
+     }
+   });
+  });
+
+ 
+  var grid = $(".isotope").isotope({
+    itemSelector: ".item",
+    layoutMode: "fitRows",
+  });
+
+  $(".menu-filter button").on("click", function () {
+    var filterValue = $(this).attr("data-filter");
+    grid.isotope({ filter: filterValue });
+
+    $(".menu-filter button").removeClass("active");
+    $(this).addClass("active");
+
+
+  });
+  grid.isotope({ filter: '.all_results' });
+
+
+  const input = document.getElementById("site-search");
+  const resultBox = document.getElementById("combined-search");
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const q = urlParams.get("q");
+  if (q && input) {
+    input.value = decodeURIComponent(q.replace(/\+/g, " "));
+    triggerSearch(q); // 🔄 Auto-trigger on load
+  }
+
+  if (input && resultBox) {
+    let timeout = null;
+
+    input.addEventListener("keyup", function () {
+      const query = input.value.trim();
+
+      clearTimeout(timeout);
+
+      if (query.length < 2) {
+        resultBox.innerHTML = "";
+        resultBox.classList.remove("show");
+        grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
+        return;
+      }
+
+      timeout = setTimeout(() => {
+        triggerSearch(query);
+      }, 300);
+    });
+  }
+
+  function triggerSearch(query) {
+    fetch(`/search_page_results?q=${encodeURIComponent(query)}`)
+    .then((response) => {
+      if (!response.ok) throw new Error(`Network error: ${response.status}`);
+      return response.text();
+    })
+    .then((fullHtml) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(fullHtml, "text/html");
+      const innerContent = doc.getElementById("combined-search");
+
+      if (innerContent) {
+        resultBox.innerHTML = innerContent.innerHTML;
+        resultBox.classList.add("show");
+
+        grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
+
+        const newItems = resultBox.querySelectorAll(".item");
+        if (newItems.length > 0) {
+          grid.append(newItems).isotope("appended", newItems);
+          grid.isotope("layout");
+        }
+      } else {
+        resultBox.innerHTML = '<p class="text-red-600">No results found.</p>';
+        resultBox.classList.add("show");
+        grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
+      }
+    })
+    .catch((error) => {
+      console.error("Search error:", error);
+      resultBox.innerHTML = '<p class="text-red-600">Error loading results.</p>';
+      resultBox.classList.add("show");
+      grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
+    });
+  }
+
+  const $banner = $('#cookie-banner');
+  const $acceptBtn = $('#accept-cookies');
+  const $rejectBtn = $('#reject-cookies');
+
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+  }
+
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  // Check if consent already stored (in localStorage or cookie)
+  if (localStorage.getItem('cookieConsent') || getCookie('OptanonConsent')) {
+    $banner.hide();
+  }
+
+  // Accept button click
+  $acceptBtn.on('click', function () {
+    localStorage.setItem('cookieConsent', 'accepted');
+    setCookie('OptanonAlertBoxClosed', new Date().toISOString(), 365);
+
+    const consentValue =
+      'landingPath=NotLandingPage&datestamp=' +
+      encodeURIComponent(new Date().toString()) +
+      '&version=202403.1.0&groups=C0004:0,C0002:0,C0001:1,C0003:0&hosts=';
+    setCookie('OptanonConsent', consentValue, 365);
+
+    $banner.hide();
+    // TODO: Initialize analytics/tracking scripts here
+  });
+
+  // Reject button click
+  $rejectBtn.on('click', function () {
+    localStorage.setItem('cookieConsent', 'rejected');
+    setCookie('OptanonAlertBoxClosed', new Date().toISOString(), 365);
+
+    const consentValue =
+      'landingPath=NotLandingPage&datestamp=' +
+      encodeURIComponent(new Date().toString()) +
+      '&version=202403.1.0&groups=C0004:0,C0002:0,C0001:0,C0003:0&hosts=';
+    setCookie('OptanonConsent', consentValue, 365);
+
+    $banner.hide();
+    // TODO: Ensure tracking scripts do NOT run
+  });
 });

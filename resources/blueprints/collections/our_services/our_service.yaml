@@ -20,6 +20,114 @@ tabs:
               default: current
               localizable: true
               max_items: 1
+          -
+            handle: background_image
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Hero Background Image'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: icon
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Icon
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: description
+            field:
+              antlers: false
+              type: textarea
+              display: Description
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: hero_short_description
+            field:
+              antlers: false
+              type: textarea
+              display: 'Hero Short Description'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: button_text
+            field:
+              input_type: text
+              default: 'Read more'
+              antlers: false
+              type: text
+              display: 'Button Text'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: button_link
+            field:
+              input_type: text
+              default: /service
+              antlers: false
+              type: text
+              display: 'Button Link'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: back_button_text
+            field:
+              input_type: text
+              default: 'Back to Services'
+              antlers: false
+              type: text
+              display: 'Back Button Text'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: back_button_url
+            field:
+              input_type: text
+              default: /service
+              antlers: false
+              type: text
+              display: 'Back Button url'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
       -
         display: 'Page Builder'
         fields:

@@ -5,7 +5,7 @@ title: Home
 template: home
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-updated_at: 1749031593
+updated_at: 1750318840
 page_builder:
   -
     id: ma279l1y
@@ -52,7 +52,7 @@ page_builder:
         enabled: true
         title: 'Empower Your Business Journey with Expert Guidance and Mentorship.'
         description: 'Empowering entrepreneurs with expert guidance and personalized mentorship to achieve sustainable business growth and success.'
-        background_image: image/case-studies.jpg
+        background_image: 'image/Business Networking.jpg'
         button_1:
           -
             id: maf2pc50
@@ -72,27 +72,7 @@ page_builder:
         enabled: true
         title: 'Empower Your Business Journey with Expert Guidance and Mentorship.'
         description: 'Empowering entrepreneurs with expert guidance and personalized mentorship to achieve sustainable business growth and success.'
-        background_image: image/LeadershipCoaching.jpg
-        button_1:
-          -
-            id: maf2pc50
-            text: 'Get a Quote'
-            link: /contact-us
-        button_2:
-          -
-            id: maf2pvv8
-            text: 'See Event Solutions'
-            link: /about-us
-            icon:
-              - image/redirect.svg
-        navigation_text: 'Business Networking'
-      -
-        id: maf5ny6k
-        type: slider
-        enabled: true
-        title: 'Empower Your Business Journey with Expert Guidance and Mentorship.'
-        description: 'Empowering entrepreneurs with expert guidance and personalized mentorship to achieve sustainable business growth and success.'
-        background_image: image/FinancialManagement.jpg
+        background_image: 'image/Leadership Coaching.jpg'
         button_1:
           -
             id: maf2pc50
@@ -106,6 +86,26 @@ page_builder:
             icon:
               - image/redirect.svg
         navigation_text: 'Leadership Coaching'
+      -
+        id: maf5ny6k
+        type: slider
+        enabled: true
+        title: 'Empower Your Business Journey with Expert Guidance and Mentorship.'
+        description: 'Empowering entrepreneurs with expert guidance and personalized mentorship to achieve sustainable business growth and success.'
+        background_image: 'image/Digital Marketing.jpg'
+        button_1:
+          -
+            id: maf2pc50
+            text: 'Get a Quote'
+            link: /contact-us
+        button_2:
+          -
+            id: maf2pvv8
+            text: 'See Event Solutions'
+            link: /about-us
+            icon:
+              - image/redirect.svg
+        navigation_text: 'Digital Marketing'
   -
     id: maf5jubp
     partners:

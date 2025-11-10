@@ -3,10 +3,9 @@ id: 9b2e3182-09ed-4196-9562-f91aa4cdce45
 blueprint: page
 title: 'Terms and Conditions'
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-template: home
+template: terms-and-conditions
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-updated_at: 1749203374
-parent: home
+updated_at: 1762417890
 page_builder:
   -
     id: makxo32u

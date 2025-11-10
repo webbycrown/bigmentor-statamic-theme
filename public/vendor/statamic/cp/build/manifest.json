@@ -1,6 +1,6 @@
 {
   "resources/css/tailwind.css": {
-    "file": "assets/tailwind-50d19c06.css",
+    "file": "assets/tailwind-5f12820e.css",
     "isEntry": true,
     "src": "resources/css/tailwind.css"
   },
@@ -25,12 +25,12 @@
     "src": "resources/img/favicon.ico"
   },
   "resources/js/app.css": {
-    "file": "assets/app-4b5d9708.css",
+    "file": "assets/app-443191f7.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-4b5d9708.css"
+      "assets/app-443191f7.css"
     ],
     "dynamicImports": [
       "resources/svg/icons/light/add-circle.svg",
@@ -65,6 +65,7 @@
       "resources/svg/icons/light/content-writing.svg",
       "resources/svg/icons/light/crane.svg",
       "resources/svg/icons/light/date.svg",
+      "resources/svg/icons/light/dictionary.svg",
       "resources/svg/icons/light/download.svg",
       "resources/svg/icons/light/drag-dots.svg",
       "resources/svg/icons/light/drawer-file.svg",
@@ -76,6 +77,7 @@
       "resources/svg/icons/light/expand-diagonal.svg",
       "resources/svg/icons/light/expand-vertical.svg",
       "resources/svg/icons/light/external-link.svg",
+      "resources/svg/icons/light/eye.svg",
       "resources/svg/icons/light/fieldsets.svg",
       "resources/svg/icons/light/fieldtype.svg",
       "resources/svg/icons/light/file-code.svg",
@@ -125,6 +127,7 @@
       "resources/svg/icons/light/seo-search-graph.svg",
       "resources/svg/icons/light/settings-horizontal.svg",
       "resources/svg/icons/light/settings-slider.svg",
+      "resources/svg/icons/light/settings.svg",
       "resources/svg/icons/light/shield-key.svg",
       "resources/svg/icons/light/shrink.svg",
       "resources/svg/icons/light/sites.svg",
@@ -384,6 +387,7 @@
       "resources/svg/icons/regular/info-circle.svg",
       "resources/svg/icons/regular/insert-image.svg",
       "resources/svg/icons/regular/insert-link.svg",
+      "resources/svg/icons/regular/light-mode.svg",
       "resources/svg/icons/regular/list-ol.svg",
       "resources/svg/icons/regular/list-ul-2.svg",
       "resources/svg/icons/regular/list-ul.svg",
@@ -402,6 +406,8 @@
       "resources/svg/icons/regular/performance-increase.svg",
       "resources/svg/icons/regular/pulse.svg",
       "resources/svg/icons/regular/quote.svg",
+      "resources/svg/icons/regular/radio-deselected.svg",
+      "resources/svg/icons/regular/radio-selected.svg",
       "resources/svg/icons/regular/relationship.svg",
       "resources/svg/icons/regular/rename-file.svg",
       "resources/svg/icons/regular/sd-card.svg",
@@ -416,6 +422,7 @@
       "resources/svg/icons/regular/superscript.svg",
       "resources/svg/icons/regular/swap.svg",
       "resources/svg/icons/regular/syringe.svg",
+      "resources/svg/icons/regular/system.svg",
       "resources/svg/icons/regular/telescope.svg",
       "resources/svg/icons/regular/text-bold.svg",
       "resources/svg/icons/regular/text-italic.svg",
@@ -460,6 +467,7 @@
       "resources/svg/icons/light/content-writing.svg",
       "resources/svg/icons/light/crane.svg",
       "resources/svg/icons/light/date.svg",
+      "resources/svg/icons/light/dictionary.svg",
       "resources/svg/icons/light/download.svg",
       "resources/svg/icons/light/drag-dots.svg",
       "resources/svg/icons/light/drawer-file.svg",
@@ -471,6 +479,7 @@
       "resources/svg/icons/light/expand-diagonal.svg",
       "resources/svg/icons/light/expand-vertical.svg",
       "resources/svg/icons/light/external-link.svg",
+      "resources/svg/icons/light/eye.svg",
       "resources/svg/icons/light/fieldsets.svg",
       "resources/svg/icons/light/fieldtype.svg",
       "resources/svg/icons/light/file-code.svg",
@@ -520,6 +529,7 @@
       "resources/svg/icons/light/seo-search-graph.svg",
       "resources/svg/icons/light/settings-horizontal.svg",
       "resources/svg/icons/light/settings-slider.svg",
+      "resources/svg/icons/light/settings.svg",
       "resources/svg/icons/light/shield-key.svg",
       "resources/svg/icons/light/shrink.svg",
       "resources/svg/icons/light/sites.svg",
@@ -779,6 +789,7 @@
       "resources/svg/icons/regular/info-circle.svg",
       "resources/svg/icons/regular/insert-image.svg",
       "resources/svg/icons/regular/insert-link.svg",
+      "resources/svg/icons/regular/light-mode.svg",
       "resources/svg/icons/regular/list-ol.svg",
       "resources/svg/icons/regular/list-ul-2.svg",
       "resources/svg/icons/regular/list-ul.svg",
@@ -797,6 +808,8 @@
       "resources/svg/icons/regular/performance-increase.svg",
       "resources/svg/icons/regular/pulse.svg",
       "resources/svg/icons/regular/quote.svg",
+      "resources/svg/icons/regular/radio-deselected.svg",
+      "resources/svg/icons/regular/radio-selected.svg",
       "resources/svg/icons/regular/relationship.svg",
       "resources/svg/icons/regular/rename-file.svg",
       "resources/svg/icons/regular/sd-card.svg",
@@ -811,6 +824,7 @@
       "resources/svg/icons/regular/superscript.svg",
       "resources/svg/icons/regular/swap.svg",
       "resources/svg/icons/regular/syringe.svg",
+      "resources/svg/icons/regular/system.svg",
       "resources/svg/icons/regular/telescope.svg",
       "resources/svg/icons/regular/text-bold.svg",
       "resources/svg/icons/regular/text-italic.svg",
@@ -839,7 +853,7 @@
       "resources/svg/filetypes/video.svg",
       "resources/svg/filetypes/xml.svg"
     ],
-    "file": "assets/app-cd5758db.js",
+    "file": "assets/app-115623f5.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -1073,6 +1087,11 @@
     "isDynamicEntry": true,
     "src": "resources/svg/icons/light/date.svg"
   },
+  "resources/svg/icons/light/dictionary.svg": {
+    "file": "assets/dictionary-b8229bb2.js",
+    "isDynamicEntry": true,
+    "src": "resources/svg/icons/light/dictionary.svg"
+  },
   "resources/svg/icons/light/download.svg": {
     "file": "assets/download-13d1cb2c.js",
     "isDynamicEntry": true,
@@ -1127,6 +1146,11 @@
     "file": "assets/external-link-0c81b049.js",
     "isDynamicEntry": true,
     "src": "resources/svg/icons/light/external-link.svg"
+  },
+  "resources/svg/icons/light/eye.svg": {
+    "file": "assets/eye-785bfb5b.js",
+    "isDynamicEntry": true,
+    "src": "resources/svg/icons/light/eye.svg"
   },
   "resources/svg/icons/light/fieldsets.svg": {
     "file": "assets/fieldsets-fda8f7b3.js",
@@ -1372,6 +1396,11 @@
     "file": "assets/settings-slider-d0056519.js",
     "isDynamicEntry": true,
     "src": "resources/svg/icons/light/settings-slider.svg"
+  },
+  "resources/svg/icons/light/settings.svg": {
+    "file": "assets/settings-57e1db31.js",
+    "isDynamicEntry": true,
+    "src": "resources/svg/icons/light/settings.svg"
   },
   "resources/svg/icons/light/shield-key.svg": {
     "file": "assets/shield-key-969a463d.js",
@@ -2484,7 +2513,7 @@
     "src": "resources/svg/icons/regular/combine-cells.svg"
   },
   "resources/svg/icons/regular/dark-mode.svg": {
-    "file": "assets/dark-mode-0a6b304a.js",
+    "file": "assets/dark-mode-23b1473a.js",
     "isDynamicEntry": true,
     "src": "resources/svg/icons/regular/dark-mode.svg"
   },
@@ -2649,7 +2678,7 @@
     "src": "resources/svg/icons/regular/image-picture.svg"
   },
   "resources/svg/icons/regular/image.svg": {
-    "file": "assets/image-6a571f67.js",
+    "file": "assets/image-7e103d75.js",
     "isDynamicEntry": true,
     "src": "resources/svg/icons/regular/image.svg"
   },
@@ -2667,6 +2696,11 @@
     "file": "assets/insert-link-158aa1a4.js",
     "isDynamicEntry": true,
     "src": "resources/svg/icons/regular/insert-link.svg"
+  },
+  "resources/svg/icons/regular/light-mode.svg": {
+    "file": "assets/light-mode-db4e6a04.js",
+    "isDynamicEntry": true,
+    "src": "resources/svg/icons/regular/light-mode.svg"
   },
   "resources/svg/icons/regular/list-ol.svg": {
     "file": "assets/list-ol-c88bac13.js",
@@ -2758,6 +2792,16 @@
     "isDynamicEntry": true,
     "src": "resources/svg/icons/regular/quote.svg"
   },
+  "resources/svg/icons/regular/radio-deselected.svg": {
+    "file": "assets/radio-deselected-4c748b55.js",
+    "isDynamicEntry": true,
+    "src": "resources/svg/icons/regular/radio-deselected.svg"
+  },
+  "resources/svg/icons/regular/radio-selected.svg": {
+    "file": "assets/radio-selected-9639aafa.js",
+    "isDynamicEntry": true,
+    "src": "resources/svg/icons/regular/radio-selected.svg"
+  },
   "resources/svg/icons/regular/relationship.svg": {
     "file": "assets/relationship-6143ceff.js",
     "isDynamicEntry": true,
@@ -2827,6 +2871,11 @@
     "file": "assets/syringe-39cac2b4.js",
     "isDynamicEntry": true,
     "src": "resources/svg/icons/regular/syringe.svg"
+  },
+  "resources/svg/icons/regular/system.svg": {
+    "file": "assets/system-267f57ce.js",
+    "isDynamicEntry": true,
+    "src": "resources/svg/icons/regular/system.svg"
   },
   "resources/svg/icons/regular/telescope.svg": {
     "file": "assets/telescope-3e0f8434.js",

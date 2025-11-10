@@ -6,13 +6,11 @@
             {{collection:{collections} limit="{limit}" sort="date:asc"}}
 
             {{if count == 1}}
-            {{page_builder}}
-            {{if type == "insights_blog_page"}}
+            
 
             <div class="w-full relative bg-cover bg-no-repeat md:min-h-fit min-h-80"
-                style="background-image: url('{{thumb_image}}');">
-                {{/if}}
-                {{/page_builder}}
+                style="background-image: url('{{image}}');">
+                
                 <div class="w-full h-full flex flex-col justify-end relative z-1">
                     <div class="p-5 md:p-8 lg:p-10 xl:p-12 2xl:p-14 bg-custom-gradient-200">
                         <span
@@ -28,12 +26,10 @@
             <div class="w-full">
                 <div class="w-full flex flex-col sm:flex-row">
                     <div class="w-full md:w-6/12 block relative before:content-[''] before:block before:pt-[68%]">
-                        {{page_builder}}
-                        {{if type == "insights_blog_page"}}
-                        <img src="{{ thumb_image:url }}" alt=""
+                        
+                        <img src="{{ image:url }}" alt=""
                             class="absolute top-0 left-0 w-full h-full object-cover">
-                        {{/if}}
-                        {{/page_builder}}
+                        
                     </div>
                     <div class="w-full md:w-6/12 flex flex-col justify-end relative z-1">
                         <div class="p-5 md:px-8 lg:px-10 xl:px-12 2xl:px-14 xl:py-9">
@@ -88,12 +84,10 @@
                     </div>
                     <div class="w-full md:w-6/12 block relative before:content-[''] before:block before:pt-[84%]">
 
-                        {{page_builder}}
-                        {{if type == "insights_blog_page"}}
-                        <img src="{{ thumb_image:url }}" alt=""
+                       
+                        <img src="{{ image:url }}" alt=""
                             class="absolute top-0 left-0 w-full h-full object-cover">
-                        {{/if}}
-                        {{/page_builder}}
+                        
 
                     </div>
                 </div>
@@ -113,12 +107,10 @@
                         </div>
                     </div>
                     <div class="w-full md:w-6/12 block relative before:content-[''] before:block before:pt-[84%]">
-                        {{page_builder}}
-                        {{if type == "insights_blog_page"}}
-                        <img src="{{ thumb_image:url }}" alt=""
+                      
+                        <img src="{{ image:url }}" alt=""
                             class="absolute top-0 left-0 w-full h-full object-cover">
-                        {{/if}}
-                        {{/page_builder}}
+                        
                     </div>
                 </div>
             </div>

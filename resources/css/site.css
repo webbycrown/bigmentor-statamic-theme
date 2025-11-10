@@ -1,5 +1,429 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Larken:wght@400;500;600&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/public/assets/font/Satoshi-Black.eot');
+    src: url('/public/assets/font/Satoshi-Black.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/Satoshi-Black.woff2') format('woff2'),
+    url('/public/assets/font/Satoshi-Black.woff') format('woff'),
+    url('/public/assets/font/Satoshi-Black.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/public/assets/font/Satoshi-Bold.eot');
+    src: url('/public/assets/font/Satoshi-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/Satoshi-Bold.woff2') format('woff2'),
+    url('/public/assets/font/Satoshi-Bold.woff') format('woff'),
+    url('/public/assets/font/Satoshi-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/public/assets/font/Satoshi-Light.eot');
+    src: url('/public/assets/font/Satoshi-Light.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/Satoshi-Light.woff2') format('woff2'),
+    url('/public/assets/font/Satoshi-Light.woff') format('woff'),
+    url('/public/assets/font/Satoshi-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/public/assets/font/Satoshi-Medium.eot');
+    src: url('/public/assets/font/Satoshi-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/Satoshi-Medium.woff2') format('woff2'),
+    url('/public/assets/font/Satoshi-Medium.woff') format('woff'),
+    url('/public/assets/font/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/public/assets/font/Satoshi-Regular.eot');
+    src: url('/public/assets/font/Satoshi-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/Satoshi-Regular.woff2') format('woff2'),
+    url('/public/assets/font/Satoshi-Regular.woff') format('woff'),
+    url('/public/assets/font/Satoshi-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken';
+    src: url('/public/assets/font/LarkenDEMO-Bold.eot');
+    src: url('/public/assets/font/LarkenDEMO-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/LarkenDEMO-Bold.woff2') format('woff2'),
+    url('/public/assets/font/LarkenDEMO-Bold.woff') format('woff'),
+    url('/public/assets/font/LarkenDEMO-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken';
+    src: url('/public/assets/font/LarkenDEMO-Black.eot');
+    src: url('/public/assets/font/LarkenDEMO-Black.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/LarkenDEMO-Black.woff2') format('woff2'),
+    url('/public/assets/font/LarkenDEMO-Black.woff') format('woff'),
+    url('/public/assets/font/LarkenDEMO-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken';
+    src: url('/public/assets/font/LarkenDEMO-ExtraBold.eot');
+    src: url('/public/assets/font/LarkenDEMO-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/LarkenDEMO-ExtraBold.woff2') format('woff2'),
+    url('/public/assets/font/LarkenDEMO-ExtraBold.woff') format('woff'),
+    url('/public/assets/font/LarkenDEMO-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken';
+    src: url('/public/assets/font/LarkenDEMO-Medium.eot');
+    src: url('/public/assets/font/LarkenDEMO-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/LarkenDEMO-Medium.woff2') format('woff2'),
+    url('/public/assets/font/LarkenDEMO-Medium.woff') format('woff'),
+    url('/public/assets/font/LarkenDEMO-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken';
+    src: url('/public/assets/font/LarkenDEMO-Light.eot');
+    src: url('/public/assets/font/LarkenDEMO-Light.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/LarkenDEMO-Light.woff2') format('woff2'),
+    url('/public/assets/font/LarkenDEMO-Light.woff') format('woff'),
+    url('/public/assets/font/LarkenDEMO-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken';
+    src: url('/public/assets/font/LarkenDEMO-Thin.eot');
+    src: url('/public/assets/font/LarkenDEMO-Thin.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/LarkenDEMO-Thin.woff2') format('woff2'),
+    url('/public/assets/font/LarkenDEMO-Thin.woff') format('woff'),
+    url('/public/assets/font/LarkenDEMO-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken';
+    src: url('/public/assets/font/LarkenDEMO-Regular.eot');
+    src: url('/public/assets/font/LarkenDEMO-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/public/assets/font/LarkenDEMO-Regular.woff2') format('woff2'),
+    url('/public/assets/font/LarkenDEMO-Regular.woff') format('woff'),
+    url('/public/assets/font/LarkenDEMO-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* Override Tailwind base font-family if needed */
+@layer base {
+  body {
+    font-family: 'Larken', sans-serif;
+    font-family: "Satoshi", sans-serif;
+  }
+  blockquote,
+  dl,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  figure,
+  p,
+  pre {
+      margin: 0;
+  }
+
+
+  .font-Larken {
+      font-family: "Larken", sans-serif;
+  }
+  .font-Satoshi {
+      font-family: "Satoshi", sans-serif;
+  }
+
+  .font-bold {
+      font-weight: 700;
+  }
+
+  .bg-error-bg {
+    background-image: url(/public/assets/image/error-bg.jpg);
+}
+.shadow-box{
+    --tw-shadow: rgb(0 0 0 / 7%) 0px 4px 25px;
+    --tw-shadow-colored: 0px 4px 25px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+      .cmc_content_page h3 {
+  margin-bottom: 0.75rem;
+  font-family: "Larken", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: calc(100% + 10px);
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+    @media (min-width: 640px) {
+
+  .cmc_content_page h3 {
+    font-size: 22px;
+  }
+}
+    @media (min-width: 768px) {
+
+  .cmc_content_page h3 {
+    font-size: 24px;
+  }
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page h3 {
+    margin-bottom: 1.25rem;
+    font-size: 26px;
+  }
+}
+    @media (min-width: 1170px) {
+
+  .cmc_content_page h3 {
+    font-size: 28px;
+  }
+}
+    @media (min-width: 1480px) {
+
+  .cmc_content_page h3 {
+    font-size: 32px;
+  }
+}
+    .cmc_content_page h4 {
+  margin-bottom: 0.75rem;
+  font-family: "Larken", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: calc(100% + 10px);
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+    @media (min-width: 640px) {
+
+  .cmc_content_page h4 {
+    font-size: 20px;
+  }
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page h4 {
+    margin-bottom: 1.25rem;
+    font-size: 25px;
+  }
+}
+    .cmc_content_page p {
+  margin-bottom: 0.75rem;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  line-height: calc(100% + 10px);
+  --tw-text-opacity: 1;
+  color: rgb(88 88 88 / var(--tw-text-opacity));
+}
+    @media (min-width: 768px) {
+
+  .cmc_content_page p {
+    font-size: 18px;
+  }
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page p {
+    margin-bottom: 1.25rem;
+    font-size: 20px;
+  }
+}
+    .cmc_content_page p:last-child {
+  margin-bottom: 0px;
+}
+    .cmc_content_page ul li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  line-height: calc(100% + 10px);
+  --tw-text-opacity: 1;
+  color: rgb(88 88 88 / var(--tw-text-opacity));
+}
+    @media (min-width: 768px) {
+
+  .cmc_content_page ul li {
+    font-size: 18px;
+    padding-left: 30px;
+    position: relative;
+  }
+  .cmc_content_page ul li:before {
+    content: '';
+    background-image: url('/public/assets/image/check-arrow.svg');
+    position: absolute;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 2%;
+    left: 0;
+    top: 6px;
+    width: 100%;
+    height: 100%;
+  }
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page ul li {
+    margin-bottom: 1rem;
+    gap: 1rem;
+    font-size: 20px;
+  }
+}
+    .cmc_content_page ul li img {
+  height: 1rem;
+  width: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+    @media (min-width: 992px) {
+
+  .cmc_content_page ul li img {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+}
+    .cmc_content_page ul + h2,
+    .cmc_content_page ul + h3,
+    .cmc_content_page ul + h4,
+    .cmc_content_page p + h2,
+    .cmc_content_page p + h3,
+    .cmc_content_page p + h4 {
+  margin-top: 2rem;
+}
+    @media (min-width: 768px) {
+
+  .cmc_content_page ul + h2,
+    .cmc_content_page ul + h3,
+    .cmc_content_page ul + h4,
+    .cmc_content_page p + h2,
+    .cmc_content_page p + h3,
+    .cmc_content_page p + h4 {
+    margin-top: 2.5rem;
+  }
+}
+}
+
+@layer components {
+    body {
+        @apply font-sans text-gray-900;
+    }
+
+
+    p {
+        @apply tracking-wider;
+    }
+    /* Button styles */
+    .all-btn {
+        @apply inline-block cursor-pointer border border-transparent bg-vividblue-400 py-2.5 px-4 text-sm font-bold leading-tight text-white;
+    }
+
+    .all-btn:hover {
+        @apply border-vividblue-400 bg-white text-vividblue-400;
+    }
+    .service-div p{
+        @apply 2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800;
+    }
+
+    @media (min-width: 768px) {
+        .all-btn {
+            @apply text-base;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .all-btn {
+            @apply py-3 px-6 text-[17px];
+        }
+    }
+
+    @media (min-width: 1480px) {
+        .all-btn {
+            @apply py-3.5 px-8 text-lg;
+        }
+    }
+
+    .btn-outline {
+        @apply inline-block cursor-pointer border border-white bg-transparent py-2.5 px-4 text-sm font-bold leading-tight text-white;
+    }
+
+    .btn-outline:hover {
+        @apply bg-white text-vividblue-400;
+    }
+
+    @media (min-width: 768px) {
+        .btn-outline {
+            @apply text-base;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .btn-outline {
+            @apply py-3 px-6 text-[17px];
+        }
+    }
+
+    @media (min-width: 1480px) {
+        .btn-outline {
+            @apply py-3.5 px-8 text-lg;
+        }
+    }
+
+    /* Custom select */
+    .wc-custom-select select {
+        @apply w-full border-b border-black text-black pb-[18px];
+        font-size: inherit;
+    }
+
+    .wc-custom-select select:focus {
+        @apply outline-none;
+    }
+}
 
 /* This is all you. */

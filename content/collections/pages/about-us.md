@@ -4,9 +4,8 @@ blueprint: page
 title: About
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-updated_at: 1748928181
-parent: home
-template: home
+updated_at: 1762501521
+template: about-us
 section:
   -
     id: madtxlb3
@@ -218,42 +217,42 @@ page_builder:
         id: mambnmbg
         icon: image/guiding-1.svg
         title: Empowerment
-        link: /services/business-strategy
+        link: /services
         description: 'Transitioning from a mentee to a mentor is a pivotal moment in your professional journey, one that brings with it a unique blend of responsibility, opportunity, and personal growth. As someone who has once been guided and supported,'
         text_icon: image/redirect.svg
       -
         id: mambxwnu
         icon: image/guiding-2.svg
         title: Integrity
-        link: /services/financial-management
+        link: /services
         description: 'Integrity is the foundation of our mentoring relationships. We uphold the highest standards of honesty, transparency, and ethical behavior, ensuring that trust and respect are at the heart of everything we do.'
         text_icon: image/redirect.svg
       -
         id: mambxxga
         icon: image/guiding-3.svg
         title: Excellence
-        link: /services/leadership-coaching
+        link: /services
         description: 'We are committed to excellence in all aspects of our mentoring services. From the quality of our advice to the outcomes we help achieve, we strive to exceed expectations and deliver superior value to our mentees.'
         text_icon: image/redirect.svg
       -
         id: mambxycy
         icon: image/guiding-4.svg
         title: Collaboration
-        link: /services/partnership-network
+        link: /services
         description: 'Collaboration is key to effective mentoring. We foster a cooperative environment where mentors and mentees work together towards common goals. Our collaborative approach ensures that diverse perspectives and expertise are leveraged for optimal'
         text_icon: image/redirect.svg
       -
         id: mambxz36
         icon: image/guiding-5.svg
         title: Innovation
-        link: /services/innovation-management
+        link: /services
         description: 'We embrace innovation and continuous improvement. By staying ahead of industry trends and adopting new methodologies, we ensure that our mentoring practices remain relevant and impactful. We encourage creative thinking and the exploration of new idea'
         text_icon: image/redirect.svg
       -
         id: mamby2fe
         icon: image/guiding-6.svg
         title: Commitment
-        link: /services/operational
+        link: /services
         description: 'We are dedicated to the success of our mentees. Our commitment extends beyond the mentoring sessions, as we remain invested in their long-term growth and achievements. We go the extra mile to support their journey.'
         text_icon: image/redirect.svg
     type: grid_section

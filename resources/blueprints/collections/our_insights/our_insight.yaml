@@ -15,20 +15,78 @@ tabs:
           -
             handle: author
             field:
-              input_type: text
-              antlers: false
-              type: text
+              max_items: 1
+              mode: select
+              collections:
+                - our_consultant
+              type: entries
               display: Author
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-      -
-        display: Main
-        fields:
           -
-            import: page_builder
+            handle: image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Image
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: button_text
+            field:
+              type: text
+              display: 'Button Text'
+              default: 'Read More'
+          -
+            handle: related_insight_text
+            field:
+              type: text
+              display: 'Related Insight Text'
+              default: 'Related Insights'
+          -
+            handle: related_insights
+            field:
+              mode: select
+              collections:
+                - our_insights
+              type: entries
+              display: 'Related Insights'
+          -
+            handle: content_sections
+            field:
+              type: replicator
+              display: 'Content Sections'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    set:
+                      display: Set
+                      fields:
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: paragraphs
+                          field:
+                            type: replicator
+                            display: Paragraphs
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  paragraphs_set:
+                                    display: 'Paragraphs set'
+                                    fields:
+                                      -
+                                        handle: paragraph
+                                        field:
+                                          type: textarea
+                                          display: Paragraph
   sidebar:
     display: Sidebar
     sections:
@@ -41,23 +99,6 @@ tabs:
               localizable: true
               validate: 'max:200'
           -
-            handle: categories
-            field:
-              type: terms
-              taxonomies:
-                - categories
-              display: Categories
-              mode: select
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
-              create: true
-              hide_display: false
-              validate:
-                - required
-              max_items: 1
-          -
             handle: date
             field:
               type: date
@@ -65,3 +106,11 @@ tabs:
               default: now
               validate:
                 - required
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - insights_category
+              display: Categories
+              mode: select

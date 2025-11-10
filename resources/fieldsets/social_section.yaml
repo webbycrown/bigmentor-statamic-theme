@@ -1,0 +1,35 @@
+title: 'Social Section'
+fields:
+  -
+    handle: socials
+    field:
+      type: grid
+      display: Socials
+      fields:
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: platform
+          field:
+            options:
+              facebook-f: Facebook
+              youtube: Youtube
+              twitter: Twitter
+              instagram: Instagram
+              linkedin-in: LinkedIn
+              github: Github
+              whatsapp: WhatsApp
+              pinterest-p: Pinterest
+              telegram-plane: Telegram
+              medium: Medium
+              reddit-alien: 'Reddit Alien'
+            type: select
+            display: Platform
+        -
+          handle: url
+          field:
+            type: text
+            display: Url

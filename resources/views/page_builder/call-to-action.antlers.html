@@ -1,11 +1,11 @@
 {{ if if_have_a_description == true }}
-<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-75"
+<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-75 before:bg-custom-gradient-100 before:content-['']"
     {{ if image }}style="background-image: url('{{ image:url }}')" {{ else }}class="bg-technology_report_bg" {{ /if }}>
     <div class="container 2xl:py-[70px] xl:py-16 lg:py-14 md:py-12 py-10">
         <div class="flex justify-between flex-col md:flex-row gap-7 relative z-1">
             <div class="w-full max-w-fit">
                 <h2
-                    class="2xl:text-4xl lg:text-3xl sm:text-1xl text-xl leading-lineHeight text-white font-Larken font-medium">
+                    class="2xl:text-4xl lg:text-3xl sm:text-1xl text-xl !leading-lineHeight text-white font-Larken font-medium">
                     {{ title }}
                 </h2>
                 {{ if button }}
@@ -31,12 +31,12 @@
     </div>
 </div>
 {{ else }}
-<div class="relative my-7 sm:my-8 md:my-10 lg:my-12 xl:my-14 2xl:my-16 lg:w-[calc(100%-100px)] md:w-[calc(100%-50px)] w-[calc(100%-16px)] mx-auto bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-60"
+<div class="relative my-7 sm:my-8 md:my-10 lg:my-12 xl:my-14 2xl:my-16 lg:w-[calc(100%-100px)] md:w-[calc(100%-50px)] w-[calc(100%-16px)] mx-auto bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-60 before:bg-custom-gradient-100 before:content-['']"
     {{ if image }}style="background-image: url('{{ image:url }}')" {{ else }}class="bg-business-better-bg" {{ /if }}>
     <div class="container 2xl:py-[70px] xl:py-16 lg:py-14 md:py-12 sm:py-10 py-8">
         <div class="flex items-center justify-between flex-col md:flex-row gap-10 relative z-1">
             <h2
-                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-white font-Larken font-medium w-full max-w-[870px]">
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl !leading-lineHeight text-white font-Larken font-medium w-full max-w-[870px]">
                 {{ title }}
             </h2>
 

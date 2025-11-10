@@ -4,9 +4,8 @@ blueprint: page
 title: Careers
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-updated_at: 1748929960
-template: home
-parent: home
+updated_at: 1762417844
+template: career
 page_builder:
   -
     id: mb1srzl9

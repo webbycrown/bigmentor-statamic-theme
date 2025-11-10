@@ -25,11 +25,9 @@
                 <h4 class="lg:text-25 sm:text-20 text-lg lg:mb-4 mb-3 leading-lineHeight text-black hover:text-vividblue-400 font-Larken font-medium ">
                      <a href="{{link}}" class="text-currentColor flex items-center justify-between">
                         <span>{{title}}</span>
-                        {{if text_icon ends_with  ".svg" }}
-                         {{svg src="{{text_icon}}" width="24" height="24" class="text-vividblue-400" viewBox="0 0 24 24" fill="none"}}
-                         {{else}}
-                         <img src="{{text_icon}}" alt="" width="24" height="24" class="text-vividblue-400" viewBox="0 0 24 24" fill="none">
-                        {{/if}}
+                        <svg width="24" height="24" class="text-vividblue-400" viewBox="0 0 24 24" fill="none">
+                            <path d="M8 19.0005V5.00049L19 12.0005L8 19.0005Z" fill="currentColor"/>
+                        </svg>
                     </a>
                 </h4>
                 <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">{{description}}</p>

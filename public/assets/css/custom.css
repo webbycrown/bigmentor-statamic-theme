@@ -102,7 +102,7 @@ input[type=checkbox]:checked~label::before {
 }
 @media (max-width: 767px) {
     .float-right-icon{
-        display: none; 
+        display: none;
     }
 }
 
@@ -139,7 +139,7 @@ input[type=checkbox]:checked~label::before {
     0% {
         transform: rotate(0deg);
     }
-    100% { 
+    100% {
         transform: rotate(-360deg);
     }
 }
@@ -168,7 +168,7 @@ input[type=checkbox]:checked~label::before {
 @media (max-width: 767px) {
     #header.scrolled .top-bar {
         margin-top: -37px;
-    }  
+    }
 }
 .top-bar {
     transition: 1s all ease;
@@ -349,6 +349,116 @@ input[type=checkbox]:checked~label::before {
 #header.header-style-1.scrolled [name="mobile-menu-view"]:hover span,
 #header.header-style-1:hover [name="mobile-menu-view"]:hover span {
     background-color: #2251FF;
+}
+
+/* Custom select styles - extracted from styles.css */
+.wc-custom-select select {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    color: #000;
+    padding-bottom: 18px;
+    font-size: inherit;
+}
+.wc-custom-select select:focus {
+    outline: none;
+}
+
+/* Button styles - extracted from styles.css */
+/*.all-btn {
+    display: inline-block;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: transparent;
+    background-color: rgb(34 81 255);
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgb(255 255 255);
+}
+
+.all-btn:hover {
+    border-color: rgb(34 81 255);
+    background-color: rgb(255 255 255);
+    color: rgb(34 81 255);
+}*/
+
+@media (min-width: 768px) {
+    .all-btn {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .all-btn {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1480px) {
+    .all-btn {
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 18px;
+    }
+}
+
+/*.btn-outline {
+    display: inline-block;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(255 255 255);
+    background-color: transparent;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgb(255 255 255);
+}
+
+.btn-outline:hover {
+    background-color: rgb(255 255 255);
+    color: rgb(34 81 255);
+}*/
+
+@media (min-width: 768px) {
+    .btn-outline {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn-outline {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1480px) {
+    .btn-outline {
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 18px;
+    }
 }
 
 

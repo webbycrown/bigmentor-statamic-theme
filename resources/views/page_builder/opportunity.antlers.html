@@ -68,11 +68,12 @@
                                 {{ location }}
                             </p>
                         </td>
+                        {{ if button_text }}
                         <td class="xl:py-12 lg:py-8 py-5 px-3 whitespace-nowrap pr-0">
 
                             <a class="popup-with-form all-btn btn-outline bg-vividblue-400 border-vividblue-400"
                                 href="#careers-popup" data-jobid="{{ id }}" data-title="{{ title }}">
-                                Apply<svg class="ml-2 inline-block " width="14" height="13" viewBox="0 0 14 13"
+                                {{ button_text }}<svg class="ml-2 inline-block " width="14" height="13" viewBox="0 0 14 13"
                                     fill="none">
                                     <path d="M1.42871 12.1428L12.5716 1M12.5716 1V11.6972M12.5716 1H1.87443"
                                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -81,6 +82,7 @@
 
                             </a>
                         </td>
+                        {{ /if }}
                     </tr>
                     {{ /collection:{collections} }}
                 </tbody>
@@ -89,7 +91,7 @@
     </div>
 </section>
 <!-- Job Application Form Popup -->
-<div id="careers-popup" class="white-popup-block mfp-hide relative max-w-[810px] mx-auto my-5">
+<div id="careers-popup" class="white-popup-block mfp-hide relative max-w-[810px] mx-auto my-5 open-career-popup">
     <div class="xl:py-[46px] xl:px-[50px] lg:p-10 md:p-8 p-6 bg-white">
         <div class="text-center max-w-[600px] mx-auto">
             <h2
@@ -99,168 +101,64 @@
                 below to apply for the desired position. Ensure all information is accurate and up-to-date.</p>
         </div>
 
-        <form class="apply-screen-form" id="apply-screen-form" method="POST" action="javascript:void(0);">
-            {{ csrf_field }}
+     
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-7 lg:gap-y-[55px] gap-y-7 mb-10">
-                <div>
-                    <input type="text" name="first_name"
-                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
-                        placeholder="First name">
-                    <span class="error error-first_name text-red-500 text-sm"></span>
-                </div>
-                <div>
-                    <input type="text" name="last_name"
-                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
-                        placeholder="Last name">
-                    <span class="error error-last_name text-red-500 text-sm"></span>
-                </div>
-                <div>
-                    <input type="email" name="email"
-                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
-                        placeholder="Email address">
-                    <span class="error error-email text-red-500 text-sm"></span>
-                </div>
-                <div>
-                    <input type="tel" name="phone"
-                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
-                        placeholder="Phone number">
-                    <span class="error error-phone text-red-500 text-sm"></span>
-                </div>
-                <div>
 
-                    <input type="hidden" id="applied_job" name="applied_job" value="">
-                    <input type="hidden" id="position_title" name="applied_position" value="">
-                    <input type="text" id="position_title_display" name="applied_position" disabled
-                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium"
-                        placeholder="Position" value="">
-                    <span class="error error-applied_position text-red-500 text-sm"></span>
-                </div>
-                <div>
-                    <input type="date" name="application_date"
-                        class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
-                        placeholder="Earliest Possible Start Date">
-                    <span class="error error-application_date text-red-500 text-sm"></span>
-                </div>
+        {{ form:job_apply id="apply-screen-form" class="apply-screen-form" }}
+        {{ csrf_field }}
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-7 lg:gap-y-[55px] gap-y-7 mb-10">
+            {{ fields }}
+            {{ if handle != "resume" && type != "textarea" }}
+            
+            <div>
+                <input
+               type="{{ if input_type == 'date' }}date{{ elseif type == 'date' }}date{{ else }}text{{ /if }}"
+                name="{{ handle }}"
+                placeholder="{{ display }}"
+                class="w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
+                >
+                <span class="field-error text-red-500" data-error-for="{{ handle }}">{{ error }}</span>
             </div>
+            {{ /if }}
+            {{ /fields }}
+        </div>
 
-            <div
-                class="flex flex-col items-center justify-center px-6 py-6 border border-black border-dashed rounded bg-gray-200 mb-6">
-                <svg class="mx-auto h-10 w-10 text-gray-400 mb-2" width="35" height="27" viewBox="0 0 35 27" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M18.75 26.75V19.25H23.75L17.5 11.75L11.25 19.25H16.25V26.75H10V26.6875C9.79 26.7 9.59 26.75 9.375 26.75C6.8886 26.75 4.50403 25.7623 2.74587 24.0041C0.98772 22.246 0 19.8614 0 17.375C0 12.565 3.6375 8.645 8.305 8.1075C8.71424 5.96824 9.85613 4.03844 11.5343 2.65002C13.2124 1.26159 15.3219 0.501335 17.5 0.5C19.6784 0.501204 21.7882 1.26136 23.4668 2.64976C25.1454 4.03815 26.2878 5.96802 26.6975 8.1075C31.365 8.645 34.9975 12.565 34.9975 17.375C34.9975 19.8614 34.0098 22.246 32.2516 24.0041C30.4935 25.7623 28.1089 26.75 25.6225 26.75C25.4125 26.75 25.21 26.7 24.9975 26.6875V26.75H18.75Z"
-                        fill="#585858" />
-                </svg>
-                <label for="file_upload"
-                    class="xl:text-lg lg:text-md text-sm relative cursor-pointer font-bold text-black leading-lineHeight mb-1 hover:text-vividblue-400">
-                    <span>Upload a File</span>
-                    <input id="file_upload" name="file_upload" type="file" class="sr-only" accept=".doc,.docx,.pdf">
-                </label>
-                <p class="text-sm text-gray-800">Drag and drop file here.</p>
-                <span class="error error-file_upload text-red-500 text-sm mt-2"></span>
-            </div>
+        {{ fields }}
+        {{ if type == "textarea" }}
+        <div class="mb-6">
+            <textarea
+            name="{{ handle }}"
+            placeholder="{{ display }}"
+            rows="3"
+            class="block resize-none w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"
+            ></textarea>
+            <span class="field-error text-red-500" data-error-for="{{ handle }}">{{ error }}</span>
+        </div>
+        {{ elseif handle == "resume" }}
+        <div class="flex flex-col items-center justify-center px-6 py-6 border border-black border-dashed rounded bg-gray-200 mb-6">
+            <svg class="mx-auto h-10 w-10 text-gray-400 mb-2" width="35" height="27" viewBox="0 0 35 27" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.75 26.75V19.25H23.75L17.5 11.75L11.25 19.25H16.25V26.75H10V26.6875C9.79 26.7 9.59 26.75 9.375 26.75C6.8886 26.75 4.50403 25.7623 2.74587 24.0041C0.98772 22.246 0 19.8614 0 17.375C0 12.565 3.6375 8.645 8.305 8.1075C8.71424 5.96824 9.85613 4.03844 11.5343 2.65002C13.2124 1.26159 15.3219 0.501335 17.5 0.5C19.6784 0.501204 21.7882 1.26136 23.4668 2.64976C25.1454 4.03815 26.2878 5.96802 26.6975 8.1075C31.365 8.645 34.9975 12.565 34.9975 17.375C34.9975 19.8614 34.0098 22.246 32.2516 24.0041C30.4935 25.7623 28.1089 26.75 25.6225 26.75C25.4125 26.75 25.21 26.7 24.9975 26.6875V26.75H18.75Z" fill="#585858"/>
+        </svg>
+        <label for="{{ handle }}" class="xl:text-lg lg:text-md text-sm relative cursor-pointer font-bold text-black leading-lineHeight mb-1 hover:text-vividblue-400">
+            <span>Upload a File</span>
+            <input id="{{ handle }}" name="{{ handle }}" type="file" class="sr-only" accept=".doc,.docx,.pdf">
+        </label>
+        <p class="text-sm text-gray-800">Drag and drop file here.</p>
+       <span class="field-error text-red-500" data-error-for="{{ handle }}">{{ error }}</span>
+    </div>
+    {{ /if }}
+    {{ /fields }}
 
-            <div class="mb-6">
-                <textarea name="about" rows="3" placeholder="About info..."
-                    class="block resize-none w-full border-b border-black focus:ring-0 focus:outline-none text-black pb-3 lg:text-lg text-md font-Satoshi font-medium placeholder:text-black"></textarea>
-                <span class="error error-about text-red-500 text-sm"></span>
-            </div>
+    <div class="text-right">
+        <button type="submit" class="all-btn btn-outline bg-vividblue-400 border-vividblue-400 mb-4 lg:mb-7">
+            Submit
+        </button>
+    </div>
 
-            <div class="text-right">
-                <button type="submit" class="all-btn focus:outline-none focus:ring-0">
-                    Submit<svg class="ml-2 inline-block" width="14" height="13" viewBox="0 0 14 13" fill="none">
-                        <path d="M1.42871 12.1428L12.5716 1M12.5716 1V11.6972M12.5716 1H1.87443" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-
-            <div id="apply-response" class="mt-4"></div>
-        </form>
+    <p class="form-message"></p>
+    {{ /form:job_apply }}
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-        // Initialize Magnific Popup
-        $('.popup-with-form').magnificPopup({
-            type: 'inline',
-            preloader: false,
-            focus: '#first_name',
-            callbacks: {
-                beforeOpen: function () {
-                    var $trigger = $(this.st.el);
-                    var jobTitle = $trigger.data('title') || '';
-                    var JobId = $trigger.data('jobid') || '';
-
-
-                    // Fill the hidden input
-                    $('#applied_job').val(JobId);
-                    $('#position_title').val(jobTitle);
-                    $('#position_title_display').val(jobTitle);
-                },
-                close: function () {
-                    // Reset form when popup closes
-                    $('#apply-screen-form')[0].reset();
-
-                    // Clear any error messages
-                    $('#apply-screen-form .error').html('');
-
-                    // Clear global response message
-                    $('#apply-response').html('');
-                }
-            }
-        });
-
-        // AJAX form submission
-        $(document).on("submit", "#apply-screen-form", function (e) {
-            e.preventDefault();
-
-            const form = $(this)[0];
-            const formData = new FormData(form);
-
-            $.ajax({
-                url: "{{ route:apply.submit }}", // Replace with correct backend route if needed
-                method: 'POST',
-                data: formData,
-                processData: false,
-                contentType: false,
-                headers: { 'X-Requested-With': 'XMLHttpRequest' },
-                success: function (data) {
-                    const $res = $('#apply-response');
-                    $res.html(''); // Clear any previous global response
-
-                    // Clear individual field errors
-                    $('#apply-screen-form .error').html('');
-
-                    if (data.status === 'success') {
-                        $res.html(`<span class="text-green-600" style="color:green;">${data.message}</span>`);
-                        $('#apply-screen-form')[0].reset();
-
-                        setTimeout(function () {
-                            $('.mfp-close').click(); // Close popup
-                            // window.location.reload();
-                        }, 2000);
-
-                    } else if (data.status === 'validation') {
-                        Object.entries(data.errors).forEach(([key, msg]) => {
-                            // Example: <div class="error error-name"></div>
-                            $(`#apply-screen-form .error-${key}`).html(`<span class="text-red-600" style="color:red;">${msg}</span>`);
-                        });
-
-                    } else if (data.status === 'error') {
-                        $res.html(`<span class="text-red-600" style="color:red;">${data.message}</span>`);
-
-                    } else {
-                        $res.html(`<span class="text-red-600" style="color:red;">Something went wrong. Please try again.</span>`);
-                    }
-                },
-                error: function (xhr, status, error) {
-                    $('#apply-response').html(`<span class="text-red-600" style="color:red;">Please try again later.</span>`);
-                }
-            });
-
-            return false;
-        });
-    });
-</script>

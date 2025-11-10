@@ -8,15 +8,12 @@
                         <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight text-white block mb-0">{{footer_about}}</p>
                     </div>
                     <div class="w-full max-w-[569px]">
-                        {{ form:newsletter }}
+                        
+                        <form class="get-free-quote-form">
+
                             <div class="block">
                                 <div class="w-full flex mb-3">
-                                    <input 
-                                        class="w-full py-2 ps-6 px-4 text-sm md:text-md lg:text-lg text-white font-normal border-0 placeholder:text-white focus:text-white focus:outline-none bg-gray-600" 
-                                        type="email" 
-                                        name="email" 
-                                        placeholder="{{ placeholder }}" 
-                                        required>
+                                    <input  class="w-full py-2 ps-6 px-4 text-sm md:text-md lg:text-lg text-white font-normal border-0 placeholder:text-white focus:text-white focus:outline-none bg-gray-600" type="email" name="email" id="email"placeholder="{{ placeholder }}">
                     
                                     <button type="submit" class="all-btn btn-outline bg-vividblue-400 border-vividblue-400 hover:border-white shrink-0 ml-3">
                                         {{ bottun:0:text }}
@@ -24,52 +21,48 @@
                                     </button>
                                 </div>
                     
-                                {{ if errors:email }}
-                                    <span class="text-red-500 text-sm" role="alert">Please enter a valid email address.</span>
-                                {{ /if }}
+                                <div class="field-error text-red-500" data-error-for="email">{{ error }}</div>
                             </div>
                     
                             <label class="flex items-center">
-                                <input 
-                                    name="privacy_policy" 
-                                    type="checkbox" 
-                                    required 
-                                    class="form-checkbox text-blue-500"
-                                    aria-describedby="privacy-error">
+                                <input name="privacy_policy" type="checkbox" id="privacy_policy" class="form-checkbox text-blue-500"aria-describedby="privacy-error">
                     
-                                <p class="text-md text-white font-normal ml-3">
-                                    {{privacy_consent_text}}
-                                </p>
-                                
+                                <p class="text-md text-white font-normal ml-3"> {{privacy_consent_text}} </p>
+
                             </label>
+                            <div class="field-error text-red-500" data-error-for="privacy_policy">{{ error }}</div>
                     
-                        {{ /form:newsletter }}
+                         <div id="form-message" class="mt-2 form-message"></div>
+                        </form>
                     </div>
                     
                 </div>
+                {{ setting }}
                 <div class="flex lg:order-none order-1 gap-7 lg:pt-10 xl:pt-14 2xl:pt-16 flex-wrap justify-between">
                     <a href="{{site:url}}">
-                        {{footer_logo}}
+                        {{main_logo}}
                         <img alt="main-logo" class="white-img w-[200px] lg:w-auto" src="{{url}}">
-                        {{/footer_logo}}
+                        {{/main_logo}}
                     </a>
                     <ul class="flex items-center gap-y-3 lg:gap-x-[30px] md:gap-x-6 gap-x-4">
-                        {{ social_media }}
-                            <li><a href="{{ link }}"><i class="fa-brands {{ icon_class }} text-white hover:text-white-100 w-4 h-4 md:w-6 md:h-6 text-md lg:text-[18px] inline-block"></i></a></li>
-                        {{ /social_media }}
+                        {{ socials }}
+                            <li><a href="{{url}}"> <i class="fa-brands fa-{{ platform }} text-white hover:text-white-100 w-4 h-4 md:w-6 md:h-6 text-md lg:text-[18px] inline-block"></i></a></li>
+                        {{ /socials }}
 
                     </ul>  
                 </div>
+                {{ /setting }}
                 <div class="w-full lg:order-none order-2 py-7 sm:py-8 md:py-10 xl:py-14 2xl:py-16">
                     <ul class="nav flex justify-start flex-wrap gap-y-2 gap-x-4 sm:gap-x-8 md:gap-x-10 lg:gap-x-12 xl:gap-x-14 2xl:gap-x-16">
-                        {{nav:footer_navs}}
-                        <li><a class="text-white hover:text-white-100 text-md lg:text-lg 2xl:text-[20px] font-normal block" href="{{url}}">{{title}}</a></li>
-                        {{/nav:footer_navs}}
+                        {{ footer_menu }}
+                        <li><a class="text-white hover:text-white-100 text-md lg:text-lg 2xl:text-[20px] font-normal block" href="{{url}}">{{text}}</a></li>
+                       {{ /footer_menu }}
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+  
     <div class="w-full border-t border-t-lightborder-100 bg-black">
         <div class="container">
             <div class="flex items-center gap-2 md:flex-nowrap flex-wrap justify-between py-3 md:py-5">
@@ -85,6 +78,7 @@
         </div>
     </div>
 </footer>
+  {{/footer}}
 <!-- ====== Footer ====== -->
 
 <!-- ====== Float right icon ====== -->
@@ -93,5 +87,5 @@
         <i class="fa-solid fa-angle-up"></i>
     </div>
 </div>
-{{/footer}}
+
 

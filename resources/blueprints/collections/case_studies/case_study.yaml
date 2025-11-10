@@ -15,17 +15,12 @@ tabs:
           -
             handle: author
             field:
-              input_type: text
-              antlers: false
-              type: text
+              max_items: 1
+              mode: select
+              collections:
+                - our_consultant
+              type: entries
               display: Author
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-              validate:
-                - required
       -
         display: 'Page Builder'
         fields:
@@ -47,16 +42,10 @@ tabs:
             field:
               max_items: 1
               mode: select
-              create: true
               taxonomies:
                 - categories
               type: terms
               display: Categories
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               validate:
                 - required
           -

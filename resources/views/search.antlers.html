@@ -1,4 +1,4 @@
-<section class="relative bg-gray-500">
+<section class="relative bg-gray-200">
     <div class="container">
         <div class="2xl:py-20 xl:py-16 lg:py-14 md:py-12 py-10">
             <form class="flex items-center border border-gray-700 bg-white lg:py-5 lg:px-6 py-3 px-4 w-full"
@@ -72,8 +72,7 @@
             <div class="results-wrap">
 
                 {{ our_insights }}
-                {{page_builder}}
-                {{if type == "insights_blog_page"}}
+                
                 <div
                     class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
                     <div class="results-title">
@@ -83,7 +82,7 @@
                         </h3>
                         <div class="md:mb-6 mb-4 max-w-[734px] w-full">
                             <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{
-                                thumb_description }}
+                                description }}
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-3">
@@ -93,20 +92,19 @@
                             </label>
                             <a href="{{ url }}"
                                 class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
-                                {{ author }}
+                                By {{ author.title }}
                             </a>
                         </div>
                     </div>
                     <div class="results-img sm:max-w-[360px] w-full">
                         <div class="relative before:content-[''] before:pt-[56%] before:block">
-                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb_image }}"
+                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ image }}"
                                 alt="{{ title }}">
 
                         </div>
                     </div>
                 </div>
-                {{/if}}
-                {{/page_builder}}
+               
                 {{ /our_insights }}
 
                 {{ case_studies }}
@@ -129,10 +127,7 @@
                                 class="font-Satoshi font-bold text-white text-13 bg-vividblue-400 py-1 px-[14px] rounded-2xl uppercase">
                                 {{ date format="d M, Y" }}
                             </label>
-                            <a href="{{ url }}"
-                                class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
-                                {{ author }}
-                            </a>
+
                         </div>
                     </div>
                     <div class="results-img sm:max-w-[360px] w-full">
@@ -250,8 +245,6 @@
         <article id="tabpanel-our_insights" class="tab-panel item insights w-full" role="tabpanel" tabindex="0">
             <div class="results-wrap">
                 {{ our_insights }}
-                {{page_builder}}
-                {{if type == "insights_blog_page"}}
                 <div
                     class="results-col flex items-center sm:justify-between sm:flex-row flex-col-reverse gap-5 border-b border-gray-700 xl:py-10 lg:py-8 md:py-6 py-5">
                     <div class="results-title">
@@ -261,7 +254,7 @@
                         </h3>
                         <div class="md:mb-6 mb-4 max-w-[734px] w-full">
                             <p class="2xl:text-md text-md leading-lineHeight font-normal text-gray-800">{{
-                                thumb_description }}
+                                description }}
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-3">
@@ -271,20 +264,19 @@
                             </label>
                             <a href="{{ url }}"
                                 class="font-Satoshi font-normal text-black hover:text-vividblue-400 text-md relative pl-4 before:content-[''] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-1 before:h-1 before:bg-black before:rounded-full">
-                                {{ author }}
+                                By {{ author.title }}
                             </a>
                         </div>
                     </div>
                     <div class="results-img sm:max-w-[360px] w-full">
                         <div class="relative before:content-[''] before:pt-[56%] before:block">
-                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ thumb_image }}"
+                            <img class="absolute top-0 left-0 w-full h-full object-cover" src="{{ image }}"
                                 alt="{{ title }}">
 
                         </div>
                     </div>
                 </div>
-                {{/if}}
-                {{/page_builder}}
+               
                 {{ /our_insights }}
             </div>
         </article>
@@ -457,92 +449,3 @@
 </section>
 
 <!-- ====== Results Section ====== -->
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        var grid = $(".isotope").isotope({
-            itemSelector: ".item",
-            layoutMode: "fitRows",
-        });
-
-        $(".menu-filter button").on("click", function () {
-            var filterValue = $(this).attr("data-filter");
-            grid.isotope({ filter: filterValue });
-
-            $(".menu-filter button").removeClass("active");
-            $(this).addClass("active");
-
-
-        });
-        grid.isotope({ filter: '.all_results' });
-
-
-        const input = document.getElementById("site-search");
-        const resultBox = document.getElementById("combined-search");
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const q = urlParams.get("q");
-        if (q && input) {
-            input.value = decodeURIComponent(q.replace(/\+/g, " "));
-            triggerSearch(q); // 🔄 Auto-trigger on load
-        }
-
-        if (input && resultBox) {
-            let timeout = null;
-
-            input.addEventListener("keyup", function () {
-                const query = input.value.trim();
-
-                clearTimeout(timeout);
-
-                if (query.length < 2) {
-                    resultBox.innerHTML = "";
-                    resultBox.classList.remove("show");
-                    grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
-                    return;
-                }
-
-                timeout = setTimeout(() => {
-                    triggerSearch(query);
-                }, 300);
-            });
-        }
-
-        function triggerSearch(query) {
-            fetch(`/search_page_results?q=${encodeURIComponent(query)}`)
-                .then((response) => {
-                    if (!response.ok) throw new Error(`Network error: ${response.status}`);
-                    return response.text();
-                })
-                .then((fullHtml) => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(fullHtml, "text/html");
-                    const innerContent = doc.getElementById("combined-search");
-
-                    if (innerContent) {
-                        resultBox.innerHTML = innerContent.innerHTML;
-                        resultBox.classList.add("show");
-
-                        grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
-
-                        const newItems = resultBox.querySelectorAll(".item");
-                        if (newItems.length > 0) {
-                            grid.append(newItems).isotope("appended", newItems);
-                            grid.isotope("layout");
-                        }
-                    } else {
-                        resultBox.innerHTML = '<p class="text-red-600">No results found.</p>';
-                        resultBox.classList.add("show");
-                        grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
-                    }
-                })
-                .catch((error) => {
-                    console.error("Search error:", error);
-                    resultBox.innerHTML = '<p class="text-red-600">Error loading results.</p>';
-                    resultBox.classList.add("show");
-                    grid.isotope("remove", grid.isotope("getItemElements")).isotope("layout");
-                });
-        }
-    });
-</script>

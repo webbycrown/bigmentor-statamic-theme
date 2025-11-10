@@ -1,0 +1,47 @@
+title: Setting
+data:
+  favicon: image/favicon.png
+  loader: image/Loader.svg
+  main_logo: image/main-logo.svg
+  white_logo: image/main-logo-white.svg
+  black_logo: image/main-logo-black.svg
+  contact_info:
+    -
+      id: mhn4t0dz
+      text_content: +91-855-556-3942
+      icon: image/phone.svg
+    -
+      id: mhn4tboi
+      text_content: info@bigmentor.com
+      icon: image/email.svg
+  socials:
+    -
+      id: mhn09d9k
+      title: Medium
+      platform: medium
+      url: 'https://medium.com/'
+    -
+      id: mhn0bm74
+      title: Linkedln
+      platform: linkedin-in
+      url: 'https://www.linkedin.com'
+    -
+      id: mhn0a7y8
+      title: Twitter
+      platform: twitter
+      url: 'https://x.com/'
+    -
+      id: mhn0980h
+      title: Facebook
+      platform: facebook-f
+      url: 'https://www.facebook.com/'
+    -
+      id: mhn0aw40
+      title: Youtube
+      platform: youtube
+      url: 'https://www.youtube.com/'
+    -
+      id: mhn0agds
+      title: Instagram
+      platform: instagram
+      url: 'https://www.instagram.com/'

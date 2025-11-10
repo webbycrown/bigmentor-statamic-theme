@@ -5,7 +5,7 @@ title: Industries
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 template: industries/index
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-updated_at: 1748262423
+updated_at: 1762404628
 parent: home
 page_builder:
   -
@@ -19,7 +19,7 @@ page_builder:
     layouts_grid: row
   -
     id: maxwztk5
-    if_have_a_tag_title: false
+    if_have_a_tag_title: true
     layouts_grid: card-based
     collections: industries
     limit: 6
@@ -31,6 +31,6 @@ page_builder:
         icon: image/redirect.svg
     type: grid_showcase
     enabled: true
-    pagination: 'true'
     card_based_grid: post
+    pagination: 'true'
 ---

@@ -1,0 +1,65 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: favicon
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Favicon
+          -
+            handle: loader
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Loader
+          -
+            handle: main_logo
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Main Logo'
+          -
+            handle: white_logo
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'White Logo'
+          -
+            handle: black_logo
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Black Logo'
+          -
+            handle: contact_info
+            field:
+              type: grid
+              display: 'Contact Info'
+              fields:
+                -
+                  handle: text_content
+                  field:
+                    type: text
+                    display: Text
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Icon
+          -
+            import: social_section

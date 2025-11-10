@@ -27,28 +27,16 @@
                     <h3 class="2xl:text-32 xl:text-xl xl:text-28 lg:text-26 md:text-24 sm:text-22 text-20 mb-4 leading-lineHeight text-black font-Larken font-medium">{{social_text}}</h3>
                     <p class="2xl:text-lg text-md leading-lineHeight mb-3 md:mb-5 lg:mb-[30px] font-normal text-gray-800">Email:<a href="mailto:{{email}}" class="hover:text-vividblue-400">{{email}}</a></p>
                     <ul class="flex flex-wrap gap-3">
-                    {{page_builder}}
-                        {{ social_media }}
-                        <li>
-                            {{ if icon}}
-                            {{if icon ends_with ".svg"}}
-                            <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
-                                href="{{link}}"> {{ svg src="{{icon}}" class="ml-1" width="16" height="16" viewBox="0 0 16 16"
-                                fill="none"
-                                }}</a>
-                                
-                                {{ else }}
-                                <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
-                                href="{{link}}"><img src="{{ icon }}" class="ml-1" width="16" height="16" alt=""></a></li>
-                                
-                                {{ /if }}
-                                {{ else }}
-                                <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full"
-                                href="{{link}}"><i class="{{icon_class}}"></i></a></li>
-                                {{ /if }}
-                                {{ /social_media }}
-                            </li>
-                    {{ /page_builder }}
+                       {{ social_share }}
+                       {{ socials }}
+
+                       <li>
+                          <a class="lg:w-[46px] lg:h-[46px] h-9 w-9 bg-black p-2 text-white text-lg hover:bg-vividblue-400 flex items-center justify-center rounded-full" href="{{ url }} {{config:app.url}}/consultants/{{ slug }}" target="_blank"> <i class="fa-brands fa-{{ platform }}"></i>
+                          </a>
+                      </li>
+
+                      {{ /socials }}
+                      {{ /social_share }}
                     </ul>
                 </div>
             </div>

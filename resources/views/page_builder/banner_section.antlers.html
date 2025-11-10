@@ -1,6 +1,6 @@
 {{if layout == "hero"}}
 {{if hero_layout == 'with_transparent_header'}}
-<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-500"
+<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-100 before:content-['']"
     style="background-image: url('{{ image }}')">
     <div
         class="container 2xl:pt-64 xl:pt-56 lg:pt-52 md:pt-40 sm:pt-36 pt-28 2xl:pb-44 xl:pb-36 lg:pb-28 md:pb-20 sm:pb-16 pb-14">
@@ -8,7 +8,7 @@
             {{ if title }}
             <div class="w-full max-w-fit">
                 <h1
-                    class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-white font-Larken font-medium">
+                    class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl !leading-lineHeight text-white font-Larken font-medium">
                     {{ title }}
                 </h1>
             </div>
@@ -26,7 +26,7 @@
 </div>
 {{/if}}
 {{if hero_layout == "with_back_button"}}
-<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-100"
+<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-100 before:content-['']"
     {{ if image }}style="background-image: url('{{ image:url }}')" {{ /if }}>
     <div class="container pt-10 2xl:pb-44 xl:pb-36 lg:pb-28 md:pb-20 sm:pb-16 pb-14 min-h-[400px] lg:min-h-[550px]">
         <div class="flex justify-between flex-col relative z-1">
@@ -47,7 +47,7 @@
             {{/if}}
             {{ if title }}
             <h1
-                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-white font-Larken font-medium mb-[18px]">
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl !leading-lineHeight text-white font-Larken font-medium mb-[18px]">
                 {{ title }}
             </h1>
             {{ /if }}
@@ -72,7 +72,7 @@
             class="p-5 sm:p-8 md:p-10 lg:p-12 xl:p-14 2xl:py-[] 2xl:px-16 backdrop-blur-md bg-[#FFFFFFB2] max-w-[870px]">
             {{ if title }}
             <h1
-                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-black font-Larken font-medium mb-[18px]">
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl !leading-lineHeight text-black font-Larken font-medium mb-[18px]">
                 {{ title }}
             </h1>
             {{ /if }}
@@ -102,7 +102,7 @@
             class="px-4 2xl:pt-[55px] 2xl:pb-20 xl:py-16 lg:py-14 md:py-12 py-10 bg-white border-b border-gray-700 -mt-28 relative z-1">
             <div class="max-w-[1320px] mx-auto">
                 <h2
-                    class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 leading-lineHeight text-black font-Larken font-medium mb-3.5">
+                    class="2xl:text-45 1xl:text-2xl xl:text-1xl lg:text-32 sm:text-xl text-28 !leading-lineHeight text-black font-Larken font-medium mb-3.5">
                     {{title}}</h2>
                 <p class="2xl:text-20 lg:text-lg text-md leading-lineHeight font-normal text-gray-800">
                     {{short_description}}</p>
@@ -248,7 +248,7 @@
 
 {{/if}}
 {{ if layout == "content_over_image" }}
-<div class="relative bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-100 2xl:min-h-[550px] xl:min-h-[450px] lg:min-h-[400px] min-h-[350px]"
+<div class="relative bg-cover bg-center before:block before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-100 2xl:min-h-[550px] xl:min-h-[450px] lg:min-h-[400px] min-h-[350px]"
     style="background-image: url('{{ image }}');">
 </div>
 
@@ -257,7 +257,7 @@
         class="2xl:-mt-[110px] xl:-mt-[90px] lg:-mt-[70px] -mt-[60px] md:p-10 p-8 bg-white min-h-[250px] flex justify-between flex-col md:flex-row gap-7 border-b border-t md:rounded-xl shadow-lg">
         <div class="w-full max-w-fit">
             <h1
-                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl leading-lineHeight text-black font-Larken font-medium">
+                class="2xl:text-4xl 1xl:text-3xl xl:text-2xl lg:text-1xl sm:text-32 text-xl !leading-lineHeight text-black font-Larken font-medium">
                 {{ title }}
             </h1>
         </div>

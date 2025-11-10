@@ -80,6 +80,19 @@ tabs:
               hide_display: false
               validate:
                 - required
+          -
+            handle: button_text
+            field:
+              input_type: text
+              default: Apply
+              antlers: false
+              type: text
+              display: 'Button Text'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
@@ -91,3 +104,11 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

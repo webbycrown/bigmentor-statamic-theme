@@ -50,7 +50,6 @@ page_builder:
     type: frequently_asked_questions
     enabled: true
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-updated_at: 1748847555
-template: home
-parent: home
+updated_at: 1762417858
+template: faq
 ---

@@ -1,0 +1,18 @@
+title: 'Social Share'
+data:
+  socials:
+    -
+      id: mhlz8b3m
+      title: Facebook
+      platform: facebook-f
+      url: 'https://www.facebook.com/sharer/sharer.php?u='
+    -
+      id: mhlz8hu3
+      title: Twitter
+      platform: twitter
+      url: 'https://twitter.com/intent/tweet?url='
+    -
+      id: mhlz8pka
+      title: Instagram
+      platform: instagram
+      url: 'https://www.instagram.com/'

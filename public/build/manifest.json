@@ -1,6 +1,206 @@
 {
+  "public/assets/font/LarkenDEMO-Black.eot": {
+    "file": "assets/LarkenDEMO-Black-5cdce080.eot",
+    "src": "public/assets/font/LarkenDEMO-Black.eot"
+  },
+  "public/assets/font/LarkenDEMO-Black.ttf": {
+    "file": "assets/LarkenDEMO-Black-4e739f89.ttf",
+    "src": "public/assets/font/LarkenDEMO-Black.ttf"
+  },
+  "public/assets/font/LarkenDEMO-Black.woff": {
+    "file": "assets/LarkenDEMO-Black-ef6466dd.woff",
+    "src": "public/assets/font/LarkenDEMO-Black.woff"
+  },
+  "public/assets/font/LarkenDEMO-Black.woff2": {
+    "file": "assets/LarkenDEMO-Black-d81af16c.woff2",
+    "src": "public/assets/font/LarkenDEMO-Black.woff2"
+  },
+  "public/assets/font/LarkenDEMO-Bold.eot": {
+    "file": "assets/LarkenDEMO-Bold-550265b8.eot",
+    "src": "public/assets/font/LarkenDEMO-Bold.eot"
+  },
+  "public/assets/font/LarkenDEMO-Bold.ttf": {
+    "file": "assets/LarkenDEMO-Bold-af6fa5da.ttf",
+    "src": "public/assets/font/LarkenDEMO-Bold.ttf"
+  },
+  "public/assets/font/LarkenDEMO-Bold.woff": {
+    "file": "assets/LarkenDEMO-Bold-1f24dcfa.woff",
+    "src": "public/assets/font/LarkenDEMO-Bold.woff"
+  },
+  "public/assets/font/LarkenDEMO-Bold.woff2": {
+    "file": "assets/LarkenDEMO-Bold-483f9c28.woff2",
+    "src": "public/assets/font/LarkenDEMO-Bold.woff2"
+  },
+  "public/assets/font/LarkenDEMO-ExtraBold.eot": {
+    "file": "assets/LarkenDEMO-ExtraBold-316d8cd4.eot",
+    "src": "public/assets/font/LarkenDEMO-ExtraBold.eot"
+  },
+  "public/assets/font/LarkenDEMO-ExtraBold.ttf": {
+    "file": "assets/LarkenDEMO-ExtraBold-fa85f8cb.ttf",
+    "src": "public/assets/font/LarkenDEMO-ExtraBold.ttf"
+  },
+  "public/assets/font/LarkenDEMO-ExtraBold.woff": {
+    "file": "assets/LarkenDEMO-ExtraBold-c7228490.woff",
+    "src": "public/assets/font/LarkenDEMO-ExtraBold.woff"
+  },
+  "public/assets/font/LarkenDEMO-ExtraBold.woff2": {
+    "file": "assets/LarkenDEMO-ExtraBold-c1e1d9bd.woff2",
+    "src": "public/assets/font/LarkenDEMO-ExtraBold.woff2"
+  },
+  "public/assets/font/LarkenDEMO-Light.eot": {
+    "file": "assets/LarkenDEMO-Light-d9462d6f.eot",
+    "src": "public/assets/font/LarkenDEMO-Light.eot"
+  },
+  "public/assets/font/LarkenDEMO-Light.ttf": {
+    "file": "assets/LarkenDEMO-Light-4bd5a283.ttf",
+    "src": "public/assets/font/LarkenDEMO-Light.ttf"
+  },
+  "public/assets/font/LarkenDEMO-Light.woff": {
+    "file": "assets/LarkenDEMO-Light-0a02665d.woff",
+    "src": "public/assets/font/LarkenDEMO-Light.woff"
+  },
+  "public/assets/font/LarkenDEMO-Light.woff2": {
+    "file": "assets/LarkenDEMO-Light-07976e32.woff2",
+    "src": "public/assets/font/LarkenDEMO-Light.woff2"
+  },
+  "public/assets/font/LarkenDEMO-Medium.eot": {
+    "file": "assets/LarkenDEMO-Medium-6ba572c1.eot",
+    "src": "public/assets/font/LarkenDEMO-Medium.eot"
+  },
+  "public/assets/font/LarkenDEMO-Medium.ttf": {
+    "file": "assets/LarkenDEMO-Medium-c87fe593.ttf",
+    "src": "public/assets/font/LarkenDEMO-Medium.ttf"
+  },
+  "public/assets/font/LarkenDEMO-Medium.woff": {
+    "file": "assets/LarkenDEMO-Medium-9b0c4d7d.woff",
+    "src": "public/assets/font/LarkenDEMO-Medium.woff"
+  },
+  "public/assets/font/LarkenDEMO-Medium.woff2": {
+    "file": "assets/LarkenDEMO-Medium-41b7032d.woff2",
+    "src": "public/assets/font/LarkenDEMO-Medium.woff2"
+  },
+  "public/assets/font/LarkenDEMO-Regular.eot": {
+    "file": "assets/LarkenDEMO-Regular-17aaea8b.eot",
+    "src": "public/assets/font/LarkenDEMO-Regular.eot"
+  },
+  "public/assets/font/LarkenDEMO-Regular.ttf": {
+    "file": "assets/LarkenDEMO-Regular-7423fd99.ttf",
+    "src": "public/assets/font/LarkenDEMO-Regular.ttf"
+  },
+  "public/assets/font/LarkenDEMO-Regular.woff": {
+    "file": "assets/LarkenDEMO-Regular-84a4072b.woff",
+    "src": "public/assets/font/LarkenDEMO-Regular.woff"
+  },
+  "public/assets/font/LarkenDEMO-Regular.woff2": {
+    "file": "assets/LarkenDEMO-Regular-e70ddda6.woff2",
+    "src": "public/assets/font/LarkenDEMO-Regular.woff2"
+  },
+  "public/assets/font/LarkenDEMO-Thin.eot": {
+    "file": "assets/LarkenDEMO-Thin-dd631ee5.eot",
+    "src": "public/assets/font/LarkenDEMO-Thin.eot"
+  },
+  "public/assets/font/LarkenDEMO-Thin.ttf": {
+    "file": "assets/LarkenDEMO-Thin-b85eed73.ttf",
+    "src": "public/assets/font/LarkenDEMO-Thin.ttf"
+  },
+  "public/assets/font/LarkenDEMO-Thin.woff": {
+    "file": "assets/LarkenDEMO-Thin-7a0618d7.woff",
+    "src": "public/assets/font/LarkenDEMO-Thin.woff"
+  },
+  "public/assets/font/LarkenDEMO-Thin.woff2": {
+    "file": "assets/LarkenDEMO-Thin-a33ef743.woff2",
+    "src": "public/assets/font/LarkenDEMO-Thin.woff2"
+  },
+  "public/assets/font/Satoshi-Black.eot": {
+    "file": "assets/Satoshi-Black-03d69c1b.eot",
+    "src": "public/assets/font/Satoshi-Black.eot"
+  },
+  "public/assets/font/Satoshi-Black.ttf": {
+    "file": "assets/Satoshi-Black-cf873b24.ttf",
+    "src": "public/assets/font/Satoshi-Black.ttf"
+  },
+  "public/assets/font/Satoshi-Black.woff": {
+    "file": "assets/Satoshi-Black-d12f0c4c.woff",
+    "src": "public/assets/font/Satoshi-Black.woff"
+  },
+  "public/assets/font/Satoshi-Black.woff2": {
+    "file": "assets/Satoshi-Black-311eaa37.woff2",
+    "src": "public/assets/font/Satoshi-Black.woff2"
+  },
+  "public/assets/font/Satoshi-Bold.eot": {
+    "file": "assets/Satoshi-Bold-9d761ec0.eot",
+    "src": "public/assets/font/Satoshi-Bold.eot"
+  },
+  "public/assets/font/Satoshi-Bold.ttf": {
+    "file": "assets/Satoshi-Bold-7d38a197.ttf",
+    "src": "public/assets/font/Satoshi-Bold.ttf"
+  },
+  "public/assets/font/Satoshi-Bold.woff": {
+    "file": "assets/Satoshi-Bold-dc2208fc.woff",
+    "src": "public/assets/font/Satoshi-Bold.woff"
+  },
+  "public/assets/font/Satoshi-Bold.woff2": {
+    "file": "assets/Satoshi-Bold-64a3d538.woff2",
+    "src": "public/assets/font/Satoshi-Bold.woff2"
+  },
+  "public/assets/font/Satoshi-Light.eot": {
+    "file": "assets/Satoshi-Light-3aa7e9aa.eot",
+    "src": "public/assets/font/Satoshi-Light.eot"
+  },
+  "public/assets/font/Satoshi-Light.ttf": {
+    "file": "assets/Satoshi-Light-1d427037.ttf",
+    "src": "public/assets/font/Satoshi-Light.ttf"
+  },
+  "public/assets/font/Satoshi-Light.woff": {
+    "file": "assets/Satoshi-Light-135d3abc.woff",
+    "src": "public/assets/font/Satoshi-Light.woff"
+  },
+  "public/assets/font/Satoshi-Light.woff2": {
+    "file": "assets/Satoshi-Light-dbd5340c.woff2",
+    "src": "public/assets/font/Satoshi-Light.woff2"
+  },
+  "public/assets/font/Satoshi-Medium.eot": {
+    "file": "assets/Satoshi-Medium-5f4eed88.eot",
+    "src": "public/assets/font/Satoshi-Medium.eot"
+  },
+  "public/assets/font/Satoshi-Medium.ttf": {
+    "file": "assets/Satoshi-Medium-0a9f5e5b.ttf",
+    "src": "public/assets/font/Satoshi-Medium.ttf"
+  },
+  "public/assets/font/Satoshi-Medium.woff": {
+    "file": "assets/Satoshi-Medium-dccee83b.woff",
+    "src": "public/assets/font/Satoshi-Medium.woff"
+  },
+  "public/assets/font/Satoshi-Medium.woff2": {
+    "file": "assets/Satoshi-Medium-370618f0.woff2",
+    "src": "public/assets/font/Satoshi-Medium.woff2"
+  },
+  "public/assets/font/Satoshi-Regular.eot": {
+    "file": "assets/Satoshi-Regular-a3e7e345.eot",
+    "src": "public/assets/font/Satoshi-Regular.eot"
+  },
+  "public/assets/font/Satoshi-Regular.ttf": {
+    "file": "assets/Satoshi-Regular-67e83486.ttf",
+    "src": "public/assets/font/Satoshi-Regular.ttf"
+  },
+  "public/assets/font/Satoshi-Regular.woff": {
+    "file": "assets/Satoshi-Regular-de50dd91.woff",
+    "src": "public/assets/font/Satoshi-Regular.woff"
+  },
+  "public/assets/font/Satoshi-Regular.woff2": {
+    "file": "assets/Satoshi-Regular-554610e8.woff2",
+    "src": "public/assets/font/Satoshi-Regular.woff2"
+  },
+  "public/assets/image/check-arrow.svg": {
+    "file": "assets/check-arrow-680f1a1b.svg",
+    "src": "public/assets/image/check-arrow.svg"
+  },
+  "public/assets/image/error-bg.jpg": {
+    "file": "assets/error-bg-4e834523.jpg",
+    "src": "public/assets/image/error-bg.jpg"
+  },
   "resources/css/site.css": {
-    "file": "assets/site-9bd4acd3.css",
+    "file": "assets/site-93acfc7a.css",
     "isEntry": true,
     "src": "resources/css/site.css"
   },

@@ -47,7 +47,7 @@ class SearchController extends Controller
         ->take(5);
 
     $insights = Entry::query()
-        ->whereIn('collection', ['our_insights', 'case_studies','industries'])
+        ->whereIn('collection', ['our_insights'])
         ->get()
         ->filter(fn($entry) =>
             Str::contains(strtolower($entry->get('title') ?? ''), $query)

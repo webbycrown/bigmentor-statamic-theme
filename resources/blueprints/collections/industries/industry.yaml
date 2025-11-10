@@ -12,6 +12,20 @@ tabs:
               required: true
               validate:
                 - required
+          -
+            handle: category
+            field:
+              mode: select
+              create: true
+              taxonomies:
+                - industry_category
+              type: terms
+              display: Category
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
       -
         display: 'Page Builder'
         fields:
@@ -42,5 +56,13 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+              validate:
+                - required
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
               validate:
                 - required

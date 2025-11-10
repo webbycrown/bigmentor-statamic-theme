@@ -1,3 +1,22 @@
+<div class="relative  bg-cover bg-center before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-custom-gradient-100 before:content-['']" style="background-image: url('{{ background_image }}')">
+  <div class="container pt-10 2xl:pb-44 xl:pb-36 lg:pb-28 md:pb-20 sm:pb-16 pb-14 min-h-[400px] lg:min-h-[550px]">
+    <div class="flex justify-between flex-col relative z-1">
+      {{ if back_button_text }}
+      <a href="{{ back_button_url }}" class="flex items-center xl:text-20 lg:text-lg text-md hover:text-vividblue-400 gap-3.5 text-white 2xl:mb-[110px] xl:mb-20 lg:mb-16 md:mb-12 mb-10">
+        <span><svg width="11" height="14" viewBox="0 0 11 14" fill="none"><path d="M11 14V0L0 7L11 14Z" fill="currentColor"/></svg></span>
+        {{ back_button_text }}
+      </a>
+      {{ /if }}
+      <h1 class="2xl:text-4xl lg:text-3xl sm:text-1xl text-xl leading-tight text-white font-Larken font-medium mb-[18px]">{{ title }}</h1>
+      <div class="w-full max-w-[687px]">
+        <p class="2xl:text-20 lg:text-lg text-md leading-normal font-normal text-white">{{ description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- ====== Hero Section ====== -->
+
+
 {{ page_builder scope="block" }}
   {{ partial src="page_builder/{type}" }}
 {{ /page_builder }}

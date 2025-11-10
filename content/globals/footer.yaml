@@ -1,9 +1,6 @@
 title: Footer
 data:
   footer_about: 'BigMentor provides personalized business mentoring to accelerate growth and refine strategies. Our expert mentors deliver actionable insights, empowering leaders and teams to overcome challenges and achieve their highest potential'
-  footer_logo:
-    - image/main-logo.svg
-  footer_navs: footer
   copyright_text: '© Copyright by BigMentor - All right reserved.'
   policies:
     -
@@ -14,31 +11,39 @@ data:
       id: ma24hdos
       title: 'Terms & Conditions'
       link: /terms-and-conditions
-  social_media:
+  footer_menu:
     -
-      id: ma3wf7co
-      link: 'https://medium.com/'
-      icon_class: fa-medium
+      id: mhn5mvi2
+      text: 'About us'
+      url: /about-us
     -
-      id: ma3wgtbs
-      link: 'https://www.youtube.com/'
-      icon_class: fa-youtube
+      id: mhn5n43x
+      text: Industries
+      url: /industries
     -
-      id: ma3wguvs
-      link: 'https://x.com/home?lang=en'
-      icon_class: fa-twitter
+      id: mhn5nd5i
+      text: 'Our Services'
+      url: /services
     -
-      id: ma3wgw74
-      link: 'https://www.instagram.com/'
-      icon_class: fa-instagram
+      id: mhn5nlbq
+      text: 'Our Insights'
+      url: /insights
     -
-      id: ma3wh5jc
-      link: 'https://www.facebook.com/'
-      icon_class: fa-facebook-f
+      id: mhn5o34u
+      text: 'Case Studies'
+      url: /case-studies
     -
-      id: ma3wi2yg
-      link: 'https://www.linkedin.com/'
-      icon_class: fa-linkedin
+      id: mhn5nut2
+      text: 'Our Consultants'
+      url: /consultants
+    -
+      id: mhn5ocza
+      text: Careers
+      url: /careers
+    -
+      id: mhn5okzq
+      text: 'Contact us'
+      url: /contact-us
   placeholder: 'Type about here...'
   bottun:
     -

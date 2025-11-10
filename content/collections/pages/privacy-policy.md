@@ -3,10 +3,9 @@ id: 51c207aa-ef90-406a-a0b1-a615efe0da86
 blueprint: page
 title: 'Privacy Policy'
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-template: home
+template: privacy-policy
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-updated_at: 1749203370
-parent: home
+updated_at: 1762417832
 page_builder:
   -
     id: makxo32u
