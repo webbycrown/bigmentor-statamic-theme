@@ -1,9 +1,13 @@
 {
     "name": "webbycrown/bigmentor-statamic-theme",
+    "type": "statamic-starter-kit",
+    "description": "A Statamic starter kit for businesses to showcase services, case studies, and portfolios.",
+    "require": {
+        "statamic/cms": "*"
+    },
     "extra": {
         "statamic": {
-            "name": "BigMentor - Statamic Theme",
-            "description": "A Statamic starter kit for businesses to showcase services, case studies, and portfolios."
+            "starter-kit": true
         }
     }
 }
