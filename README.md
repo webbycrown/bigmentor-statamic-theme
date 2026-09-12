@@ -2,6 +2,9 @@
 
 At BigMentor Statamic, we’re dedicated to helping businesses and creators showcase their expertise with confidence. Our theme is designed with precision and purpose—offering smart layouts, customizable components, and a content-first approach. Whether you're promoting services, sharing case studies, or building trust with testimonials, BigMentor delivers the flexibility, performance, and visual clarity you need to build impactful, conversion-focused websites—effortlessly.
 
+**Live demo:** https://bigmentor-statamic.webbydemo.in/  
+Control Panel: `/cp` — `admin@example.com` / `password`
+
 
 ## ✅ Modular Design System
 Fully responsive, mobile-friendly layouts
@@ -39,6 +42,16 @@ BigMentor is perfect for:
 - Terms Of Use Page
 - Privacy Policy Page
 - Contact Us Page
+
+## Collections
+
+- **Pages**: Site structure and static content.
+- **Our services**: Service catalog and detail.
+- **Industries** and **industry sub categories**: Multi-level industry pages.
+- **Case studies**: Project stories and detail.
+- **Our insights**: Articles and thought leadership.
+- **Our consultant**: Consultant profiles.
+- **Job careers** and **job apply**: Careers listing and applications.
 
 ## Features of BigMentor
 
