@@ -112,3 +112,11 @@ statamic new my-site webbycrown/bigmentor-statamic-theme
 </div>
 
 See [THIRD_PARTY.md](THIRD_PARTY.md) for bundled front-end libraries, fonts, and sample imagery licences.
+
+## Theme sections
+
+Every marketing page uses one **Page** template. Add, remove, or reorder Theme sections in the Control Panel.
+
+
+Statamic Core includes one form. Use **Statamic Pro** if you keep all 3.
+

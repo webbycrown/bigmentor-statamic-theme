@@ -1,5 +1,5 @@
 title: Pages
-template: default
+template: page
 layout: layout
 revisions: false
 route: '{parent_uri}/{slug}'

@@ -5,7 +5,7 @@ title: Careers
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_at: 1762417844
-template: career
+template: page
 page_builder:
   -
     id: mb1srzl9

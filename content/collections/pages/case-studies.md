@@ -3,7 +3,7 @@ id: ca47d780-fe24-4751-a7ca-a4e7e3a8f95c
 blueprint: page
 title: 'Case Studies'
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-template: case_studies/index
+template: page
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_at: 1748604883
 page_builder:

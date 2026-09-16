@@ -11,7 +11,7 @@
                     <p class="2xl:text-lg text-md leading-lineHeight font-normal text-gray-800">{{ description }}</p>
                 </div>
 
-                {{ form:contact-us id="contactForm" ajax="true" }}
+                {{ form:contact-us id="contactForm" }}
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-7 lg:gap-y-[55px] gap-y-7 mb-10">
                     {{ fields }}
                         {{ if type == "text" or type == "email" or type == "tel" }}

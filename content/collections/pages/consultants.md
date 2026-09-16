@@ -26,6 +26,6 @@ page_builder:
     pagination: 'true'
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_at: 1748850091
-template: our_consultant/index
+template: page
 parent: home
 ---

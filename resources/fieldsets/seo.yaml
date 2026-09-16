@@ -1,0 +1,43 @@
+title: SEO
+fields:
+  -
+    handle: seo_title
+    field:
+      type: text
+      display: Meta title
+      instructions: Shown in the browser tab and search results. Leave blank to use the page title.
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: Meta description
+      instructions: Short summary for search and social shares. Leave blank to use the excerpt.
+  -
+    handle: seo_keywords
+    field:
+      type: text
+      display: Meta keywords
+  -
+    handle: seo_image
+    field:
+      type: assets
+      display: Social share image
+      container: assets
+      max_files: 1
+  -
+    handle: seo_canonical
+    field:
+      type: text
+      display: Canonical URL
+      instructions: Leave blank to use this page URL.
+  -
+    handle: seo_robots
+    field:
+      type: select
+      display: Search indexing
+      default: 'index, follow'
+      options:
+        'index, follow': Index, follow
+        'noindex, follow': No index, follow
+        'index, nofollow': Index, no follow
+        'noindex, nofollow': No index, no follow

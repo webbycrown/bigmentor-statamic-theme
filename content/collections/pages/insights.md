@@ -5,7 +5,7 @@ title: 'Our Insights'
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_at: 1762411880
-template: our_insights/index
+template: page
 description: 'Unlock the wisdom of experienced mentors and industry leaders with our comprehensive resources. Explore expert articles, in-depth case studies actionable guides designed to empower your business journey. Stay informed on the latest trends, innovations, best practices to drive your business success.'
 page_builder:
   -

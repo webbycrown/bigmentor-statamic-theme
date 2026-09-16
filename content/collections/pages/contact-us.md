@@ -3,7 +3,7 @@ id: 9747f5af-0ef7-4b00-ae55-f1646b7fc72c
 blueprint: page
 title: 'Contact Us'
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-template: contact
+template: page
 page_builder:
   -
     id: maw70mzu

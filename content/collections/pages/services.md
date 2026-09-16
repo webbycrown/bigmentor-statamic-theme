@@ -5,7 +5,7 @@ title: 'Our Services'
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_at: 1748849776
-template: our_services/index
+template: page
 page_builder:
   -
     id: makvv0h6

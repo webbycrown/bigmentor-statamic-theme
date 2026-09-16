@@ -1,3 +1,6 @@
+title: BigMentor Theme
+user: webbycrown
+repo: webbycrown/bigmentor-statamic-theme
 export_paths:
   - routes
   - content

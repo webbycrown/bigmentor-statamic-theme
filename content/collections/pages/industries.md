@@ -3,7 +3,7 @@ id: 11fb64a0-e9fd-4dbc-a402-172fd1d20653
 blueprint: page
 title: Industries
 author: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
-template: industries/index
+template: page
 updated_by: 7fab386b-3c2a-480d-b06f-dbbe0f8adf74
 updated_at: 1762404628
 parent: home
