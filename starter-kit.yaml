@@ -17,9 +17,9 @@ export_paths:
   - public/build
   - public/vendor
   - public/webfonts
-  - storage/forms
   - package.json
   - postcss.config.js
   - tailwind.config.js
   - vite.config.js
   - README.md
+  - THIRD_PARTY.md

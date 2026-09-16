@@ -2,9 +2,6 @@
 
 At BigMentor Statamic, we’re dedicated to helping businesses and creators showcase their expertise with confidence. Our theme is designed with precision and purpose—offering smart layouts, customizable components, and a content-first approach. Whether you're promoting services, sharing case studies, or building trust with testimonials, BigMentor delivers the flexibility, performance, and visual clarity you need to build impactful, conversion-focused websites—effortlessly.
 
-**Live demo:** https://bigmentor-statamic.webbydemo.in/  
-Control Panel: `/cp` — `admin@example.com` / `password`
-
 
 ## ✅ Modular Design System
 Fully responsive, mobile-friendly layouts
@@ -113,3 +110,5 @@ statamic new my-site webbycrown/bigmentor-statamic-theme
 <div align="center">
   <strong>Made with ❤️ by <a href="https://www.webbycrown.com/custom-statamic-development-services-company/">WebbyCrown Solutions</a></strong>
 </div>
+
+See [THIRD_PARTY.md](THIRD_PARTY.md) for bundled front-end libraries, fonts, and sample imagery licences.

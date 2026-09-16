@@ -3,7 +3,7 @@
     "type": "statamic-starter-kit",
     "description": "A Statamic starter kit for businesses to showcase services, case studies, and portfolios.",
     "require": {
-        "statamic/cms": "*"
+        "statamic/cms": "^5.0"
     },
     "extra": {
         "statamic": {
